@@ -1,0 +1,11 @@
+ul {
+  list-style-image: url("../Images/bullet.png");
+}
+
+h1 {
+	font-variant-caps: small-caps;
+}
+.keyword {
+	font-color: red;
+	font-weight: bold;
+}
