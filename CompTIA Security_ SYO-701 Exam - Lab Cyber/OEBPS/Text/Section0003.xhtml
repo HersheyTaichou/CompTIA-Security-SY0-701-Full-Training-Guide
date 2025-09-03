@@ -8,6 +8,228 @@
 </head>
 
 <body>
-
+<p id="page_18"><span><b>SECTION 3 - </b></span></p>
+<p>&#160;</p>
+<p><span><b>EXPLAIN CRYPTOGRAPHIC </b></span></p>
+<p>&#160;</p>
+<p><span><b>SOLUTIONS</b></span></p>
+<p>&#160;</p>
+<p><span><b>3.1  Introduction To Cryptography And Hashing</b></span></p>
+<p>&#160;</p>
+<p><span>Cryptography Is A Secure Communication       <span><b>Cryptographic Algorithms:</b></span></span> Technique That Allows Only The Sender </p>
+<p>And Receiver Of A Message To View It.           Hashing Algorithms </p>
+<p><b>Plaintext -</b>                                          Symmetric Encryption Cipher  An Unencrypted Message </p>
+<p><b>Ciphertext -</b>                                      Asymmetric Encryption Cipher An Encrypted Message </p>
+<p><b>Cipher -</b>                                         <b>Hashing Algorithms -</b> The Simplest Type  The Process (Algorithm) Used To Encrypt And Decrypt A Message                Of Cryptographic Operation And Produces </p>
+<p>A Fixed Length String From An Input </p>
+<p><b>Cryptanalysis -</b> The Art Of Cracking              Plaintext That Can Be Of Any Length. Cryptographic Systems                        A <b>Hashing Collision</b> Occurs When Two </p>
+<p>Different Plain Texts Produce The Exact </p>
+<p>&#160;</p>
+<p><span><b>There Are Three Main Types Of </b></span>         Same Hash Value. Encryption Algorithms Must Demonstrate Collision Avoidance.</p>
+<p><img src="../Images/index-18_1.png" alt=""/></p>
+<p>&#160;</p>
+<p><span><b>18</b></span></p>
+<p id="page_19"><span><b>Hashing Algorithms</b></span></p>
+<p> <b>Secure Hash Algorithm (Sha) -</b> Considered To Be The Strongest Algorithm With The </p>
+<p>Most Popular Being The Sha-256 Which Produces A 256-Bit Digest. </p>
+<p> Message Direct Algorithm #5 (Md5) - Produces A 128-Bit Digest</p>
+<p>Birthday Attack - A Brute Force Attack Aimed At Exploiting Collisions In Hash Functions. Could Be Used For Forging A Digital Signature</p>
+<p>&#160;</p>
+<p><span><b>3.2  Encryption</b></span></p>
+<p>&#160;</p>
+<p>An encryption algorithm is a type of               plaintext and ciphertext but their order is cryptographic process that encodes data         changed according to some mechanism.</p>
+<p>so that it can be recovered or decrypted.         Consider the ciphertext “hloolelwrd”</p>
+<p>&#160;</p>
+<p>The use of a key, with the encryption              h l o o l cipher ensures that decryption can only be performed by authorized persons.               e l w r d</p>
+<p>A substitution cipher involves replacing           The letters are simply written as columns units in the plaintext with different                  and the rows are concatenated.</p>
+<p>&#160;</p>
+<p>ciphertext. e.g rot13 rotates each letter 13         symmetric encryption - here both places so a becomes n encryption and decryption are performed The ciphertext “uryyb jbeyq” means “hello        by the same secret key and can be used world”                                        for confidentiality. It is very fast and is used </p>
+<p>for bulk encryption of large amounts of </p>
+<p>In contrast to substitution ciphers, the units </p>
+<p>data but can be vulnerable if the key is </p>
+<p>in a transposition cipher stay the same in </p>
+<p>stolen.</p>
+<p><img src="../Images/index-19_1.png" alt=""/></p>
+<p>&#160;</p>
+<p><span><b>19</b></span></p>
+<p id="page_20"><b>There are two types -</b> Stream ciphers &amp; block ciphers</p>
+<p><b>Stream cipher -</b> The plaintext is combined with a separate randomly generated message calculated from the key and an initialization vector (iv). each byte or bit of data is encrypted one at a time.</p>
+<p><b>Block cipher -</b> The plaintext is divided into equal-size blocks (usually 128-bit). if there is not enough data in the plaintext, it is padded to the correct size. e.g, a 1200-bit plaintext would be padded with an extra 80 bits to fit into 10 x 128-bit blocks.</p>
+<p><b>Asymmetric Encryption -</b> Here both encryption and decryption are performed by two different but related public and private keys in a key pair. Each key is capable of reversing the operation of its pair and they are linked in such a way as to make it impossible to derive one from the other.</p>
+<p><img src="../Images/index-20_1.png" alt=""/></p>
+<p>&#160;</p>
+<p>Can Be Used To Prove Identity As The Holder Of The Private Key Cannot Be Impersonated By Anyone Else.</p>
+<p>The Major Drawback Of This Encryption Is That It Involves Substantial Computing Resources.</p>
+<p>Mostly Used For Authentication And Non-Repudiation And For Key Agreement And Exchange.</p>
+<p>Asymmetric Encryption Is Often Referred To As Public Key Cryptography And The Products Are Based On The Rsa Algorithm.</p>
+<p>Ron Rivest, Adi Shamir And Leonard Adleman Published The Rsa Cipher In 1977.</p>
+<p>&#160;</p>
+<p><span><b>20</b></span></p>
+<p id="page_21"><span><b>3.3  Cryptographic Modes Of Operation &amp; Cipher Suites</b></span></p>
+<p>&#160;</p>
+<p>A Mode Of Operation Is A Means Of Using       And Are Freely Available But How Can A Cipher Within A Product To Achieve A          Anyone Trust The Identity Of The Person Security Goal Such As Confidentiality Or          Or Server Issuing A Public Key?</p>
+<p>Integrity.                                                A Third Party Known As A <b>Certificate </b>Public Key Cryptography Can Authenticate       <b>Authority</b> (Ca) Can Validate The Owner Of A Sender While Hashing Can Prove  <span>The Public Key By Issuing The Subject With </span></p>
+<p>Integrity.                                                A Certificate.</p>
+<p>Both Can Be Combined To Authenticate         The Process Of Issuing And Verifying A Sender And Prove The Integrity Of A           Certificates Is Called <b>Public Key </b>Message And This Usage Is Called A            <b>Infrastructure (Pki)</b></p>
+<p><b>Digital Signature</b>.                                <b>Cipher Suite -</b> This Is The Combination Of Symmetric Encryption Can Encrypt And          Ciphers Supported And Is Made Up Of</p>
+<p>&#160;</p>
+<p>Decrypt Large Amounts Of Data But It's            <b>Signature Algorithm - </b>Used To Assert Difficult To Distribute The Secret Key The Identity Of The Server's Public Key Securely. And Facilitate Authentication</p>
+<p>&#160;</p>
+<p>Asymmetric (Pkc) Encryption Can Distribute        <b>Key Exchange/Agreement Algorithm </b>The Key Easily But Cannot Be Used For <b>- </b>Used By The Client And Server To Large Amounts Of Data. Derive The Same Bulk Encryption Digital Certificates - Public Keys Are Used            Symmetric Key.</p>
+<p>&#160;</p>
+<p><span><b>3.4  Cryptographic Use Cases</b></span></p>
+<p>&#160;</p>
+<p>Cryptography supporting authentication &amp; non-repudiation - a single hash function, symmetric or asymmetric cipher is called a cryptographic primitive. a complete cryptographic system or product is likely to use multiple cryptographic primitives such as within a cipher suite.</p>
+<p>Authentication &amp; non-repudiation depend on the recipient not being able to encrypt the message or the recipient would be able to impersonate the sender. Basically the recipient must be able to use the cryptographic process to decrypt authentication and integrity data but not to encrypt it.</p>
+<p>Cryptography supporting confidentiality - cryptography removes the need to store data in secure media as even if the ciphertext is stolen, the threat actor will not be able to understand or change what has been stolen.</p>
+<p>Cryptography supporting integrity &amp; resiliency - integrity is proved by hashing algorithms which allow two parties to derive the same checksum and show that a message or data has not been tampered with. Cryptography can be used to design highly resilient control systems and secure computer code.</p>
+<p>&#160;</p>
+<p><span><b>21</b></span></p>
+<p id="page_22">A developer can make tampering more difficult through obfuscation which is the art of making a message difficult to understand. Cryptography is a very effective way of obfuscating code but it also means the computer might not be able to understand and execute the code.</p>
+<p>&#160;</p>
+<p><span><b>3.5  Longevity, Salting , Stretching &amp; Other Types Of</b></span></p>
+<p><span><b>Cryptographic Technologies</b></span></p>
+<p>&#160;</p>
+<p><b>Longevity -</b>This Refers To The Measure          Key. This Means The Attacker Will Have To Of Confidence That People Have In A            Do Extra Processing For Each Possible Key Given Cipher. In Another Sense, It Is The          Value Thus Make The Attack Even Slower.</p>
+<p>&#160;</p>
+<p>Consideration Of How Long Data Must Be       This Can Be Performed By Using A Kept Secure. Particular Software Library To Hash And <b>Salting -</b>Passwords Stored As Hashes Are       Save Passwords When They Are Created. Vulnerable To Brute Force And Dictionary        The <b>Password-Based Key Derivation </b>Attacks. A Password Hash Cannot Be            <b>Function 2 (Pbkdf2)</b> Is Widely Used For Decrypted As They Are One-Way. However,      This Purpose. An Attacker Can Generate Hashes To </p>
+<p>Try And Find A Match For The Captured          <b>Homomorphic Encryption -</b>This Is The </p>
+<p>&#160;</p>
+<p>Password Hash Through A Brute Force Or       Conversion Of Data Into Ciphertext That Can Be Analyzed And Worked With As If It Dictionary Attack. Were Still In Its Original Form.</p>
+<p>&#160;</p>
+<p>A Brute Force Attack Will Run Through           It Enables Complex Mathematical A Combination Of Letters, Numbers And Operations To Be Performed On Encrypted Symbols While A Dictionary Attack Creates Data Without Compromising The Hashes Of Common Words And Phrases. Encryption.</p>
+<p>&#160;</p>
+<p><span><b>Both Attacks Can Be Slowed Down </b></span>     <b>Blockchain -</b>This is a concept in which an </p>
+<p>expanding list of transactional records is </p>
+<p><span><b>By Adding A Salt Value When </b></span>          secured using cryptography. Each record <span><b>Creating The Hash.</b></span>                    is referred to as a block and is run through </p>
+<p>a hash function. The hash value of the </p>
+<p><span><b>(Salt + Password) * Sha = Hash</b></span>           previous block in the chain is added to </p>
+<p>&#160;</p>
+<p>The Salt Is Not Kept Secret Because Any         the hash calculation of the next block and thus ensures that each successive block is System Verifying The Hash Must Know cryptographically linked. The Value Of The Salt But It's Presence </p>
+<p>Means That An Attacker Cannot Use Pre-        <b>Steganography -</b>This is a technique for Computed Tables Of Hashes.                  obscuring the presence of a message </p>
+<p>&#160;</p>
+<p><b>Key Stretching -</b>This Takes A Key That's         such as hiding a message in a picture. the container document or file is called the Generated From A User Password Plus covertext. A Random Salt Value And Repeatedly </p>
+<p>Converts It To A Longer And More Random </p>
+<p>&#160;</p>
+<p><span><b>22</b></span></p>
+<p id="page_23"><span><b>3.6  Certificates, Pkis, Ras &amp; Csrs</b></span></p>
+<p>&#160;</p>
+<p>Public &amp; Private Key Usage</p>
+<p>When you want others to send you confidential messages, you give them your public key to encrypt the message and then you decrypt the message with your private key.</p>
+<p>When You Want To Authenticate Yourself To Others, You Create A Signature And Sign It Using Your Private Key To Encrypt It. You Give Others Your Public Key To Decrypt The Signature.</p>
+<p><b>Certificate Authority -</b> This Is The Entity Responsible For Issuing And Guaranteeing Certificates.</p>
+<p>&#160;</p>
+<p><span><b>Pki Trust Models Include:</b></span></p>
+<p> <b>Single Ca -</b> A Single Ca Issues Certificates To Users And The Users Trust Certificates By </p>
+<p>That Ca Exclusively. If The Ca Is Compromised, The Entire Pki Collapses</p>
+<p> <b>Hierarchical (Intermediate Ca) -</b> A Single Ca Called The Root Issues Certificates To </p>
+<p>Several Intermediate Cas. The Intermediate Cas Issue Certificates To Subjects (Leaf </p>
+<p>Or End Entities). Each Leaf Certificate Can Be Traced Back To The Root Ca Along The </p>
+<p>Certification Path And This Is Referred To As A Certificate Chain Or Chain Of Trust. The </p>
+<p>Root Is Still A Single Point Of Failure But It Can Be Taken Offline As Most Of The Regular </p>
+<p>Ca Activities Are Handled By The Intermediate Ca Servers.</p>
+<p>&#160;</p>
+<p> <b>Online Versus Offline Cas -</b> An online ca is one that is available to accept and process </p>
+<p>certificate signing requests and management tasks. Because of the high risk posed by </p>
+<p>a compromised root ca, a secure configuration </p>
+<p><img src="../Images/index-23_1.png" alt=""/></p>
+<p>will involve making the root an offline ca </p>
+<p><img src="../Images/index-23_2.png" alt=""/></p>
+<p>meaning it is disconnected from any network </p>
+<p>and only brought back online to add or update </p>
+<p>intermediate cas.</p>
+<p><b>Registration authorities and CSRS -</b></p>
+<p>registration is the process by which end users </p>
+<p>create an account with the CA and become </p>
+<p>authorized to request certificates.</p>
+<p>When A Subject Wants To Obtain A Certificate, </p>
+<p>It Completes A Certificate Signing Request (Csr) </p>
+<p>And Submits It To The Ca.</p>
+<p>The CA Reviews The Certificate And Checks </p>
+<p>That The Information Is Valid. If The Request Is </p>
+<p>Accepted, The CA Signs The Certificate And </p>
+<p>Sends It To The Subject.</p>
+<p>&#160;</p>
+<p><span><b>23</b></span></p>
+<p id="page_24"><span><b>3.7  Digital Certificates</b></span></p>
+<p>&#160;</p>
+<p>A Digital Certificate Is Essentially A Wrapper For A Subject's Public Key. As Well As The Public Key, It Contains Information About The Subject And The Certificate's Issuer.</p>
+<p><img src="../Images/index-24_1.png" alt=""/></p>
+<p>&#160;</p>
+<p><b>Field</b>                     <b>Usage</b></p>
+<p><img src="../Images/index-24_2.png" alt=""/></p>
+<p><span>A number uniquely identifying the </span></p>
+<p><span><b>Serial number</b></span>         <span>certificate within the domain of its </span></p>
+<p><span>CA.</span></p>
+<p><span>The algorithm used by the CA to sign </span></p>
+<p><span><b>Signature algorithm</b></span></p>
+<p><span>the certificate.</span></p>
+<p><span><b>Issuer</b></span>                  <span>The name of the CA.</span></p>
+<p><span>Date and time during which the </span></p>
+<p><span><b>Valid from/to</b></span></p>
+<p><span>certificate is valid.</span></p>
+<p><span>The name of the certificate holder, </span></p>
+<p><span>expressed as a distinguished name </span></p>
+<p><span>(DN). Within this, the common name </span></p>
+<p><span><b>Subject</b></span>               <span>(CN) part should usually match either </span></p>
+<p><span>the fully qualified domain name </span></p>
+<p><span>(FQDN) of the server or a user email </span></p>
+<p><span>address.</span></p>
+<p><span>Public key and algorithm used by the </span></p>
+<p><span><b>Public key</b></span></p>
+<p><span>certificate holder.</span></p>
+<p><span>V3 certificates can be defined with </span></p>
+<p>When Certificates Were First                                 <span>extended attributes, such as friendly </span>Introduced, The Common Name                         <span>email addresses, and intended key </span><span><b>Extensions</b></span>            <span>subject or issuer names, contact </span>(Cn) Attribute Was Used To Identify                           <span>usage.</span> The Fqdn By Which The Server Is                           <span>This extension field is the preferred </span>Accessed.                           <span><b>Subject alternative </b></span>    <span>mechanism to identify the DNS </span></p>
+<p><span><b>name (SAN)</b></span>          <span>name or names by which a host is </span></p>
+<p>The <b>Subject Alternative Name </b>                           <span>identified.</span> <b>(San)</b> Extension Field Is Structured </p>
+<p>To Represent Different Types </p>
+<p><img src="../Images/index-24_3.png" alt=""/></p>
+<p>Of Identifiers Including Domain </p>
+<p><img src="../Images/index-24_4.png" alt=""/></p>
+<p>Names.</p>
+<p>A <b>Wildcard</b> Domain Such As </p>
+<p>*.Comptia.Org Means That The </p>
+<p>Certificate Issued To The Parent </p>
+<p>Domain Will Be Accepted As Valid </p>
+<p>For All Subdomains.</p>
+<p>&#160;</p>
+<p><span><b>24</b></span></p>
+<p id="page_25"><span><b>Eku Field - Can Have The Following </b></span>     <span><b>Other Certificate Types Include:</b></span></p>
+<p><span><b>Values</b></span>                                Machine/Computer Certificates </p>
+<p> Server Authentication                        Email/User Certificates </p>
+<p> Client Authentication                         Code Signing Certificates </p>
+<p> Code Signing                             Root Certificate </p>
+<p> Email Protection                            Self-Signed Certificates</p>
+<p>&#160;</p>
+<p><span><b>Web Server Certificate Types Include:</b></span></p>
+<p> Domain Validation (Dv) - Proves The Ownership Of A Particular Domain</p>
+<p> Extended Validation (Ev) - Subjecting To A Process That Requires More Rigorous Checks </p>
+<p>On The Subject's Legal Identity And Control Over The Domain.</p>
+<p>&#160;</p>
+<p><span><b>3.8  Key Management</b></span></p>
+<p>&#160;</p>
+<p>This Refers To Operational Considerations For The Various Stages In A Key's Life Cycle And Can Be <b>Centralized</b> Meaning One Admin Controls The Process Or <b>Decentralized</b> In Which Each User Is Responsible For His Or Her Keys.</p>
+<p>&#160;</p>
+<p><span><b>Key Life Cycle</b></span></p>
+<p> Key Generation                            Revocation </p>
+<p> Certificate Generation                        Expiration And Renewal</p>
+<p> Storage </p>
+<p>&#160;</p>
+<p>If The Key Used To Decrypt Data Is Lost Or Damaged, Encrypted Data Cannot Be Recovered Unless A Backup Of The Key Exists. However Making Too Many Backups Can Make It More Difficult To Keep The Key Secure.</p>
+<p><b>Escrow</b> Means That Something Is Held Independently Which In Terms Of Key Management, Means A Third Party Is Trusted To Store The Key Securely.</p>
+<p>&#160;</p>
+<p><span><b>25</b></span></p>
+<p id="page_26"><span><b>3.9  Certificate Management</b></span></p>
+<p>&#160;</p>
+<p>When You Are Renewing A Certificate, It Is Possible To Use The Existing Key Referred To Specifically As <b>Key Renewal </b>Or Generate A New Key In Which Case, The Certificate Is <b>Rekeyed.</b></p>
+<p>Certificates Are Issued With A Limited Duration Set By The Ca Policy For The Certificate Type E.G A Root Certificate Might Have A 10 Year Expiry Date While A Web Server Certificate Might Be Issued For 1 Year Only.</p>
+<p>A Certificate May Be Revoked Or Suspended. A Revoked Certificate Is No Longer Valid And Cannot Be Reinstated While A Suspended Certificate Can Be Re-Enabled.</p>
+<p>A Certificate May Be Revoked Or Suspended For A Variety Of Reasons Such As The Private Key Compromise, Business Closure Or A User Leaving The Company. These Reasons Are Codified Under</p>
+<p> Unspecified </p>
+<p> Key Compromise </p>
+<p> Ca Compromise </p>
+<p> Superseded </p>
+<p> Cessation Of Operation</p>
+<p>A Suspended Key Is Given The Code <b>Certificate Hold</b></p>
 </body>
 </html>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Section Title</title>
+</head>
+
+<body>
+<p id="page_50"><span><b>SECTION 6 - </b></span></p>
+<p>&#160;</p>
+<p><span><b>SECURE CLOUD NETWORK </b></span></p>
+<p>&#160;</p>
+<p><span><b>ARCHITECTURE</b></span></p>
+<p>&#160;</p>
+<p><span><b>6.1  Cloud Deployment Models</b></span></p>
+<p>&#160;</p>
+<p><b>Public (multi-tenant) -</b> A service offered over the internet by cloud service providers (csps) to cloud consumers</p>
+<p><b>Hosted Private -</b> Hosted by a third party for the exclusive use of an organization. Better performance but more expensive than public.</p>
+<p><b>Private - </b>Cloud infrastructure that is completely private and owned by the organization. Geared more towards banks and governmental services where security and privacy is of utmost importance.</p>
+<p><b>Community -</b> Several organizations share the costs of either a hosted private or fully private cloud.</p>
+<p><b>Cloud Service Models -</b> Cloud services can also be differentiated on the level of complexity and pre-configuration provided (sometimes referred to as anything as a service xaas)</p>
+<p>Most common implementations are infrastructure, software and platform.</p>
+<p><b>Infrastructure As A Service (IAAS) - </b>It resources (servers, load balancers and san) are provided here. Examples include amazon elastic compute cloud, oracle cloud and microsoft azure virtual machines.</p>
+<p><b>Software As A Service (SAAS) - </b>Provisioning of software applications and can be purchased on a pay-as-you-go or lease arrangement. Examples are microsoft 365, salesforce and adobe creative cloud.</p>
+<p><b>Platform As A Service (PAAS) -</b> Provides resources somewhere between saas and iaas. A typical paas solution would provide servers and storage network infrastructure and also a web-application or database platform on top.</p>
+<p>Examples include oracle database, microsoft azure sql database and google app engine.</p>
+<p>&#160;</p>
+<p><span><b>50</b></span></p>
+<p id="page_51"><span><b>Security As A Service</b></span></p>
+<p> <b>Consultants - </b>Can Be Used For Framework Analysis Or For More Specific Projects. </p>
+<p> <b>Managed Security Services Provider (Mssp) -</b> Fully Outsourcing Responsibility For </p>
+<p>Information Assurance To A Third Party. Can Be Expensive But A Good Fit For An Sme </p>
+<p>That Has No In-House Security Capability. </p>
+<p> <b>Security As A Service (Secaas) -</b> Can Mean A Lot Of Things But Typically Means </p>
+<p>Implementing A Particular Security Control Such As Malware Scanning In The Cloud. </p>
+<p>Examples Include Cloudflare, Mandiant/Fireeye And Sonicwall.</p>
+<p>&#160;</p>
+<p><span><b>6.2  Responsibility Matrix</b></span></p>
+<p>&#160;</p>
+<p>The shared responsibility model describes the balance of responsibility between a customer and a cloud service provider (CSP) for implementing security in a cloud platform.</p>
+<p>The division of responsibility becomes more or less complicated based on whether the service model is SaaS, PaaS, or IaaS. For example, in a SaaS model, the CSP performs the operating system configuration and control as part of the service offering.</p>
+<p>In contrast, operating system security is shared between the CSP and the customer in an IaaS model.</p>
+<p>A <b>responsibility matrix </b>sets out these duties in a clear table.</p>
+<p>&#160;</p>
+<p><span>CIS Controls Cloud </span>    <span>CIS Foundations </span></p>
+<p><span><b>Responsibility</b></span>                 <span>On-premises</span>     <span>laaS</span>      <span>PaaS</span>      <span>SaaS</span>      <span>FaaS</span></p>
+<p><span>Companion Guide</span>      <span>Benchmarks</span></p>
+<p><span><b>Data classification and </b></span></p>
+<p><span><b>Accountability</b></span></p>
+<p><span><b>Client and end-point </b></span>           w</p>
+<p><span><b>Protection</b></span></p>
+<p><span><b>Identity and access </b></span></p>
+<p><span><b>Management</b></span></p>
+<p><span><b>Application-level Controls</b></span></p>
+<p>&#160;</p>
+<p><span><b>Network Controls</b></span></p>
+<p>&#160;</p>
+<p><span><b>Host Infrastructure</b></span></p>
+<p><span><b>Physical Security</b></span></p>
+<p>&#160;</p>
+<p><b>Cloud customer</b>         <b>Cloud provider</b></p>
+<p>&#160;</p>
+<p><span><b>51</b></span></p>
+<p id="page_52"><span><b>6.3  Cloud Security Solutions</b></span></p>
+<p>&#160;</p>
+<p>Cloud computing is also a means of transferring risk and as such it is important to identify which risks are being transferred and what responsibilities both the company and service provider will undertake.</p>
+<p>A company will always still be held liable for legal and regulatory consequences in case of a security breach though the service provider could be sued for the breach.</p>
+<p>The company will also need to consider the legal implications of using a csp if its servers are located in a different country.</p>
+<p>Application security in the cloud refers both to the software development process and to the identify and access management (iam) features designed to ensure authorized use of applications.</p>
+<p>Cloud provides resources abstracted from physical hardware via one or more layers of virtualization and the compute component provides process and system memory (ram) resources as required for a particular workload.</p>
+<p><b>High availability -</b>one of the benefits of using the cloud is the potential for providing services that are resilient to failures at different levels.</p>
+<p>In terms of storage performance, high availability (ha) refers to storage provisioned with a guarantee of 99.99% Uptime or better and the csp typically uses redundancy to make multiple disk controllers and storage devices available to a pool of storage resources.</p>
+<p><b>Replication -</b> data replication allows businesses to copy data to where it can be utilized most effectively and the cloud may be used as a central storage area.</p>
+<p>&#160;</p>
+<p>The terms hot and cold storage refer to how quickly data is retrieved and hot storage is quicker but also more expensive to manage.</p>
+<p> <b>Local replication - </b>Replicates data within a single data center in the region where the </p>
+<p>storage account was created.</p>
+<p> <b>Regional replication -</b>Replicates data across multiple data centers within one or two </p>
+<p>regions. </p>
+<p> <b>Geo-redundant storage (grs) -</b>Replicates data to a secondary region that is distant </p>
+<p>from the primary region. This safeguards data in the event of a regional outage or a </p>
+<p>disaster.</p>
+<p> <b>Virtual private clouds (vpcs) -</b> each customer can create one or more vpcs attached </p>
+<p>to their account. By default, a vpc is isolated from other csp accounts and from other </p>
+<p>vpcs operating in the same account.</p>
+<p>Each subnet within a vpc can either be private or public. For external connectivity that isn't appropriate for public.</p>
+<p>Routing can be configured between subnets in a vpc and between vpcs in the same </p>
+<p>&#160;</p>
+<p><span><b>52</b></span></p>
+<p id="page_53">account or with vpcs belonging to different accounts.</p>
+<p>Configuring additional vpcs rather than subnets within a vpc allows for a greater degree of segmentation between instances.</p>
+<p>A vpc endpoint is a means of publishing a service that is accessible by instances in other vpcs using only the aws internal network and private ip addresses. There are two types - gateway and interface</p>
+<p> <b>Cloud firewall security -</b> Filtering decisions can be made based on packet headers and </p>
+<p>payload contents at various layers</p>
+<p> <b>Network layer 3 -</b> The firewall accepts/denies connections based on the ip addresses or </p>
+<p>address ranges and tcp/udp port numbers (actually contained in layer 4 headers but the </p>
+<p>functionality is still always described as layer 3 filtering). </p>
+<p> <b>Transport layer 4 -</b> The firewall can store connection states and use rules to allow </p>
+<p>established traffic. </p>
+<p> <b>Application layer 7 -</b> The firewall can parse application protocol headers and payloads </p>
+<p>and make decisions based on their contents.</p>
+<p>Firewalls in the cloud can be implemented in several ways to suit different purposes.</p>
+<p> As software running on an instance </p>
+<p> As a service at the virtualization layer to filter traffic between vpc subnets and instances. </p>
+<p>This equates to an on-premises network firewall.</p>
+<p>&#160;</p>
+<p>Cloud access security brokers (casb) -CASBs provide you with visibility into how clients and other network nodes are using cloud services.</p>
+<p> Enable single sign-on authentication and enforces access controls and authorizations </p>
+<p>from the enterprise network to the cloud provider </p>
+<p> Scan for malware and rouge devices </p>
+<p> Monitor and audit user and resource activity </p>
+<p> Mitigate data exfiltration</p>
+<p>&#160;</p>
+<p>Casbs are implemented in one of three ways:</p>
+<p> <b>Forward proxy -</b> positioned at the client network edge that forwards user traffic to the </p>
+<p>cloud network </p>
+<p> <b>Reverse proxy -</b> positioned at the cloud network edge and directs traffic to cloud services </p>
+<p> api</p>
+<p>&#160;</p>
+<p><span><b>53</b></span></p>
+<p id="page_54"><span><b>6.4 - Infrastructure As Code Concepts</b></span></p>
+<p>&#160;</p>
+<p><b>Service-Oriented Architecture (Soa) -</b> This Conceives Of Atomic Services Closely Mapped To Business Workflows. Each Service Takes Defined Inputs And Produces Defined Outputs.</p>
+<p>Service Functions Are Self-Contained, Do Not Rely On The State Of Other Services And Expose Clear Input/Output (I/O) Interfaces.</p>
+<p><b>Microservices -</b> Microservice-Based Development Shares Many Similarities With Agile Software Project Management And The Processes Of Continuous Delivery And Deployment.</p>
+<p>The Main Difference From Soa Is That While Soa Allows A Service To Be Built From Other Services, Each Microservice Should Be Capable Of Being Developed, Tested And Deployed Independently (Highly Decoupled)</p>
+<p><b>Services Integration -</b> Service Integration Refers To Ways Of Making These Decoupled Services Work Together To Perform A Workflow. Where Soa Used The Concept Of An Enterprise Service Bus, Microservices Integration And Cloud Services/Virtualization, Integration Generally Is Very Often Implemented Using <b>Orchestration</b> Tools.</p>
+<p>Automation Focuses On Making A Single Discrete Task Easily Repeatable While Orchestration Performs A Sequence Of Automated Tasks.</p>
+<p>Cloud Orchestration Platforms Connect To And Provide Administration, Management And Orchestration For Many Popular Cloud Platforms And Services.</p>
+<p>&#160;</p>
+<p>Application Programming Interfaces (Api) - Soa, Microservices, Service Integration, Automation And Orchestration All Depend On Apis</p>
+<p> <b>Simple Object Access Protocol (Soap) -</b> Uses Xml Format Messaging And Has A Number </p>
+<p>Of Extensions In The Form Of Web Services Standards That Support Common Features </p>
+<p>Such As Authentication, Transport Security And Asynchronous Messaging. </p>
+<p> <b>Representational State Transfer (Rest) -</b> A Much Looser Architectural Framework Also </p>
+<p>Referred To As Restful Api. Soap Requests Must Be Sent In Correctly Formatted Xml </p>
+<p>Document While Rest Requests Can Be Submitted As An Http Operation.</p>
+<p>&#160;</p>
+<p><b>Serverless architecture -</b> This is a modern design pattern for service delivery and is strongly associated with modern web applications - netflix.</p>
+<p>billing is based on execution time rather than hourly charges and this type of service provision is also called function as a service (FAAS).</p>
+<p>Serverless architecture eliminates the need to manage physical or virtual server instances so there is no need for software and patches or file system security monitoring.</p>
+<p><b>Infrastructure as code -</b> An approach to infrastructure management where automation and orchestration fully replace manual configuration is referred to as infrastructure as code (IAC)</p>
+<p>The main objective of iac is to eliminate snowflake systems which are basically systems that </p>
+<p>&#160;</p>
+<p><span><b>54</b></span></p>
+<p id="page_55">are different from others and this can happen Edge Computing Is A Broader Concept when there is a lack of consistency in terms     Partially Developed From Fog Computing.</p>
+<p>of patch updates and stability issues.             Edge Devices Collect And Depend Upon By rejecting manual configuration of any            Data For Their Operation. </p>
+<p>&#160;</p>
+<p>kind, iac ensures idempotence which            Edge Gateways Perform Some Pre-means making the same call with the same Processing Of Data To And From Edge parameters will always produce the same Devices To Enable Prioritization. result.</p>
+<p> Fog Nodes Can Be Incorporated As A </p>
+<p>Iac means using carefully developed and </p>
+<p>tested scripts and orchestration runbooks to        To The Edge Gateways. Data Processing Layer Positioned Closed generate consistent builds.</p>
+<p>&#160;</p>
+<p><b>Fog &amp; Edge Computing -</b> Traditional data          The Main Storage And Processing  The Cloud Or Data Center Layer Provides center architecture sensors are quite likely to </p>
+<p>have low bandwidth and higher latency WAN      Aggregation Of Data Between Sites. Resources Plus Distribution And links to data networks.</p>
+<p>Instead of depending on a cluster of clouds </p>
+<p>Fog computing developed by cisco </p>
+<p>&#160;</p>
+<p>processing resources close to the physical      (routers, PCs, smartphones) to produce location for the iot sensors. The sensors shorter response time as the data is communicate with the fog node using wi-processed locally. addresses this by placing fog node             computing leverages local computing for computing and data storage, edge fi or 4g/5g and the fog node prioritizes </p>
+<p>traffic, analyzes and remediates alertable </p>
+<p>conditions.</p>
+<p>&#160;</p>
+<p><span><b>6.5  Zero Trust</b></span></p>
+<p>&#160;</p>
+<p>This is a security framework requiring all subjects, assets and workflows to be authenticated, authorized and continuously validated before being granted or keeping access to the data or application.</p>
+<p>&#160;</p>
+<p><span><b>Zero Trust View</b></span></p>
+<p> <b>No Implicit Zone Trust -</b> Assets should always act as though an attacker was present in </p>
+<p>the enterprise network</p>
+<p> Devices on the network cannot be owned or configured by users</p>
+<p> Assume all network connections are insecure</p>
+<p>&#160;</p>
+<p><span><b>Zero Trust Core Principles  (NIST SP800-207)</b></span></p>
+<p> <b>Continuous Verification -</b>Always verify access all the time</p>
+<p> <b>Access Limitation -</b>Access to resources are granted strictly on a per-session basis</p>
+<p>&#160;</p>
+<p><span><b>55</b></span></p>
+<p id="page_56"> <b>Limit the “Blast Radius” -</b>Minimize the impact of a breach</p>
+<p> <b>Automate - </b>Automate context, collection and response for credentials, workloads, threat </p>
+<p>intelligence and endpoints</p>
+<p>&#160;</p>
+<p><span><b>Control &amp; Data Planes</b></span></p>
+<p> <b>Control Plane - </b>Used by infrastructure components to maintain and configure assets, </p>
+<p>access control and communication security.</p>
+<p> <b>Data Plane - </b>Used for communication between software components.</p>
+<p><img src="../Images/index-56_1.png" alt=""/></p>
+<p>&#160;</p>
+<p><span><b>Zero Trust Architecture</b></span></p>
+<p>&#160;</p>
+<p><span><b>Zero Trust Logical Components</b></span></p>
+<p> <b>Policy Decision Point (PDP) -</b> The gatekeeper and is made up of the policy engine and </p>
+<p>policy administrator.</p>
+<p> <b>Policy Engine (PE) -</b> is responsible for granting access to a resource</p>
+<p> <b>Policy Administrator (PA) - </b>generates any session-specific authentication token or </p>
+<p>credential used to access an enterprise resource.</p>
+<p> <b>Policy Enforcement Point (PEP) -</b> is responsible for enabling, monitoring and terminating </p>
+<p>connections between a subject and an enterprise resource.</p>
+<p>&#160;</p>
+<p><span><b>Zero Trust Disadvantages</b></span></p>
+<p> Can be complex and expensive</p>
+<p> Slows down application performance</p>
+<p> Hampers employee productivity</p>
+<p>&#160;</p>
+<p><span><b>56</b></span></p>
+<p id="page_57"><span><b>6.6  Embedded Systems</b></span></p>
+<p>&#160;</p>
+<p>This Is A Complete System Designed To Perform A Specific Dedicated Function.</p>
+<p>These Systems Can Be A Microcontroller In A Small Device Or Could Be As Large And Complex As The Network Of Control Devices Managing A Water Treatment Plant.</p>
+<p>Embedded Systems Are Characterized As Static Environments While A Pc Is A Dynamic Environment Because Both Software And Hardware Changes Can Be Made By The User.</p>
+<p>Embedded Systems Are Usually Constrained By:</p>
+<p> Processor Capability                        Power (Battery) </p>
+<p> System Memory                        Authentication Technologies </p>
+<p> Persistent Storage                          Cryptographic Identification</p>
+<p> Cost                                Network And Range Constraints</p>
+<p>&#160;</p>
+<p>Raspberry Pi And Arduino Are Examples Of Soc Boards Initially Devised As Educational Tools But Now Widely Used For Industrial Applications And Hacking.</p>
+<p><b>Field Programmable Gate Array (Fpga) -</b> As Many Embedded Systems Perform Simple And Repetitive Operations, It Is More Efficient To Design The Hardware Controller To Perform Only The Instructions Needed.</p>
+<p>An Example Of This Is The Application-Specific Integrated Circuits (Asics) Used In Ethernet Switches But They Can Be Quite Expensive And Work Only For A Single Application.</p>
+<p>An Fpga Solves The Problem Because The Structure Is Not Fully Set At The Time Of Manufacture Giving The End Customer The Ability To Configure The Programming Logic Of The Device To Run A Specific Application.</p>
+<p><b>Operational Technology (Ot) Networks - </b>These Are Cabled Networks For Industrial Applications And Typically Use Either Serial Data Protocols Or Industrial Ethernet.</p>
+<p><b>Industrial Ethernet Is Optimized For Real-</b>Time And Deterministic Transfers.</p>
+<p><b>Cellular Networks -</b> A Cellular Network Enables Long-Distance Communication Over The Same System That Supports Mobile And Smartphones.</p>
+<p>&#160;</p>
+<p><span><b>Also Known As Baseband Radio And There Are Two Main Radio Technologies:</b></span></p>
+<p> <b>Narrowband-Iot (Nb-Iot) -</b>This Refers To Low-Power Version Of The Long Term Evolution </p>
+<p>(Lte) Or 4g Cellular Standard.</p>
+<p> <b>Lte Machine Type Communication (Lte-M) -</b>This Is Another Low-Power System But </p>
+<p>Supports Higher Bandwidth (Up To About 1 Mbps)</p>
+<p>Any Lte-Based Cellular Radio Uses A Subscriber Identity Module (Sim) Card As An Identifier. The Sim Is Issued By A Cellular Provider With Roaming To Allow The Use Of Other Supplier's Tower Relays.</p>
+<p><span><b>57</b></span></p>
+<p id="page_58"><span><b>6.7  Industrial Control Systems &amp; Internet Of Things</b></span></p>
+<p>&#160;</p>
+<p>Industrial Systems Have Different Priorities To It Systems And Tend To Prioritize Availability And Integrity Over Confidentiality (Reversing The Cia Triad As The Aic Triad)</p>
+<p><b>Workflow And Process Automation Systems -</b> Industrial Control Systems (Icss) Provide Mechanisms For Workflow And Process Automation And These Systems Control Machinery Used In Critical Infrastructure Like Power And Water Suppliers And Health Services.</p>
+<p>&#160;</p>
+<p>An Ics Comprises Plant Devices And Equipment With Embedded PLCs.</p>
+<p><b>Supervisory Control And Data Acquisition (SCADA) -</b> A SCADA  System Takes The Place Of A Server In Large Scale Multiple-Site Icss. Scada Typically Run As Software On Ordinary Computers, Gathering Data From And Managing Plant Devices And Equipment With Embedded Plcs Referred To As Field Devices.</p>
+<p><b>Ics/Scada Applications -</b> These Types Of Systems Are Used Within Many Sectors Of Industry</p>
+<p> Power Generation And Distribution </p>
+<p> Mining And Refining Raw Materials </p>
+<p> Fabrication And Manufacturing </p>
+<p> Logistics </p>
+<p> Site And Building Management Systems</p>
+<p><b>Internet Of Things (IoT) -</b> This Is Used To Describe A Global Network Of Appliances And Personal Devices That Have Been Equipped With Sensors, Software And Network Connectivity.</p>
+
+</body>
+</html>

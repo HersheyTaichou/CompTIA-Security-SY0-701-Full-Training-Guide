@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Section Title</title>
+</head>
+
+<body>
+p id="page_89"><span><b>SECTION 11 </b></span></p>
+<p>&#160;</p>
+<p><span><b>ENHANCE APPLICATION </b></span></p>
+<p>&#160;</p>
+<p><span><b>SECURITY CAPABILITIES</b></span></p>
+<p>&#160;</p>
+<p><span><b>11.1  Dns Security, Directory Services &amp; Snmp</b></span></p>
+<p>&#160;</p>
+<p><span><b>DNS Security -</b> To Ensure Dns Security On A Private Network, Local Dns Servers Should Only Accept </span><span>Recursive Queries From Local Authenticated Hosts And Not From The Internet.</span></p>
+<p>Clients Should Be Restricted To Using Authorized Resolvers To Perform Name Resolution. <b>Dns Footprinting</b> Means Obtaining Information About A Private Network By Using Its Dns Server To Perform A Zone Transfer (All The Records In A Domain) To A Rogue Dns.</p>
+<p><span><b>DNS Security Extensions (DNSSEC) -</b> These Help To Mitigate Against Spoofing And Poisoning </span><span>Attacks By Providing A Validation Process For Dns Responses.</span></p>
+<p><span><b>Secure Directory Services -</b> A Network Directory Lists The Subjects (Users, Computers And </span><span>Services) And Objects (Directories And Files) Available On The Network Plus The Permissions </span><span>Subjects Have Over Objects.</span></p>
+<p>Most Directory Services Are Based On The Lightweight Directory Access Protocol (Ldap) Running Over Port 389.</p>
+<p>Authentication Referred To As Binding To The Server Can Be Implemented By:</p>
+<p> <b>No Authentication -</b> Anonymous Access Is Granted</p>
+<p> <b>Simple Bind -</b> The Client Must Supply Its Distinguished Name And Password In Plaintext</p>
+<p> <b>Simple Authentication And Security Layer (Sasl) -</b> The Client And Server Negotiate The </p>
+<p>Use Of A Supported Authentication Mechanism Such As Kerberos.</p>
+<p> <b>Ldap Secure (Ldaps) -</b> The Server Is Installed With A Digital Certificate Which It Uses To </p>
+<p>Setup A Secure Tunnel For The User Credential Exchange. Ldaps Use Port 636.</p>
+<p>Generally Two Levels Of Access To The Directory Can Be Granted Which Are Read-Only Access (Query) And Read/Write Access (Update) And Is Implemented Using An Access Control Policy.</p>
+<p><b>Time Synchronization -</b> Many Network Applications Are Time Dependent And Time Critical. The <b>Network Time Protocol (Ntp)</b> Provides A Transport Over Which To Synchronize These Time Dependent Applications</p>
+<p>Ntp Works Over Udp On Port 123.</p>
+<p>&#160;</p>
+<p><span><b>89</b></span></p>
+<p id="page_90">Ntp Has Historically Lacked Any Sort Of Security Mechanism But There Are Moves To Create A Security Extension For The Protocol Called <b>Network Time Security</b>.</p>
+<p><b>Simple Network Management Protocol (Snmp) Security -</b> This Is A Widely Used Framework For Management And Monitoring And Consists Of An Snmp Monitor And Agents. The Agent Is A Process (Software Or Firmware) Running On A Switch, Router, Server Or Other Snmp-Compatible Network Device.</p>
+<p>This Agent Maintains A Database Called A Management Information Base (Mib) That Holds Statistics Relating To The Activity Of The Device. The Agent Is Also Capable Of Initiating A Trap Operation Where It Informs The Management System Of A Notable Event Like Port Failure.</p>
+<p>&#160;</p>
+<p><span><b>11.2  Secure Application Operations Protocols</b></span></p>
+<p>&#160;</p>
+<p>HTTP enables clients to request resources from an HTTP server. The server acknowledges the request and responds with the data or an error message.</p>
+<p>HTTP is a <b>stateless</b> protocol which means the server preserves no information about the client during a session.</p>
+<p>&#160;</p>
+<p><b>Transport Layer Security -</b> Secure Sockets Layer (SSL) was developed by Netscape in the 1990s to address the lack of security in HTTP and was quickly adopted as a standard named Transport Layer Security (TLS). </p>
+<p>To implement TLS, a server is assigned a digital certificate signed by some trusted CA. The certificate proves the identity of the server and validates the server's public/private key pair.</p>
+<p>The server uses its key pair and the TLS protocol to agree mutually supported ciphers with the client and negotiate an encrypted communications session.</p>
+<p><b>SSL/TLS Version -</b> A server can provide support for legacy clients meaning a TLS 1.2 server could be configured to allow clients to downgrade to TLS 1.1 or 1.0</p>
+<p>TLS 1.3 was approved in 2018 and the ability to perform downgrade attacks was mitigated by preventing the use of unsecure features and algorithms from previous versions.</p>
+<p><b>Cipher Suites -</b> This is a set of algorithms supported by both the client and server to perform the different encryption and hashing operations required by the protocol.</p>
+<p>Prior to TLS 1.3, a cipher suite would be written like this</p>
+<p>&#160;</p>
+<p><span><b>90</b></span></p>
+<p id="page_91"><span><b>ECDHE-RSA-AES128-GCM-SHA256</b></span></p>
+<p>This means that the server can use Elliptic Curve Diffie-Hellman Ephemeral mode for a session key agreement, RSA signatures, 128-bit AES-GCM (Galois Counter Mode) for symmetric bulk encryption and 256-bit SHA for HMAC functions.</p>
+<p>TLS 1.3 uses simplified and shortened suites</p>
+<p>&#160;</p>
+<p><span><b>TLS_AES_256_GCM_SHA384</b></span></p>
+<p>Only ephemeral key agreement is supported in 1.3 and the signature type is supplied in the certificate so the cipher suite only lists the bulk encryption key strength and mode of operation (AES_256_GCM) plus the cryptographic hash algorithm (SHA384).</p>
+<p>&#160;</p>
+<p><span><b>11.3  File Transfer, Email &amp; Video Services</b></span></p>
+<p>&#160;</p>
+<p>FTP - File Transfer Protocol is the most popular protocol for transferring files across networks because it is very efficient and has wide cross-platform support but has no security mechanism.</p>
+<p><b>SSH FTP (SFTP) &amp; FTP over SSL (FTPS) -</b> SFTP addresses the lack of security by encrypting the authentication and data transfer between client and server. SFTP uses port 22.</p>
+<p><b>Explicit TLS (FTPES) -</b> Use the AUTH TLS command to upgrade and insecure connection established on port 21 to a secure one. </p>
+<p><b>Implicit TLS (FTPS) -</b> Negotiates an SSL/TLS tunnel before the exchange of any FTP commands. This mode uses the secure port 990 for the control connection.</p>
+<p>&#160;</p>
+<p><span><b>Email Services: These use two </b></span>          <span><b>Secure SMTP (SMTPS) - </b></span><span><b>types of protocols:</b></span>                       <span><b>communications can be secured </b></span></p>
+<p><span>                        <span><b>using TLS and there are two ways </b></span></span>The Simple Mail Transfer Protocol </p>
+<p>(SMTP) which specifies how mail is sent       <span><b>to do this:</b></span></p>
+<p>from one system to another.                   <b>STARTTLS -</b> This command will upgrade                          an existing unsecure connection to use A mailbox protocol stores messages </p>
+<p>for users and allows them to download           TLS. Also referred to as explicit TLC or </p>
+<p>them to client computers or manage             opportunistic TLS.</p>
+<p>them on the server.                            <b>SMTPS -</b> This establishes the </p>
+<p>secure connection before any SMTP </p>
+<p>commands are exchanged. Also </p>
+<p>referred to as implicit TLS.</p>
+<p>&#160;</p>
+<p><span><b>91</b></span></p>
+<p id="page_92">Typical SMTP configurations use the following ports and secure services:</p>
+<p> <b>Port 25 -</b> Used for message relay between SMTP servers or Message Transfer Agents </p>
+<p>(MTA)</p>
+<p> <b>Port 587 -</b> Used by mail clients to submit messages for delivery by an SMTP server</p>
+<p> <b>Port 465 -</b> Some providers and mail clients use this port for message submission over </p>
+<p>implicit TLS (SMTPS)</p>
+<p><b>Secure POP (POP3S) -</b> The Post Office Protocol v3 is a mailbox protocol designed to store the messages delivered by SMTP on a server.</p>
+<p><b>Secure IMAP (IMAPS) - </b>The Internet Message Access Protocol v4 (IMAP4) supports permanent connections to a server and connecting multiple clients to the same mailbox simultaneously.</p>
+<p><b>Secure/Multipurpose Internet Mail Extensions (S/MIME) - </b> Is a means of applying both authentication and confidentiality on a per-message basis.</p>
+<p>&#160;</p>
+<p><span><b>11.4 Email Security</b></span></p>
+<p>&#160;</p>
+<p><b>Sender Policy Framework (SPF) -</b> Is an email authentication method that helps detect and prevent sender address forgery commonly used in phishing and spam emails.</p>
+<p>SPF works by verifying the sender's IP address against a list of authorized sending IP addresses published in the DNS TXT records of the email sender's domain. </p>
+<p><b>DomainKeys Identified Mail (DKIM) -</b> Leverages encryption features to enable email verification by allowing the sender to sign emails using a digital signature, The receiving email server uses a DKIM record in the sender's DNS record to verify the signature and the email's integrity.</p>
+<p><b>Domain-based Message Authentication, Reporting &amp; Conformance (DMARC) -</b> Uses the results of SPF and DKIM checks to define rules for handling messages, such as moving messages to quarantine or spam, rejecting them outright or tagging the message.</p>
+<p><b>An email gateway -</b>  Is the control point for all incoming and outgoing email traffic. It acts as a gatekeeper, scrutinizing all emails to remove potential threats before they reach inboxes. Email gateways utilize several security measures, including anti-spam filters, antivirus scanners, and sophisticated threat detection algorithms to identify phishing attempts, malicious URLs, and harmful attachments.</p>
+<p>&#160;</p>
+<p><span><b>92</b></span></p>
+<p id="page_93"><img src="../Images/index-93_1.png" alt=""/></p>
+<p>The combined use of SPF, DKIM, and DMARC significantly enhances email security by making it much more difficult for attackers to impersonate trusted domains, which is one of the most common tactics used in phishing and spam attacks. </p>
+<p><img src="../Images/index-93_2.png" alt=""/></p>
+<p>&#160;</p>
+<p><span><b>93</b></span></p>
+<p id="page_94"><span><b>11.5  Secure Coding Techniques</b></span></p>
+<p>&#160;</p>
+<p><b>Input Validation - </b>Malicious Input Could Be Crafted To Perform An Overflow Attack Or Some Type Of Script Or Sql Injection Attack.</p>
+<p>To Mitigate This, There Should Be Routines To Check User Input And Anything That Does Not Conform To What Is Required Must Be Rejected.</p>
+<p><b>Normalization And Output Encoding - Normalization</b> Means That A String Is Stripped Of Illegal Characters Or Substrings And Converted To The Accepted Character Set. This Ensures That The String Is In A Format That Can Be Processed Correctly By The Input Validation Routines.</p>
+<p>Output Encoding Means That A String Is Re-Encoded Safely For The Context In Which It Is Being Used.</p>
+<p><b>Server-Side Versus Client-Side Validation -</b> A Web Application Can Be Designed To Perform Code Execution And Input Validation Locally (On The Client) Or Remotely (On The Server).</p>
+<p>The Main Issue With Client-Side Validation Is That The Client Will Always Be More Vulnerable To Some Sort Of Malware Interfering With The Validation Process.</p>
+<p>Main Issue With Server-Side Validation Is That It Can Be Time-Consuming As It May Involve Multiple Transactions Between The Server And Client.</p>
+<p>Client-Side Validation Is Usually Restricted To Informing The User That There Is Some Sort Of Problem With The Input Before Submitting It To The Server. Relying On Client-Side Validation Only Is Poor Programming Practice.</p>
+<p>&#160;</p>
+<p><span><b>Web Application Security In Response Headers</b></span></p>
+<p>A Number Of Security Options Can Be Set In The Response Header</p>
+<p> <b>Http Strict Transport (Hsts) -</b>Forces Browser To Connect Using Https Only, Mitigating </p>
+<p>Downgrade Attacks Such As Ssl Stripping.</p>
+<p> <b>Content Security Policy (Csp) </b>- Mitigates Clickjacking, Script Injection And Other Client-</p>
+<p>Side Attacks. </p>
+<p> <b>Cache Control -</b>Sets Whether The Browser Can Cache Responses. Preventing Caching </p>
+<p>Of Data Protects Confidential And Personal Information Where The Client Device Might </p>
+<p>Be Shared By Multiple Users.</p>
+<p><b>Data Exposure And Memory Management -Data Exposure</b> Is A Fault That Allows Privileged Information Such As A Password Or Personal Data To Be Read Without Being Subject To The Appropriate Access Controls.</p>
+<p>A Well-Written Application Must Be Able To Handle Errors And Exceptions Gracefully. Ideally The Programmer Should Have Written A <b>Structured Exception Handler (Seh)</b> To Dictate What The Application Should Then Do.</p>
+<p>&#160;</p>
+<p><span><b>94</b></span></p>
+<p id="page_95">The Error Must Not Reveal Any Platform Information Or Inner Workings Of The Code To An Attacker.</p>
+<p><b>Secure Code Usage -</b> A Program May Make Use Of Existing Code In The Following Ways:</p>
+<p> <b>Code Reuse -</b>Using A Block Of Code From Elsewhere In The Same Application Or From </p>
+<p>Another Application To Perform A Different Function. </p>
+<p> <b>Third-Party Library -</b> Using A Binary Package (Such As A Dynamic Link Library) That </p>
+<p>Implements Some Sort Of Standard Functionality Such As Establishing A Network </p>
+<p>Connection. </p>
+<p> <b>Software Development Kit (Sdk) -</b> Using Sample Code Or Libraries Of Pre-Built </p>
+<p>Functions From The Programming Environment Used To Create The Software. </p>
+<p> <b>Stored Procedures -</b> Using A Pre-Built Function To Perform A Database Query.</p>
+<p>&#160;</p>
+<p><span><b>Unreachable code and dead code</b></span></p>
+<p><b>Unreachable code</b> is a part of application source code that can never be executed (if ... then conditional logic that is never called because the conditions are never met).</p>
+<p><b>Dead code</b> is executed but has no effect on the program flow (a calculation is performed but the result is never stored as a variable or used to evaluate a condition).</p>
+<p><b>Static code analysis -</b> this is performed against the application code before it is packaged as an executable process. The software will scan the source code for signatures of known issues.</p>
+<p>Human analysis of software source code is described as a manual code review. It is important that the code be reviewed by developers other than the original coders to try to identify oversights, mistaken assumptions or a lack of experience.</p>
+<p>Dynamic code analysis - static code review will not reveal any vulnerabilities that exist in the runtime environment. dynamic analysis means that the application is tested under real world conditions using a staging environment.</p>
+<p><b>Fuzzing</b> is a means of testing that an application‘s input validation routines work well. fuzzing will deliberately generate large amounts of invalid or random data and record the responses made by the application.</p>
+<p>Associated with fuzzing is the concept of stress testing an application to see how an application performs under extreme performance or usage scenarios.</p>
+<p>Finally, the fuzzer needs some means of detecting an application crash and recording which input sequence generated the crash.</p>
+
+</body>
+</html>
