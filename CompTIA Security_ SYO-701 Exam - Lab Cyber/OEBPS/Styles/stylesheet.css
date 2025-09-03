@@ -5,7 +5,31 @@ ul {
 h1 {
 	font-variant-caps: small-caps;
 }
+
+h2 {
+	background-color: green;
+	color: white;
+	margin-top: 2cap
+}
+
+h3 {
+	color: green;
+}
+
+li {
+	padding-bottom: 1ch
+}
+
 .keyword {
-	font-color: red;
+	color: red;
+	font-weight: bold;
+}
+
+.section {
+	color: green
+}
+
+.bullets {
+	color: green;
 	font-weight: bold;
 }
