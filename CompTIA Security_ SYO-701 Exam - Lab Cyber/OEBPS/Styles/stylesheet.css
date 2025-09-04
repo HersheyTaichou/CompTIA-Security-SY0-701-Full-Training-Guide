@@ -8,7 +8,6 @@ h1 {
 
 h2 {
 	background-color: green;
-	color: white;
 	margin-top: 2cap
 }
 
@@ -32,4 +31,23 @@ li {
 .bullets {
 	color: green;
 	font-weight: bold;
+}
+
+.image {
+	float: left;
+	padding:1ch
+}
+
+.tdleft {
+	background-color: green;
+	font-weight: bold;
+}
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.fright {
+	float: right;
 }
