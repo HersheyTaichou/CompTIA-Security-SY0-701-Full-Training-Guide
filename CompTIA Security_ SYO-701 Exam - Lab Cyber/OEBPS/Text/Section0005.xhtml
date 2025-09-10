@@ -4,159 +4,118 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Section Title</title>
+  <title>Section 5 - Secure Enterprise Network Architecture</title>
   <link rel="stylesheet" type="text/css" href="../Styles/stylesheet.css"/>
 </head>
 
 <body>
-<p id="page_36"><span><b>SECTION 5 - </b></span></p>
-<p>&#160;</p>
-<p><span><b>SECURE ENTERPRISE </b></span></p>
-<p>&#160;</p>
-<p><span><b>NETWORK ARCHITECTURE</b></span></p>
-<p>&#160;</p>
-<p><span><b>5.1  Secure Network Designs</b></span></p>
-<p>&#160;</p>
-<p><b>Switches -</b> forward frames between nodes in a cabled network.</p>
-<p>They work at layer 2 of the osi model and make forwarding messages based on the hardware or media access control (mac) address of attached nodes.</p>
-<p>They can establish network segments that either map directly to the underlying cabling or to logical segments created in the switch configuration as virtual lans (vlans)</p>
-<p>Wireless access points - provide a bridge between a cabled network and wireless clients or stations. They also work at layer 2 of the osi model.</p>
-<p><b>Load balancers -</b> distribute traffic between network segments or servers to optimize performance. They work at layer 4 of the osi model or higher</p>
-<p><b>Routers -</b> forward packets around an internetwork, making forward decisions based on ip addresses. They work at layer 3 of the osi model. They can apply logical ip subnet addresses to segments within a network.</p>
-<p><b>Firewalls -</b> they apply an access control list (acl) to filter traffic passing in or out of a network segment. They can work at layer 3 of the osi model or higher.</p>
-<p><b>Domain name system (dns) servers -</b> host name records and perform name resolution to allow applications and users to address hosts and services using fully qualified domain names (fqdns) rather than ip addresses.</p>
-<p>Dns works at layer 7 of the osi model.</p>
-<p>&#160;</p>
-<p><span><b>36</b></span></p>
-<p id="page_37"><img src="../Images/index-37_1.png" alt=""/></p>
-<p><span><b>5.2  Network Segmentation, Topology &amp; Dmzs</b></span></p>
-<p><img src="../Images/index-37_2.png" alt=""/></p>
-<p>&#160;</p>
-<p>A Network Segment Is One Where All The Hosts Attached To The Segment Can Use Local (Layer 2) Forwarding To Communicate Freely With One Another.</p>
-<p><b>Segregation</b> Means That The Hosts In One Segment Are Restricted In The Way They Communicate With Hosts In Other Segments.</p>
-<p><b>Freely</b> Means That No Network Appliances Or Policies Are Preventing Communications.</p>
-<p>A Network Topology Is A Description Of How A Computer Network Is Physically Or Logically Organized.</p>
-<p>The Main Building Block Of A Topology Is A Zone Which Is An Area Of The Network Where The Security Configuration Is The Same For All Hosts Within It.</p>
-<p>Zones Can Be Segregated With Vlans While The Traffic Between Them Can Be Controlled Using A Security Device, Typically A Firewall.</p>
-<p>&#160;</p>
-<p><span><b>37</b></span></p>
-<p id="page_38"><span><b>Network Zones</b></span></p>
-<p> <b>Intranet (Private Network) - </b>This Is A Network Of Trusted Hosts Owned And Controlled By </p>
-<p>The Organization. </p>
-<p> <b>Extranet -</b> This Is A Network Of Semi-Trusted Hosts Typically Representing Business </p>
-<p>Parties, Suppliers Or Customers.</p>
-<p> <b>Internet/Guest -</b> This Is A Zone Permitting Anonymous Access By Untrusted Hosts Over </p>
-<p>The Internet.</p>
-<p><b>Demilitarized Zones (Dmzs) -</b> The Most Important Distinction Between Different Security Zones Is Whether A Host Is Internet-Facing.</p>
-<p>An Internet-Facing Host Accepts Inbound Connections From And Makes Connections To Hosts On The Internet.</p>
-<p>Such Hosts Are Placed In A Dmz (Perimeter Or Edge Network). In A Dmz, External Clients Are Allowed To Access Data On Private Systems Such As Web Servers Without Compromising The Security Of The Internal Network As A Whole.</p>
-<p><b>Triple-Homed Firewall -</b> A Dmz Can Also Be Established Using One Router/Firewall Appliance With Three Network Interfaces, Referred To As Triple-Homed.</p>
-<p> One Interface Is The Dmz </p>
-<p> The Second Is The Public One </p>
-<p> The Third Connects To The Lan</p>
-<p><b>East-West Traffic -</b> Traffic That Goes To And From A Data Center Is Referred To As <b>North-South</b>. This Traffic Represents Clients Outside The Data Center Making Requests.</p>
-<p>However In Data Centers That Support Cloud Services, Most Traffic Is Actually Between Servers Within That Data Center And This Traffic Is Referred To As <b>East-West</b> Traffic.</p>
-<p><b>Zero Trust - </b>This Is Based On The Idea That Perimeter Security Is Unlikely To Be Robust Enough. As Such In A Zero Trust Model, Continuous Authentication And Conditional Access Are Used To Mitigate Threats.</p>
-<p>Zero Trust Also Uses A Technique Called <b>Microsegmentation</b>. This Is A Security Process That Is Capable Of Applying Policies To A Single Node As Though It Was In A Zone Of Its Own.</p>
-<p>&#160;</p>
-<p><span><b>5.3  Device Placement &amp; Attributes</b></span></p>
-<p>&#160;</p>
-<p>The process of choosing the type and placement of security controls to ensure the goals of the CIA triad and compliance with any framework requirements.</p>
-<p>The selection of effective controls is governed by the principle of defense in depth. </p>
-<p>&#160;</p>
-<p><span><b>38</b></span></p>
-<p id="page_39"> <b>Preventive Controls  -</b> Are often placed at the border of a network segment or zone. </p>
-<p>Preventive controls such as firewalls enforce security policies on traffic entering and </p>
-<p>exiting the segment, ensuring confidentiality and integrity. A load balancer control </p>
-<p>ensures high availability for access to the zone.</p>
-<p> <b>Detective Controls  -</b> Might be placed within the perimeter to monitor traffic exchanged </p>
-<p>between hosts within the segment. This provides alerting of malicious traffic that has </p>
-<p>evaded perimeter controls.</p>
-<p> <b>Preventive, Detective &amp; Corrective Controls  -</b> Might be installed on hosts as a layer of </p>
-<p>endpoint protection in addition to the network infrastructure controls.</p>
-<p><img src="../Images/index-39_1.png" alt=""/></p>
-<p>&#160;</p>
-<p>Attributes determine the precise way in which a device can be placed within the network topology</p>
-<p>A <b>passive security control</b> is one that does not require any sort of client or agent configuration or host data transfer to operate. </p>
-<p>An <b>active security control</b> that performs scanning must be configured with credentials and access permissions and exchange data with target hosts. An active control that performs filtering requires hosts to be explicitly configured to use the control. This might mean installing agent software on the host, or configuring network settings to use the control as a gateway.</p>
-<p>&#160;</p>
-<p><span><b>39</b></span></p>
-<p id="page_40"><b>Inline vs Monitor</b></p>
-<p>A device that is deployed inline becomes part of the cable path. No changes in the IP or routing topology are required. The device's interfaces are not configured with MAC or IP addresses.</p>
-<p><b>SPAN (Switched Port Analyzer)/Mirror Port - </b>This means that the sensor is attached to a specially configured monitor port on a switch that receives copies of frames addressed to nominated access ports (or all the other ports). This method is not completely reliable. Frames with errors will not be mirrored and frames may be dropped under heavy load</p>
-<p><b>Test Access Point (TAP) - </b>This is a box with ports for incoming and outgoing network cabling and an inductor or optical splitter that physically copies the signal from the cabling to a monitor port. Unlike SPAN every single frame is copied or received.</p>
-<p><img src="../Images/index-40_1.png" alt=""/></p>
-<p>&#160;</p>
-<p><b>Fail-Open versus Fail-Closed</b></p>
-<p>A security device could enter a failure state for a number of reasons. There could be a power or hardware fault, an irreconcilable policy violation, or a configuration error. Hardware failure can be caused by power surges, overheating, and physical damage. </p>
-<p>Software failure can occur because of bugs, security vulnerabilities, and compatibility issues. Configuration issues can be caused by human errors such as inattention, fatigue, or lack of training.</p>
-<p>When a device fails, it can be configured to fail-open or fail-closed</p>
-<p> Fail-open means that network or host access is preserved. This mode prioritizes </p>
-<p>availability over confidentiality and integrity.</p>
-<p> Fail-closed means that access is blocked. This mode prioritizes confidentiality and </p>
-<p>integrity over availability.</p>
-<p>&#160;</p>
-<p><span><b>40</b></span></p>
-<p id="page_41"><span><b>5.4  Device Placement &amp; Attributes</b></span></p>
-<p>&#160;</p>
-<p><b>Man-In-The-Middle &amp; Layer 2 Attacks - </b>Most Attacks At Layer 1 And 2 Of The Osi Model Are Typically Focused On Information Gathering Through Network Mapping And Eavesdropping.</p>
-<p>A MITM can also be performed on this layer due to the lack of security.</p>
-<p><b>MAC cloning</b> or <b>MACaddress spoofing -</b> Changes the hardware address of an adapter to an arbitrary one either by overriding the original address in software via os commands or with the use of packet crafting software.</p>
-<p><b>Arp Poisoning Attack - </b>Arp poisoning attack uses a packet crafter such as ettercap to broadcast unsolicited arp reply packets.</p>
-<p>Because arp has no security mechanism, the receiving devices trust this communication and update their mac:ip address cache table with the spoofed address.</p>
-<p><b>MAC flooding attacks - </b>Where arp poisoning is directed at hosts, mac flooding is used to attack a switch.</p>
-<p>The idea here is to exhaust the memory used to store the switch's mac address table which is used by the switch to determine which port to use to forward unicast traffic to its correct destination.</p>
-<p>Overwhelming the table can cause the switch to stop trying to apply mac-based forwarding and simply flood unicast traffic out of all ports.</p>
-<p>&#160;</p>
-<p><span><b>Router / Switch Security</b></span>                    arriving on access ports to ensure that </p>
-<p> <b>Physical Port Security - </b>Access to               address. with dhcp snooping, only dhcp a host is not trying to spoof its mac </p>
-<p>&#160;</p>
-<p>physical switch ports and hardware              messages from ports configured as should be restricted to authorized trusted are allowed. staff by using a secure server room or </p>
-<p>lockable hardware cabinets.                   <b>Network Access Control - </b>Nac products </p>
-<p>&#160;</p>
-<p> <b>Mac Limiting/Filtering - </b>Configuring             to allow admins to devise policies or can extend the scope of authentication mac filtering on a switch means defining          profiles describing a minimum security which mac addresses are allowed to configuration that devices must meet connect to a particular port by creating to be granted network access. This is </p>
-<p>a list of valid mac addresses. mac                 called a health policy. limiting involves specifying a limit to the </p>
-<p>number of permitted addresses that can       <b>Route Security - </b>A successful attack </p>
-<p>connect to a port.                                 against route security enables the </p>
-<p>&#160;</p>
-<p> <b>Dhcp Snooping - </b>Dynamic host                intended destination. routes between attacker to redirect traffic from its configuration protocol is one that allows          networks and subnets can be a server to assign an ip address to a configured manually, but most routers client when it connects to a network. automatically discover routes by </p>
-<p>dhcp snooping inspects this traffic                communicating with each other.</p>
-<p>&#160;</p>
-<p><span><b>41</b></span></p>
-<p id="page_42"><span><b>routing is subject to numerous vulnerabilities</b></span></p>
-<p> <b>Spoofed Routing Information (Route Injection) - </b>T raffic is misdirected to a monitoring </p>
-<p>port (sniffing) or continuously looped around the network causing dos.</p>
-<p> <b>Source Routing - </b>This uses an option in the ip header to pre-determine the route a </p>
-<p>packet will take through the network. This can be used to spoof ip addresses and bypass </p>
-<p>router/firewall filters.</p>
-<p> <b>Software Exploits In The Underlying Operating System - </b>Cisco devices typically use the </p>
-<p>internetwork operating system (ios) which suffer from fewer exploitable vulnerabilities </p>
-<p>than full network operating systems.</p>
-<p>&#160;</p>
-<p><span><b>5.5  Routing &amp; Switching Protocols</b></span></p>
-<p>&#160;</p>
-<p>Layer 3 Forwarding Or Routing Occurs Between Both Logically And Physically Defined Networks. A Single Network Divided Into Multiple Logical Broadcast Domains Is Said To Be Subnetted.</p>
-<p>At Layer 3, Nodes Are Identified By Ip Addresses.</p>
-<p><b>Address Resolution Protocol (Arp) - </b>This Maps A Mac Address To An Ip Address.</p>
-<p>Normally A Device That Needs To Send A Packet To An Ip Address But Does Not Know The Receiving Device's Mac Address Broadcasts Will Broadcast An Arp Request Packet And The Device With The Matching Ip Responds With An Arp Reply.</p>
-<p><img src="../Images/index-42_1.png" alt=""/></p>
-<p>&#160;</p>
-<p><span><b>42</b></span></p>
-<p id="page_43">Internet Protocol (Ip)</p>
-<p>This Provides The Addressing Mechanism For Logical Networks And Subnets.</p>
-<p><b>172.16.1.101/16</b></p>
-<p>The /16 Prefix Indicates That The First Half Of The Address (172.16.0.0) Is The Network Id While The Remainder Uniquely Identifies A Host On That Network. Networks Also Use 128-Bit Ipv6 Addressing.</p>
-<p>&#160;</p>
-<p><b>2001:Db8::Abc:0:Def0:1234</b>                 Some Common Routing Protocols Include</p>
-<p>The First 64-Bits Contain Network               Border Gateway Protocol (Bgp) </p>
-<p>&#160;</p>
-<p>Information While The Last Are Fixed As The     Open Shortest Path First (Ospf) Host's Interface Id.</p>
-<p>&#160;</p>
-<p>A Route To A Network Can Be Configured         Protocol (Eigrp)  Enhanced Interior Gateway Routing Statically But Most Networks Use Routing </p>
-<p>Protocols To Transmit New And Updated        Routing Information Protocol (Rip) Routes Between Routers.</p>
-<p>&#160;</p>
-<p><span><b>5.6  Using Secure Protocols</b></span></p>
-<p>&#160;</p>
+  <h1>Section 5 - <span class="section">Secure Enterprise Network Architecture</span></h1>
+  <h2>5.1  Secure Network Designs</h2>
+  <p><b>Switches</b> - forward frames between nodes in a cabled network.</p>
+  <p>They work at layer 2 of the OSI model and make forwarding messages based on the hardware or media access control (MAC) address of attached nodes.</p>
+  <p>They can establish network segments that either map directly to the underlying cabling or to logical segments created in the switch configuration as virtual lans (VLAN)</p>
+  <p><b>Wireless access points</b> - provide a bridge between a cabled network and wireless clients or stations. They also work at layer 2 of the OSI model.</p>
+  <p><b>Load balancers</b> - distribute traffic between network segments or servers to optimize performance. They work at layer 4 of the OSI model or higher</p>
+  <p><b>Routers</b> - forward packets around an internetwork, making forward decisions based on IP Addresses. They work at layer 3 of the OSI model. They can apply logical IP subnet addresses to segments within a network.</p>
+  <p><b>Firewalls</b> - they apply an access control list (ACL) to filter traffic passing in or out of a network segment. They can work at layer 3 of the OSI model or higher.</p>
+  <p><b>Domain name system (DNS) servers</b> - host name records and perform name resolution to allow applications and users to address hosts and services using fully qualified domain names (FQDNs) rather than IP Addresses.</p>
+  <p>DNS works at layer 7 of the OSI model.</p>
+  <p><img src="../Images/index-37_2.png" alt="" /></p>
+  <h2>5.2  Network Segmentation, Topology &amp; DMZs</h2>
+  <p>A Network Segment Is One Where All The Hosts Attached To The Segment Can Use Local (Layer 2) Forwarding To Communicate Freely With One Another.</p>
+  <p><span class="keyword">Segregation</span> Means That The Hosts In One Segment Are Restricted In The Way They Communicate With Hosts In Other Segments.</p>
+  <p><span class="keyword">Freely</span> Means That No Network Appliances Or Policies Are Preventing Communications.</p>
+  <p>A Network Topology Is A Description Of How A Computer Network Is Physically Or Logically Organized.</p>
+  <p>The Main Building Block Of A Topology Is A Zone Which Is An Area Of The Network Where The Security Configuration Is The Same For All Hosts Within It.</p>
+  <p>Zones Can Be Segregated With VLANs While The Traffic Between Them Can Be Controlled Using A Security Device, Typically A Firewall.</p>
+  <h3>Network Zones</h3>
+  <ul>
+    <li><span class="bullets">Intranet (Private Network)</span> - This Is A Network Of Trusted Hosts Owned And Controlled By The Organization.</li>
+    <li><span class="bullets">Extranet</span> - This Is A Network Of Semi-Trusted Hosts Typically Representing Business Parties, Suppliers Or Customers.</li>
+    <li><span class="bullets">Internet/Guest</span> - This Is A Zone Permitting Anonymous Access By Untrusted Hosts Over The Internet.</li>
+  </ul>
+  <p><b>Demilitarized Zones (DMZs)</b> - The Most Important Distinction Between Different Security Zones Is Whether A Host Is Internet-Facing.</p>
+  <p>An Internet-Facing Host Accepts Inbound Connections From And Makes Connections To Hosts On The Internet.</p>
+  <p>Such Hosts Are Placed In A DMZ (Perimeter Or Edge Network). In A DMZ, External Clients Are Allowed To Access Data On Private Systems Such As Web Servers Without Compromising The Security Of The Internal Network As A Whole.</p>
+  <p><b>Triple-Homed Firewall</b> - A DMZ Can Also Be Established Using One Router/Firewall Appliance With Three Network Interfaces, Referred To As Triple-Homed.</p>
+  <ul>
+    <li>One Interface Is The Dmz</li>
+    <li>The Second Is The Public One</li>
+    <li>The Third Connects To The Lan</li>
+  </ul>
+  <p><b>East-West Traffic</b> - Traffic That Goes To And From A Data Center Is Referred To As <span class="keyword">North-South</span>. This Traffic Represents Clients Outside The Data Center Making Requests.</p>
+  <p>However In Data Centers That Support Cloud Services, Most Traffic Is Actually Between Servers Within That Data Center And This Traffic Is Referred To As <span class="keyword">East-West</span> Traffic.</p>
+  <p><b>Zero Trust</b> - This Is Based On The Idea That Perimeter Security Is Unlikely To Be Robust Enough. As Such In A Zero Trust Model, Continuous Authentication And Conditional Access Are Used To Mitigate Threats.</p>
+  <p>Zero Trust Also Uses A Technique Called <span class="keyword">Microsegmentation</span>. This Is A Security Process That Is Capable Of Applying Policies To A Single Node As Though It Was In A Zone Of Its Own.</p>
+  <h2>5.3  Device Placement &amp; Attributes</h2>
+  <p>The process of choosing the type and placement of security controls to ensure the goals of the CIA triad and compliance with any framework requirements.</p>
+  <p>The selection of effective controls is governed by the principle of defense in depth. </p>
+  <ul>
+    <li><span class="bullets">Preventive Controls</span> - Are often placed at the border of a network segment or zone. Preventive controls such as firewalls enforce security policies on traffic entering and exiting the segment, ensuring confidentiality and integrity. A load balancer control ensures high availability for access to the zone.</li>
+    <li><span class="bullets">Detective Controls</span> - Might be placed within the perimeter to monitor traffic exchanged between hosts within the segment. This provides alerting of malicious traffic that has evaded perimeter controls.</li>
+    <li><span class="bullets">Preventive, Detective &amp; Corrective Controls</span> - Might be installed on hosts as a layer of endpoint protection in addition to the network infrastructure controls.</li>
+  </ul>
+  <p><img src="../Images/index-39_1.png" alt=""/></p>
+  <p>Attributes determine the precise way in which a device can be placed within the network topology</p>
+  <p>A <b>passive security control</b> is one that does not require any sort of client or agent configuration or host data transfer to operate. </p>
+  <p>An <b>active security control</b> that performs scanning must be configured with credentials and access permissions and exchange data with target hosts. An active control that performs filtering requires hosts to be explicitly configured to use the control. This might mean installing agent software on the host, or configuring network settings to use the control as a gateway.</p>
+  <p><b>Inline vs Monitor</b></p>
+  <p>A device that is deployed inline becomes part of the cable path. No changes in the IP or routing topology are required. The device's interfaces are not configured with MAC or IP Addresses.</p>
+  <p><b>SPAN (Switched Port Analyzer)/Mirror Port - </b>This means that the sensor is attached to a specially configured monitor port on a switch that receives copies of frames addressed to nominated access ports (or all the other ports). This method is not completely reliable. Frames with errors will not be mirrored and frames may be dropped under heavy load</p>
+  <p><b>Test Access Point (TAP) - </b>This is a box with ports for incoming and outgoing network cabling and an inductor or optical splitter that physically copies the signal from the cabling to a monitor port. Unlike SPAN every single frame is copied or received.</p>
+  <p><img src="../Images/index-40_1.png" alt=""/></p>
+  <h3>Fail-Open versus Fail-Closed</h3>
+  <p>A security device could enter a failure state for a number of reasons. There could be a power or hardware fault, an irreconcilable policy violation, or a configuration error. Hardware failure can be caused by power surges, overheating, and physical damage. </p>
+  <p>Software failure can occur because of bugs, security vulnerabilities, and compatibility issues. Configuration issues can be caused by human errors such as inattention, fatigue, or lack of training.</p>
+  <p>When a device fails, it can be configured to fail-open or fail-closed</p>
+  <ul>
+    <li> Fail-open means that network or host access is preserved. This mode prioritizes availability over confidentiality and integrity.</li>
+    <li> Fail-closed means that access is blocked. This mode prioritizes confidentiality and integrity over availability.</li>
+  </ul>
+  <h2>5.4  Device Placement &amp; Attributes</h2>
+  <p><b>Man-In-The-Middle &amp; Layer 2 Attacks</b> - Most Attacks At Layer 1 And 2 Of The OSI Model Are Typically Focused On Information Gathering Through Network Mapping And Eavesdropping.</p>
+  <p>A MITM can also be performed on this layer due to the lack of security.</p>
+  <p><span class="keyword">MAC cloning</span> or <span class="keyword">MAC address spoofing</span> - Changes the hardware address of an adapter to an arbitrary one either by overriding the original address in software via os commands or with the use of packet crafting software.</p>
+  <p><b>ARP Poisoning Attack - </b>ARP poisoning attack uses a packet crafter such as ettercap to broadcast unsolicited ARP reply packets.</p>
+  <p>Because ARP has no security mechanism, the receiving devices trust this communication and update their MAC:IP Address cache table with the spoofed address.</p>
+  <p><b>MAC flooding attacks - </b>Where ARP poisoning is directed at hosts, MAC flooding is used to attack a switch.</p>
+  <p>The idea here is to exhaust the memory used to store the switch's MAC address table which is used by the switch to determine which port to use to forward unicast traffic to its correct destination.</p>
+  <p>Overwhelming the table can cause the switch to stop trying to apply MAC-based forwarding and simply flood unicast traffic out of all ports.</p>
+  <h3>Router / Switch Security</h3>
+  <ul>
+    <li><span class="bullets">Physical Port Security</span> - Access to physical switch ports and hardware should be restricted to authorized staff by using a secure server room or lockable hardware cabinets.</li>
+    <li><span class="bullets">Mac Limiting/Filtering</span> - Configuring MAC Filtering on a switch means defining which MAC addresses are allowed to connect to a particular port by creating a list of valid MAC addresses. MAC Limiting involves specifying a limit to the number of permitted addresses that can connect to a port.</li>
+    <li><span class="bullets">DHCP Snooping</span> - Dynamic Host Configuration Protocol is one that allows a server to assign an IP Address to a client when it connects to a network. DHCP Snooping inspects this traffic arriving on access ports to ensure that a host is not trying to spoof its MAC address. With DHCP Snooping, only DHCP messages from ports configured as trusted are allowed.</li>
+    <li><span class="bullets">Network Access Control</span> - NAC products can extend the scope of authentication to allow admins to devise policies or profiles describing a minimum security configuration that devices must meet to be granted network access. This is called a health policy.</li>
+    <li><span class="bullets">Route Security</span> - A successful attack against Route Security enables the attacker to redirect traffic from its intended destination. routes between networks and subnets can be configured manually, but most routers automatically discover routes by communicating with each other.</li>
+  </ul>
+  <h3>Routing is subject to numerous vulnerabilities</h3>
+  <ul>
+    <li><span class="bullets">Spoofed Routing Information (Route Injection)</span> - Traffic is misdirected to a monitoring port (sniffing) or continuously looped around the network causing DOS.</li>
+    <li><span class="bullets">Source Routing</span> - This uses an option in the IP header to pre-determine the route a packet will take through the network. This can be used to spoof IP Addresses and bypass router/firewall filters.</li>
+    <li><span class="bullets">Software Exploits In The Underlying Operating System</span> - Cisco devices typically use the Internetwork Operating System (IOS) which suffer from fewer exploitable vulnerabilities than full network operating systems.</li>
+  </ul>
+  <h2>5.5  Routing &amp; Switching Protocols</h2>
+  <p>Layer 3 Forwarding Or Routing Occurs Between Both Logically And Physically Defined Networks. A Single Network Divided Into Multiple Logical Broadcast Domains Is Said To Be Subnetted.</p>
+  <p>At Layer 3, Nodes Are Identified By IP Addresses.</p>
+  <p><b>Address Resolution Protocol (ARP)</b> - This Maps A MAC Address To An IP Address.</p>
+  <p>Normally A Device That Needs To Send A Packet To An IP Address But Does Not Know The Receiving Device's MAC Address Will Broadcast An ARP Request Packet And The Device With The Matching IP Responds With An ARP Reply.</p>
+  <p><img src="../Images/index-42_1.png" alt=""/></p>
+  <h3>Internet Protocol (IP)</h3>
+  <p>This Provides The Addressing Mechanism For Logical Networks And Subnets.</p>
+  <p><span class="keyword">172.16.1.101/16</span></p>
+  <p>The /16 Prefix Indicates That The First Half Of The Address (172.16.0.0) Is The Network ID While The Remainder Uniquely Identifies A Host On That Network. Networks Also Use 128-Bit IPv6 Addressing.</p>
+  <p><span class="keyword">2001:Db8::Abc:0:Def0:1234</span></p>
+  <p>The First 64-Bits Contain Network Information While The Last Are Fixed As The Host's Interface Id.</p>
+  <p>A Route To A Network Can Be Configured Statically But Most Networks Use Routing Protocols To Transmit New And Updated Routes Between Routers.</p>
+  <P>Some Common Routing Protocols Include:</P>
+  <ul>
+    <li>Border Gateway Protocol (BGP)</li>
+    <li>Open Shortest Path First (OSPF)</li>
+    <li>Enhanced Interior Gateway Routing Protocol (EIGRP)</li>
+    <li>Routing Information Protocol (RIP)</li>
+  </ul>
+  <h2>5.6  Using Secure Protocols</h2>
 <p>Secure protocols have places in many parts of your network and infrastructure. Security professionals need to be able to recommend the right protocol for each of the following scenarios:</p>
 <p> Voice and video rely on a number of common protocols. Videoconferencing tools often </p>
 <p>rely on HTTPS, but secure versions of the Session Initiation Protocol (SIP) and the Real-</p>
@@ -197,7 +156,7 @@
 <p>well as data flow reviews all being part of best practices to secure subscription </p>
 <p>service traffic if options are available.</p>
 <p>&#160;</p>
-<p><span><b>5.7  Attack Surface</b></span></p>
+<h2>5.7  Attack Surface</h2>
 <p>&#160;</p>
 <p>The network attack surface refers to all the points at which a threat actor could gain access to hosts and services.</p>
 <p>Using the OSI model we can analyze the potential attack surface:</p>
@@ -218,7 +177,7 @@
 <p> Lack of documentation</p>
 <p> Over dependence on perimeter security</p>
 <p>&#160;</p>
-<p><span><b>5.8  Firewalls</b></span></p>
+<h2>5.8  Firewalls</h2>
 <p>&#160;</p>
 <p><b>Packet Filtering Firewalls -</b> These are the earliest type of firewalls and are configured by specifying a group of rules called an access control list (acl).</p>
 <p>Each rule defines a specific type of data packet and the appropriate action to take when a packet matches the rule. an action can either be to deny or to accept the packet.</p>
@@ -239,7 +198,7 @@
 <p><img src="../Images/index-46_1.png" alt=""/></p>
 <p>&#160;</p>
 <p><span><b>46</b></span></p>
-<p id="page_47"><span><b>5.9  Firewall Implementation</b></span></p>
+<h2>5.9  Firewall Implementation</h2>
 <p>&#160;</p>
 <p><b>Firewall Appliances -</b> This Is A Stand-Alone Firewall Deployed To Monitor Traffic Passing Into And Out Of A Network Zone. It Can Be Deployed In Two Ways:</p>
 <p> <b>Routed (Layer 3) - </b>The Firewall Performs Forwarding Between Subnets</p>
@@ -261,7 +220,7 @@
 <p><b>Reverse Proxy Servers -</b> These Provide For Protocol-Specific Inbound Traffic.</p>
 <p>A Reverse Proxy Can Be Deployed On The Network Edge And Configured To Listen For Client Requests From A Public Network</p>
 <p>&#160;</p>
-<p><span><b>5.10  Remote Access Architecture</b></span></p>
+<h2>5.10  Remote Access Architecture</h2>
 <p>&#160;</p>
 <p>Most Remote Access Is Implemented As A Virtual Private Network (Vpn) Running Over The Internet But It Can Be More Difficult To Ensure The Security Of Remote Workstations And Servers Than Those On The Lan. A Vpn Can Also Be Deployed In A Site-To-Site Model To Connect Two Or More Private Networks And Is Typically Configured To Operate Automatically</p>
 <p>&#160;</p>
@@ -270,9 +229,9 @@
 <p>Another Option Is Microsoft's Secure Sockets Tunneling Protocol (Sstp) Which Works By Tunneling Point-To-Point Protocol (Ppp) Layer 2 Frames Over A Tls Session.</p>
 <p><b>Internet Protocol Security (Ipsec) - </b>Tls Is Applied At The Application Level Either By Using A Separate Secure Port Or By Using Commands In The Application Protocol To Negotiate A Secure Connection.</p>
 <p>Ipsec Operates At The Network Layer (Layer 3) So It Can Operate Without Having To Configure Specific Application Support.</p>
-<p><b>Authentication Header (Ah) - </b>This Performs A Cryptographic Hash On The Whole Packet Including The Ip Header Plus A Shared Secret Key And Adds This Hmac In Its Header As Integrity Check Value (Icv)</p>
+<p><b>Authentication Header (Ah) - </b>This Performs A Cryptographic Hash On The Whole Packet Including The Ip Header Plus A Shared Secret Key And Adds This HMAC In Its Header As Integrity Check Value (Icv)</p>
 <p>The Recipient Performs The Same Function On The Packet And Key And Should Derive The Same Value To Confirm That The Packet Has Not Been Modified.</p>
-<p><b>Encapsulation Security Payload (Esp) - </b>This Provides Confidentiality And/Or Authentication And Integrity. It Can Be Used To Encrypt The Packet Rather Than Simply Calculating An Hmac.</p>
+<p><b>Encapsulation Security Payload (Esp) - </b>This Provides Confidentiality And/Or Authentication And Integrity. It Can Be Used To Encrypt The Packet Rather Than Simply Calculating An HMAC.</p>
 <p>Esp Attaches Three Fields To The Packet: A Header, A Trailer (Providing Padding For The Cryptographic Function) And An Icv.</p>
 <p><b>Ipsec Transport And Tunnel Modes -</b> Ipsec Can Be Used In Two Modes:</p>
 <p> <b>Transport Mode - </b>This Mode Is Used To Secure Communications Between Hosts On A </p>
@@ -298,7 +257,7 @@
 <p><b>Always-On Vpn - </b>This Means That The Computer Establishes The Vpn Whenever An Internet Connection Over A Trusted Network Is Detected, Using The User's Cached Credentials To Authenticate.</p>
 <p>When A Client Connected To A Remote Access Vpn Tries To Access Other Sites On The Internet, There Are Two Ways To Manage The Connection:</p>
 <p><b>Split Tunnel - </b>The Client Accesses The Internet Directly Using Its “Native” Ip Configuration And Dns Servers.</p>
-<p><b>Full Tunnel -</b> Internet Access Is Mediated By The Corporate Network, Which Will Alter The Client's Ip Address And Dns Servers And May Use A Proxy.</p>
+<p><b>Full Tunnel -</b> Internet Access Is Mediated By The Corporate Network, Which Will Alter The Client's IP Address And Dns Servers And May Use A Proxy.</p>
 <p>Full Tunnel Offers Better Security But The Network Address Translations And Dns Operations Required May Cause Problems With Some Websites Especially Cloud Services.</p>
 <p><b>Out-Of-Band Management -</b> Remote Management Methods Can Be Described As Either In-Band Or Out-Of-Band (Oob).</p>
 <p>&#160;</p>
