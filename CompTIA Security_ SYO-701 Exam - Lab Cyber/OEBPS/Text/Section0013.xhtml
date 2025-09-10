@@ -4,18 +4,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Section Title</title>
+  <title>Section 13 - Analyze Indicators of Malicious Activity</title>
   <link rel="stylesheet" type="text/css" href="../Styles/stylesheet.css"/>
 </head>
 
 <body>
-<p id="page_110"><span><b>SECTION 13 - </b></span></p>
-<p>&#160;</p>
-<p><span><b>ANALYZE INDICATORS OF </b></span></p>
-<p>&#160;</p>
-<p><span><b>MALICIOUS ACTIVITY</b></span></p>
-<p>&#160;</p>
-<p><span><b>13.1  Malware Classification</b></span></p>
+  <h1>Section 13 - <span class="section">Analyze Indicators of Malicious Activity</span></h1>
+  <h2>13.1  Malware Classification</h2>
 <p>&#160;</p>
 <p>Some Malware Classifications Such As Trojan, Virus And Worm Focus On The Vector Used By The Malware. The Vector Is The Method By Which The Malware Executes On A Computer And Potentially Spreads To Other Network Hosts.</p>
 <p>&#160;</p>
@@ -37,7 +32,7 @@
 <p> Ransomware</p>
 <p>&#160;</p>
 <p><span><b>110</b></span></p>
-<p id="page_111"><span><b>13.2  Computer Viruses</b></span></p>
+<h2>13.2  Computer Viruses</h2>
 <p>&#160;</p>
 <p>This Is A Type Of Malware Designed To Replicate And Spread From Computer To Computer Usually By “Infecting” Executable Applications Or Program Code.</p>
 <p>The Following Categories Describe Some Types Of Malware According To Vector:</p>
@@ -54,7 +49,7 @@
 <p>Microsoft Office Documents Or Pdf Documents With Javascript Enabled.</p>
 <p>The Term <b>Multipartite</b> Is Used For Viruses That Use Multiple Vectors And <b>Polymorphic</b> For Viruses That Can Dynamically Change Or Obfuscate Their Code To Evade Detection. Viruses Must Infect A Host File Or Media. An Infected File Can Be Distributed Through Any Normal Means - On A Disk, On A Network, A Download From A Website Or Email Attachment.</p>
 <p>&#160;</p>
-<p><span><b>13.3  Computer Worms &amp; Fileless Malware</b></span></p>
+<h2>13.3  Computer Worms &amp; Fileless Malware</h2>
 <p>&#160;</p>
 <p>Computer Worms - this is a memory resident malware that can run without user intervention and replicate over network resources. viruses need the user to perform an action but worms can execute by exploiting a vulnerability in a process and replicate themselves.</p>
 <p>Worms can rapidly consume network bandwidth as the worm replicates and they may be able to crash an operating system or server application. worms can also carry a payload that may perform some other malicious action.</p>
@@ -73,7 +68,7 @@
 <p>Executables To Evade Detection. This Means That The Malware Code Uses Legitimate </p>
 <p>System Scripting Tools Like Powershell To Execute Payload Actions.</p>
 <p>&#160;</p>
-<p><span><b>13.4  Spyware, Keyloggers, Rootkits, Backdoors, </b></span></p>
+<h2>13.4  Spyware, Keyloggers, Rootkits, Backdoors, </h2>
 <p><span><b>Ransomware &amp; Logic Bombs</b></span></p>
 <p>&#160;</p>
 <p><b>Spyware -</b> This is malware that can perform adware-like tracking but also monitor local application activity, take screenshots and activate recording devices.</p>
@@ -90,7 +85,7 @@
 <p id="page_113"><b>Ransomware -</b> This type of malware tries to extort money from the victim by encrypting the victim's files and demanding payment. ransomware uses payment methods such as wire transfer or cryptocurrency.</p>
 <p><b>Logic bombs -</b> Logic bombs are not always malware code. a typical example is a disgruntled admin who leaves a scripted trap that runs in the event his or her account is disabled or deleted. anti-malware software is unlikely to detect this kind of script and this type of trap is also referred to as a mine.</p>
 <p>&#160;</p>
-<p><span><b>13.5  Malware Indicators &amp; Process Analysis</b></span></p>
+<h2>13.5  Malware Indicators &amp; Process Analysis</h2>
 <p>&#160;</p>
 <p><span><b>There Are Multiple Indicators Of Malware:</b></span></p>
 <p> Antivirus Notifications </p>
@@ -100,7 +95,7 @@
 <p>Because shellcode is easy to obfuscate, it can easily evade signature-based a-v products. Threat hunting and security monitoring must use behavioral-based techniques to identify infections.</p>
 <p>Along with observing how a process interacts with the file system, network activity is one of the most reliable ways to identify malware.</p>
 <p>&#160;</p>
-<p><span><b>13.6  Password Attacks</b></span></p>
+<h2>13.6  Password Attacks</h2>
 <p>&#160;</p>
 <p>Plain text/ unencrypted attacks - an attack that exploits unencrypted password storage such as those used in protocols like http, pap and telnet.</p>
 <p><b>Online attacks -</b> The threat actor interacts directly with the authentication service using either a database of known passwords or a list of passwords that have been cracked online. This attack can be prevented with the use of strong passwords and restricting the number of login attempts within a specified period of time.</p>
@@ -118,7 +113,7 @@
 <p> <b>Password Vault -</b>Software based password manager typically using a cloud service to </p>
 <p>allow access from any device.</p>
 <p>&#160;</p>
-<p><span><b>13.7  Tactics, Techniques &amp; Procedures</b></span></p>
+<h2>13.7  Tactics, Techniques &amp; Procedures</h2>
 <p>&#160;</p>
 <p>A Tactic, Technique Or Procedure (Ttp) Is A Generalized Statement Of Adversary Behavior. Ttps Categorize Behaviors In Terms Of Campaign Strategy And Approach (<b>Tactics</b>), Generalized Attack Vectors ( <b>Techniques</b>) And Specific Intrusion Tools And Methods (<b>Procedures</b>).</p>
 <p>An <b>Indicator Of Compromise</b> (Ioc) Is A Residual Sign That An Asset Or Network Has Been Successfully Attacked. In Other Words, An Ioc Is Evidence Of A Ttp.</p>
@@ -133,7 +128,7 @@
 <p> Unknown Port And Protocol Usage          Indicator Of Attack (Ioa) Is Sometimes Also An Attack That Was Successful. The Term  Excessive Bandwidth Usage  <span>Used For Evidence Of An Intrusion Attempt </span></p>
 <p>In Progress.</p>
 <p>&#160;</p>
-<p><span><b>13.8   Privilege Escalation &amp; Error Handling</b></span></p>
+<h2>13.8   Privilege Escalation &amp; Error Handling</h2>
 <p>&#160;</p>
 <p><b>Application Attack -</b> This Attacks A Vulnerability In An Os Or Application And A Vulnerability Refers To A Design Flaw That Can Cause The Application Security System To Be Circumvented Or To Crash. The Purpose Of This Attack Is To Allow The Attacker To Run His/ Her Own Code On The System And This Is Referred To As <b>Arbitrary Code Execution</b>.</p>
 <p>Where The Code Is Transmitted From One Computer To Another, This Is Referred To As Remote Code Execution.</p>
@@ -146,7 +141,7 @@
 <p><b>Improper Input Handling -</b> Good Programming Practice Dictates That Any Input Accepted By A Program Or Software Must Be Tested To Ensure That It Is Valid. Most Application Attacks Work By Passing Invalid Or Maliciously Constructed Data To The Vulnerable Process.</p>
 <p>&#160;</p>
 <p><span><b>115</b></span></p>
-<p id="page_116"><span><b>13.9   Uniform Resource Locator Analysis &amp; </b></span></p>
+<h2>13.9   Uniform Resource Locator Analysis &amp; </h2>
 <p><span><b>Percent Encoding</b></span></p>
 <p>&#160;</p>
 <p><b>Uniform Resource Locator Analysis - </b>Besides Pointing To The Host Or Service Location On The Internet, A Url Can Encode Some Action Or Data To Submit To The Server Host. This Is A Common Vector For Malicious Activity.</p>
@@ -171,8 +166,7 @@
 <p><img src="../Images/index-117_1.png" alt=""/></p>
 <p>&#160;</p>
 <p><span><b>117</b></span></p>
-<p id="page_118"><span><b>13.10   Api &amp; Replay Attacks, Cross-Site Request </b></span></p>
-<p><span><b>Forgery, Clickjacking &amp; Ssl Strip Attacks</b></span></p>
+<h2>13.10  Api &amp; Replay Attacks, Cross-Site Request Forgery, Clickjacking &amp; Ssl Strip Attacks</h2>
 <p>&#160;</p>
 <p>Application Programming Interface Attacks - Web Applications And Cloud Services Implement Application Program Interfaces (Apis) To Allow Consumers To Automate Services.</p>
 <p>If The Api Isn't Secure, Threat Actors Can Easily Take Advantage Of It To Compromise The Services And Data Stored On The Web Application. Api Calls Over Plain Http Are Not Secure And Could Easily Be Modified By A Third Party.</p>
@@ -202,7 +196,7 @@
 <p>When A Client Requests An Http Site That Redirects To An Https Site In An Unsafe Way, The Sslstrip Utility Proxies The Request And Response, Serving The Client The Http Site With An Unencrypted Login Form Thus Capturing Any User Credentials.</p>
 <p>&#160;</p>
 <p><span><b>119</b></span></p>
-<p id="page_120"><span><b>13.11   Injection Attacks</b></span></p>
+<h2>13.11   Injection Attacks</h2>
 <p>&#160;</p>
 <p>XML and LDAP injection attacks - an injection attack can target other types of protocols where the application takes user input to construct a query, filter or document.</p>
 <p>Extensible markup language (xml) injection - xml is used by apps for authentication and authorizations and for other types of data exchange and uploading.</p>
