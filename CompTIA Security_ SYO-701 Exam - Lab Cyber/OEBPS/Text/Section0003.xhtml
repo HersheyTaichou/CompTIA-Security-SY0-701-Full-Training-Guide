@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>1.2 Cybersecurity Framework</title>
+  <title>Section 3 - Explain Cryptographic Solutions</title>
   <link rel="stylesheet" type="text/css" href="../Styles/stylesheet.css"/>
 </head>
 
@@ -99,70 +99,84 @@
     <li><span class="bullets">Hierarchical (Intermediate CA)</span> - A Single CA Called The Root Issues Certificates To Several Intermediate CAs. The Intermediate CAs Issue Certificates To Subjects (Leaf Or End Entities). Each Leaf Certificate Can Be Traced Back To The Root CA Along The Certification Path And This Is Referred To As A Certificate Chain Or Chain Of Trust. The Root Is Still A Single Point Of Failure But It Can Be Taken Offline As Most Of The Regular CA Activities Are Handled By The Intermediate CA Servers.</li>
     <li><span class="bullets">Online Versus Offline CAs</span> - An online CA is one that is available to accept and process certificate signing requests and management tasks. Because of the high risk posed by a compromised root CA, a secure configuration will involve making the root an offline CA meaning it is disconnected from any network and only brought back online to add or update intermediate CAs.</li>
   </ul>
-  <img src="../Images/index-23_2.png" alt="An image showing the certificate chain for www.globalsign.com" />
-  <p><b>Registration authorities and CSRs</b> - registration is the process by which end users create an account with the CA and become authorized to request certificates. 
-  <p>When A Subject Wants To Obtain A Certificate, It Completes A Certificate Signing Request (CSR) And Submits It To The CA.</p>
-  <p>The CA Reviews The Certificate And Checks That The Information Is Valid. If The Request Is Accepted, The CA Signs The Certificate And Sends It To The Subject.</p>
+  <div class="row">
+    <img src="../Images/index-23_2.png" alt="An image showing the certificate chain for www.globalsign.com" class="column"/>
+    <p><b>Registration authorities and CSRs</b> - registration is the process by which end users create an account with the CA and become authorized to request certificates. </p>
+    <p>When A Subject Wants To Obtain A Certificate, It Completes A Certificate Signing Request (CSR) And Submits It To The CA.</p>
+    <p>The CA Reviews The Certificate And Checks That The Information Is Valid. If The Request Is Accepted, The CA Signs The Certificate And Sends It To The Subject.</p>
+  </div>
   <h2>3.7  Digital Certificates</h2>
   <p>A Digital Certificate Is Essentially A Wrapper For A Subject's Public Key. As Well As The Public Key, It Contains Information About The Subject And The Certificate's Issuer.</p>
-  <img src="../Images/index-24_2.png" alt="" class="image"/>
-  <table>
-    <tr>
-      <th>Field</th>
-      <th>Usage</th>
-    </tr>
-    <tr>
-      <td class="tdleft">Serial Number</td>
-      <td>A number uniquely identifying the certificate within the domain of its CA.</td>
-    </tr>
-    <tr>
-      <td class="tdleft">Signature algorithm</td>
-      <td>The algorithm used by the CA to sign the certificate.</td>
-    </tr>
-    <tr>
-      <td class="tdleft">Issuer</td>
-      <td>The name of the CA.</td>
-    </tr>
-    <tr>
-      <td class="tdleft">Valid from/to</td>
-      <td>Date and time during which the certificate is valid.</td>
-    </tr>
-    <tr>
-      <td class="tdleft">Subject</td>
-      <td>The name of the certificate holder, expressed as a distinguished name (DN). Within this, the common name (CN) part should usually match either the fully qualified domain name (FQDN) of the server or a user email address.</td>
-    </tr>
-    <tr>
-      <td class="tdleft">Public key</td>
-      <td>Public key Public key and algorithm used by the certificate holder.</td>
-    </tr>
-    <tr>
-      <td class="tdleft">Extensions</td>
-      <td>V3 certificates can be defined with extended attributes, such as friendly subject or issuer names, contact email addresses, and intended key usage.</td>
-    </tr>
-    <tr>
-      <td class="tdleft">Subject Alternative Name</td>
-      <td>This extension field is the preferred mechanism to identify the DNS name or names by which a host is identified.</td>
-    </tr>
-  </table>
-  <p><img src="../Images/index-24_4.png" alt="" class="fright"/></p>
-  <p>When Certificates Were First Introduced, The Common Name (CN) Attribute Was Used To Identify The FQDN By Which The Server Is Accessed.</p>
-  <p>The <span class="keyword">Subject Alternative Name (SAN)</span> Extension Field Is Structured To Represent Different Types Of Identifiers Including Domain Names.</p>
-  <p>A <span class="keyword">Wildcard</span> Domain Such As *.Comptia.Org Means That The Certificate Issued To The Parent Domain Will Be Accepted As Valid For All Subdomains.</p>
-  <h3>EKU Field - Can Have The Following Values</h3>
-  <ul>
-    <li>Server Authentication</li>
-    <li>Client Authentication</li>
-    <li>Code Signing</li>
-    <li>Email Protection</li>
-  </ul>
-  <h3>Other Certificate Types Include:</h3>
-  <ul>
-    <li>Machine/Computer Certificates</li>
-    <li>Email/User Certificates</li>
-    <li>Code Signing Certificates</li>
-    <li>Root Certificate</li>
-    <li>Self-Signed Certificates</li>
-  </ul>
+  <div class="row">
+    <div class="column">
+      <img src="../Images/index-24_2.png" alt="An example certificate as shown in Windows, on the Details tab, with the Public Key displayed" />
+      <p>When Certificates Were First Introduced, The Common Name (CN) Attribute Was Used To Identify The FQDN By Which The Server Is Accessed.</p>
+      <p>The <span class="keyword">Subject Alternative Name (SAN)</span> Extension Field Is Structured To Represent Different Types Of Identifiers Including Domain Names.</p>
+      <p>A <span class="keyword">Wildcard</span> Domain Such As *.Comptia.Org Means That The Certificate Issued To The Parent Domain Will Be Accepted As Valid For All Subdomains.</p>
+    </div>
+    <div class="column">
+      <table>
+        <tr>
+          <th>Field</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td class="tdleft">Serial Number</td>
+          <td>A number uniquely identifying the certificate within the domain of its CA.</td>
+        </tr>
+        <tr>
+          <td class="tdleft">Signature algorithm</td>
+          <td>The algorithm used by the CA to sign the certificate.</td>
+        </tr>
+        <tr>
+          <td class="tdleft">Issuer</td>
+          <td>The name of the CA.</td>
+        </tr>
+        <tr>
+          <td class="tdleft">Valid from/to</td>
+          <td>Date and time during which the certificate is valid.</td>
+        </tr>
+        <tr>
+          <td class="tdleft">Subject</td>
+          <td>The name of the certificate holder, expressed as a distinguished name (DN). Within this, the common name (CN) part should usually match either the fully qualified domain name (FQDN) of the server or a user email address.</td>
+        </tr>
+        <tr>
+          <td class="tdleft">Public key</td>
+          <td>Public key Public key and algorithm used by the certificate holder.</td>
+        </tr>
+        <tr>
+          <td class="tdleft">Extensions</td>
+          <td>V3 certificates can be defined with extended attributes, such as friendly subject or issuer names, contact email addresses, and intended key usage.</td>
+        </tr>
+        <tr>
+          <td class="tdleft">Subject Alternative Name</td>
+          <td>This extension field is the preferred mechanism to identify the DNS name or names by which a host is identified.</td>
+        </tr>
+      </table>
+      <p><img src="../Images/index-24_4.png" alt="" class="fright"/></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <h3>EKU Field - Can Have The Following Values</h3>
+      <ul>
+        <li>Server Authentication</li>
+        <li>Client Authentication</li>
+        <li>Code Signing</li>
+        <li>Email Protection</li>
+      </ul>
+    </div>
+    <div class="column">
+      <h3>Other Certificate Types Include:</h3>
+      <ul>
+        <li>Machine/Computer Certificates</li>
+        <li>Email/User Certificates</li>
+        <li>Code Signing Certificates</li>
+        <li>Root Certificate</li>
+        <li>Self-Signed Certificates</li>
+      </ul>
+    </div>
+  </div>
   <h3>Web Server Certificate Types Include:</h3>
   <ul>
     <li>Domain Validation (DV) - Proves The Ownership Of A Particular Domain</li>
