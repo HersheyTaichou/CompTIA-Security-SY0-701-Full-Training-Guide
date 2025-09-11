@@ -18,8 +18,8 @@
   <p><b>Load balancers</b> - distribute traffic between network segments or servers to optimize performance. They work at layer 4 of the OSI model or higher</p>
   <p><b>Routers</b> - forward packets around an internetwork, making forward decisions based on IP Addresses. They work at layer 3 of the OSI model. They can apply logical IP subnet addresses to segments within a network.</p>
   <p><b>Firewalls</b> - they apply an Access Control List (ACL) to filter traffic passing in or out of a network segment. They can work at layer 3 of the OSI model or higher.</p>
-  <aside id="DNS" epub:type="footnote"><p><b>Domain Name System (DNS) servers</b> - host name records and perform name resolution to allow applications and users to address hosts and services using fully qualified domain names (FQDNs) rather than IP Addresses.</p></aside>
-  <p><a href="Section0005.xhtml#DNS" epub:type="noteref">DNS</a> works at layer 7 of the OSI model.</p>
+  <p><b>Domain Name System (DNS) servers</b> - host name records and perform name resolution to allow applications and users to address hosts and services using fully qualified domain names (FQDNs) rather than IP Addresses.</p>
+  <p><a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a> works at layer 7 of the OSI model.</p>
   <p><img src="../Images/index-37_2.png" alt="" /></p>
   <h2>5.2  Network Segmentation, Topology &amp; DMZs</h2>
   <p>A Network Segment Is One Where All The Hosts Attached To The Segment Can Use Local (Layer 2) Forwarding To Communicate Freely With One Another.</p>
@@ -124,7 +124,7 @@
     <li>File Transfer Protocol (FTP) has largely been replaced by a combination of HTTPS file transfers and SFTP or FTPS, depending on organizational preferences and needs.</li>
     <li>Directory services like LDAP can be moved to LDAPS, a secure version of LDAP.</li>
     <li>Remote access technologies—including shell access, which was once accomplished via telnet and is now almost exclusively done via SSH—can also be secured. Microsoft's RDP is encrypted by default, but other remote access tools may use other protocols, including HTTPS, to ensure that their traffic is not exposed.</li>
-    <li>Domain name resolution remains a security challenge, with multiple efforts over time that have had limited impact on <a href="Section0005.xhtml#DNS" epub:type="noteref">DNS</a> protocol security, including DNSSEC and <a href="Section0005.xhtml#DNS" epub:type="noteref">DNS</a> reputation lists.</li>
+    <li>Domain name resolution remains a security challenge, with multiple efforts over time that have had limited impact on <a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a> protocol security, including DNSSEC and <a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a> reputation lists.</li>
     <li>Routing and switching protocol security can be complex, with protocols like Border Gateway Protocol (BGP) lacking built-in security features. Therefore, attacks such as BGP hijacking attacks and other routing attacks remain possible. Organizations cannot rely on a secure protocol in many cases and need to design around this lack.</li>
     <li>Network address allocation using DHCP does not offer a secure protocol, and network protection against DHCP attacks relies on detection and response rather than a secure protocol.</li>
     <li>Subscription services such as cloud tools and similar services frequently leverage HTTPS but may also provide other secure protocols for their specific use cases. The wide variety of possible subscriptions and types of services means that these services must be assessed individually with an architecture and design review, as well as data flow reviews all being part of best practices to secure subscription service traffic if options are available.</li>
@@ -161,7 +161,7 @@
   <p><b>Application Layer (OSI Layer 7)</b> - This type of firewall can inspect the contents of packets at the application layer and one key feature is to verify the application protocol matches the port e.g http web traffic will use port 80.</p>
   <p><b>IP Tables</b> - <code>iptables</code> is a command on Linux that allows admins to edit the rules enforced by the Linux kernel firewall.</p>
   <p>Iptables works with chains which apply to the different types of traffic such as the input chain for traffic destined for the local host. Each chain has a default policy set to drop or allow traffic that does not match a rule.</p>
-  <p>The rules in this example will drop any traffic from the specific host 10.1.0.192 and allow icmp echo requests (pings), <a href="Section0005.xhtml#DNS" epub:type="noteref">DNS</a> and http/https traffic either from the local subnet (10.1.0.0/24) or from any network (0.0.0.0/0)</p>
+  <p>The rules in this example will drop any traffic from the specific host 10.1.0.192 and allow icmp echo requests (pings), <a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a> and http/https traffic either from the local subnet (10.1.0.0/24) or from any network (0.0.0.0/0)</p>
   <p><img src="../Images/index-46_1.png" alt=""/></p>
   <h2>5.9  Firewall Implementation</h2>
   <p><b>Firewall Appliances -</b> This Is A Stand-Alone Firewall Deployed To Monitor Traffic Passing Into And Out Of A Network Zone. It Can Be Deployed In Two Ways:</p>
@@ -187,27 +187,27 @@
   <p>Most Remote Access Is Implemented As A Virtual Private Network (VPN) Running Over The Internet But It Can Be More Difficult To Ensure The Security Of Remote Workstations And Servers Than Those On The LAN. A VPN Can Also Be Deployed In A Site-To-Site Model To Connect Two Or More Private Networks And Is Typically Configured To Operate Automatically</p>
   <p><b>OpenVPN - </b>This Is An Open Source Example Of A TLS VPN. OpenVPN Can Work In TAP (Bridged) Mode To Tunnel Layer 2 Frames Or In TUN (Routed) Mode To Forward IP Packets.</p>
   <p>Another Option Is Microsoft's Secure Sockets Tunneling Protocol (SSTP) Which Works By Tunneling Point-To-Point Protocol (PPP) Layer 2 Frames Over A TLS Session.</p>
-  <aside id="IPSEC" epub:type="footnote"><p><b>Internet Protocol Security (IPSEC)</b> - TLS Is Applied At The Application Level Either By Using A Separate Secure Port Or By Using Commands In The Application Protocol To Negotiate A Secure Connection.</p></aside>
-  <p><a href="Section0005.xhtml#IPSEC" epub:type="noteref">IPSEC</a> Operates At The Network Layer (Layer 3) So It Can Operate Without Having To Configure Specific Application Support.</p>
-  <p><b>Authentication Header (AH)</b> - This Performs A Cryptographic Hash On The Whole Packet Including The IP Header Plus A Shared Secret Key And Adds This HMAC In Its Header As Integrity Check Value (ICV)</p>
+  <p><b>Internet Protocol Security (IPSEC)</b> - TLS Is Applied At The Application Level Either By Using A Separate Secure Port Or By Using Commands In The Application Protocol To Negotiate A Secure Connection.</p>
+  <p><a href="Section0017.xhtml#IPSEC" epub:type="noteref">IPSEC</a> Operates At The Network Layer (Layer 3) So It Can Operate Without Having To Configure Specific Application Support.</p>
+  <p><b>Authentication Header (AH)</b> - This Performs A Cryptographic Hash On The Whole Packet Including The IP Header Plus A Shared Secret Key And Adds This HMAC In Its Header As an Integrity Check Value (ICV)</p>
   <p>The Recipient Performs The Same Function On The Packet And Key And Should Derive The Same Value To Confirm That The Packet Has Not Been Modified.</p>
   <p><b>Encapsulation Security Payload (ESP)</b> - This Provides Confidentiality And/Or Authentication And Integrity. It Can Be Used To Encrypt The Packet Rather Than Simply Calculating An HMAC.</p>
   <p>ESP Attaches Three Fields To The Packet: A Header, A Trailer (Providing Padding For The Cryptographic Function) And An ICV.</p>
-  <p><b><a href="Section0005.xhtml#IPSEC" epub:type="noteref">IPSEC</a> Transport And Tunnel Modes</b> - <a href="Section0005.xhtml#IPSEC" epub:type="noteref">IPSEC</a> Can Be Used In Two Modes:</p>
+  <p><b><a href="Section0017.xhtml#IPSEC" epub:type="noteref">IPSEC</a> Transport And Tunnel Modes</b> - <a href="Section0017.xhtml#IPSEC" epub:type="noteref">IPSEC</a> Can Be Used In Two Modes:</p>
   <ul>
     <li>
-      <p><span class="bullets">Transport Mode</span> - This Mode Is Used To Secure Communications Between Hosts On A Private Network. Here The Ip Header For Each Packet Is Not Encrypted, Just The Payload Data. If AH Is Used In This Mode, It Can Provide Integrity For The IP Header.</p>
+      <p><span class="bullets">Transport Mode</span> - This Mode Is Used To Secure Communications Between Hosts On A Private Network. Here The Ip Header For Each Packet Is Not Encrypted, Just The Payload Data. If <a href="Section0017.xhtml#AH" epub:type="noteref">AH</a> Is Used In This Mode, It Can Provide Integrity For The IP Header.</p>
       <table class="IPExample">
         <tr>
           <td>IP Header</td>
-          <td><span class="tooltip" title="Authentication Header">AH</span>
+          <td><a href="Section0017.xhtml#AH" epub:type="noteref">AH</a>
             <table class="IPEmbedded">
               <tr>
-                <td><span class="tooltip" title="Integrity Check Value">ICV</span></td>
+                <td> <a href="Section0005.xhtml#ICV" epub:type="noteref">ICV</a> </td>
               </tr>
             </table>
           </td>
-          <td><span class="tooltip" title="Encapsulation Security Payload">ESP</span>
+          <td> <a href="Section0017.xhtml#ESP" epub:type="noteref">ESP</a> 
             <table class="IPEmbedded">
               <tr>
                 <td>TCP/UDP</td>
@@ -224,7 +224,7 @@
       <table class="IPExample">
         <tr>
           <td>NEW IP Header</td>
-          <td><span class="tooltip" title="Encapsulation Security Payload">ESP</span>
+          <td> <a href="Section0017.xhtml#ESP" epub:type="noteref">ESP</a> 
             <table class="IPEmbedded">
               <tr>
                 <td>IP Header</td>
@@ -234,21 +234,21 @@
             </table>
           </td>
           <td>Trailer</td>
-          <td><span class="tooltip" title="Integrity Check Value">ICV</span></td>
+          <td> <a href="Section0005.xhtml#ICV" epub:type="noteref">ICV</a> </td>
         </tr>
       </table>
     </li>
   </ul>
-  <p id="page_49"><b>Internet Key Exchange (<span class="tooltip" title="Internet Key Exchange">IKE</span>)</b> - <a href="Section0005.xhtml#IPSEC" epub:type="noteref">IPSEC</a>'s Encryption And Hashing Functions Depend On A Shared Secret. The Secret Must Be Communicated To Both Hosts And The Hosts Must Confirm One Another's Identity (Mutual Authentication) Otherwise The Connection Is Vulnerable To Mitm And Spoofing Attacks. The <span class="tooltip" title="Internet Key Exchange">IKE</span> Protocol Handles Authentication And Key Exchange Referred To As Security Associations (<span class="tooltip" title="Security Associations">SA</span>).</p>
-  <p><span class="tooltip" title="Internet Key Exchange">IKE</span> Negotiations Take Place Over Two Phases:</p>
+  <p><b>Internet Key Exchange (IKE)</b> - <a href="Section0017.xhtml#IPSEC" epub:type="noteref">IPSEC</a>'s Encryption And Hashing Functions Depend On A Shared Secret. The Secret Must Be Communicated To Both Hosts And The Hosts Must Confirm One Another's Identity (Mutual Authentication) Otherwise The Connection Is Vulnerable To MITM And Spoofing Attacks. The  <a href="Section0017.xhtml#IKE" epub:type="noteref">IKE</a>  Protocol Handles Authentication And Key Exchange Referred To As Security Associations (<span class="tooltip" title="Security Associations">SA</span>).</p>
+  <p><a href="Section0017.xhtml#IKE" epub:type="noteref">IKE</a> Negotiations Take Place Over Two Phases:</p>
   <p>Phase 1 Establishes The Identity Of The Two Hosts And Performs Key Agreement Using The <span class="tooltip" title="Diffie-Hellman">DH</span> Algorithm To Create A Secure Channel. Digital Certificates And Pre-Shared Key Are Used For Authenticating Hosts. </p>
-  <p>Phase 2 Uses The Secure Channel Created In Phase 1 To Establish Which Ciphers And Key Sizes Will Be Used With <span class="tooltip" title="Authentication Header">AH</span> And/Or <span class="tooltip" title="Encapsulation Security Payload">ESP</span> In The <a href="Section0005.xhtml#IPSEC" epub:type="noteref">IPSEC</a> Session.</p>
+  <p>Phase 2 Uses The Secure Channel Created In Phase 1 To Establish Which Ciphers And Key Sizes Will Be Used With <a href="Section0017.xhtml#AH" epub:type="noteref">AH</a> And/Or  <a href="Section0017.xhtml#ESP" epub:type="noteref">ESP</a>  In The <a href="Section0017.xhtml#IPSEC" epub:type="noteref">IPSEC</a> Session.</p>
   <p><b>VPN Client Configuration - </b>To Configure A VPN Client, You May Need To Install The Client Software If The VPN Type Is Not Natively Supported By The Os.</p>
   <p><b>Always-On VPN - </b>This Means That The Computer Establishes The VPN Whenever An Internet Connection Over A Trusted Network Is Detected, Using The User's Cached Credentials To Authenticate.</p>
   <p>When A Client Connected To A Remote Access VPN Tries To Access Other Sites On The Internet, There Are Two Ways To Manage The Connection:</p>
-  <p><b>Split Tunnel</b> - The Client Accesses The Internet Directly Using Its "Native" IP Configuration And <a href="Section0005.xhtml#DNS" epub:type="noteref">DNS</a> Servers.</p>
-  <p><b>Full Tunnel</b> - Internet Access Is Mediated By The Corporate Network, Which Will Alter The Client's IP Address And <a href="Section0005.xhtml#DNS" epub:type="noteref">DNS</a> Servers And May Use A Proxy.</p>
-  <p>Full Tunnel Offers Better Security But The Network Address Translations And <a href="Section0005.xhtml#DNS" epub:type="noteref">DNS</a> Operations Required May Cause Problems With Some Websites Especially Cloud Services.</p>
+  <p><b>Split Tunnel</b> - The Client Accesses The Internet Directly Using Its "Native" IP Configuration And <a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a> Servers.</p>
+  <p><b>Full Tunnel</b> - Internet Access Is Mediated By The Corporate Network, Which Will Alter The Client's IP Address And <a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a> Servers And May Use A Proxy.</p>
+  <p>Full Tunnel Offers Better Security But The Network Address Translations And <a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a> Operations Required May Cause Problems With Some Websites Especially Cloud Services.</p>
   <p><b>Out-Of-Band Management -</b> Remote Management Methods Can Be Described As Either In-Band Or Out-Of-Band (OOB).</p>
   <p>An <span class="keyword">In-Band</span> Management Link Is One That Shares Traffic With Other Communications On The "Production" Network While A Serial Console Or Modem Port On A Router Is A Physically <span class="keyword">Out-Of-Band</span> Management Method.</p>
   <p><b>Secure Shell - </b>This Is The Principal Means Of Obtaining Secure Remote Access To A Command Line Terminal. Mostly Used For Remote Administration And Secure File Transfer (SFTP).</p>

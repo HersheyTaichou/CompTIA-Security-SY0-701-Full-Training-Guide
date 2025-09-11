@@ -10,10 +10,10 @@
 
 <body>
   <h1>Section 11 - <span class="section">Enhance Application Security Capabilities</span></h1>
-  <h2>11.1 <a href="Section0005.xhtml#DNS" epub:type="noteref">DNS</a>Security, Directory Services &amp; Snmp</h2>
-<p><span><b>DNS Security -</b> To Ensure<a href="Section0005.xhtml#DNS" epub:type="noteref">DNS</a>Security On A Private Network, Local<a href="Section0005.xhtml#DNS" epub:type="noteref">DNS</a>Servers Should Only Accept </span><span>Recursive Queries From Local Authenticated Hosts And Not From The Internet.</span></p>
-<p>Clients Should Be Restricted To Using Authorized Resolvers To Perform Name Resolution. <b>Dns Footprinting</b> Means Obtaining Information About A Private Network By Using Its<a href="Section0005.xhtml#DNS" epub:type="noteref">DNS</a>Server To Perform A Zone Transfer (All The Records In A Domain) To A Rogue Dns.</p>
-<p><span><b>DNS Security Extensions (DNSSEC) -</b> These Help To Mitigate Against Spoofing And Poisoning </span><span>Attacks By Providing A Validation Process For<a href="Section0005.xhtml#DNS" epub:type="noteref">DNS</a>Responses.</span></p>
+  <h2>11.1 <a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a>Security, Directory Services &amp; Snmp</h2>
+<p><span><b>DNS Security -</b> To Ensure<a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a>Security On A Private Network, Local<a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a>Servers Should Only Accept </span><span>Recursive Queries From Local Authenticated Hosts And Not From The Internet.</span></p>
+<p>Clients Should Be Restricted To Using Authorized Resolvers To Perform Name Resolution. <b>Dns Footprinting</b> Means Obtaining Information About A Private Network By Using Its<a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a>Server To Perform A Zone Transfer (All The Records In A Domain) To A Rogue Dns.</p>
+<p><span><b>DNS Security Extensions (DNSSEC) -</b> These Help To Mitigate Against Spoofing And Poisoning </span><span>Attacks By Providing A Validation Process For<a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a>Responses.</span></p>
 <p><span><b>Secure Directory Services -</b> A Network Directory Lists The Subjects (Users, Computers And </span><span>Services) And Objects (Directories And Files) Available On The Network Plus The Permissions </span><span>Subjects Have Over Objects.</span></p>
 <p>Most Directory Services Are Based On The Lightweight Directory Access Protocol (Ldap) Running Over Port 389.</p>
 <p>Authentication Referred To As Binding To The Server Can Be Implemented By:</p>
@@ -73,8 +73,8 @@
 <p><b>Secure/Multipurpose Internet Mail Extensions (S/MIME) - </b> Is a means of applying both authentication and confidentiality on a per-message basis.</p>
 <h2>11.4 Email Security</h2>
 <p><b>Sender Policy Framework (SPF) -</b> Is an email authentication method that helps detect and prevent sender address forgery commonly used in phishing and spam emails.</p>
-<p>SPF works by verifying the sender's IP address against a list of authorized sending IP addresses published in the<a href="Section0005.xhtml#DNS" epub:type="noteref">DNS</a>TXT records of the email sender's domain. </p>
-<p><b>DomainKeys Identified Mail (DKIM) -</b> Leverages encryption features to enable email verification by allowing the sender to sign emails using a digital signature, The receiving email server uses a DKIM record in the sender's<a href="Section0005.xhtml#DNS" epub:type="noteref">DNS</a>record to verify the signature and the email's integrity.</p>
+<p>SPF works by verifying the sender's IP address against a list of authorized sending IP addresses published in the<a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a>TXT records of the email sender's domain. </p>
+<p><b>DomainKeys Identified Mail (DKIM) -</b> Leverages encryption features to enable email verification by allowing the sender to sign emails using a digital signature, The receiving email server uses a DKIM record in the sender's<a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a>record to verify the signature and the email's integrity.</p>
 <p><b>Domain-based Message Authentication, Reporting &amp; Conformance (DMARC) -</b> Uses the results of SPF and DKIM checks to define rules for handling messages, such as moving messages to quarantine or spam, rejecting them outright or tagging the message.</p>
 <p><b>An email gateway -</b>  Is the control point for all incoming and outgoing email traffic. It acts as a gatekeeper, scrutinizing all emails to remove potential threats before they reach inboxes. Email gateways utilize several security measures, including anti-spam filters, antivirus scanners, and sophisticated threat detection algorithms to identify phishing attempts, malicious URLs, and harmful attachments.</p>
 <p><span><b>92</b></span></p>
