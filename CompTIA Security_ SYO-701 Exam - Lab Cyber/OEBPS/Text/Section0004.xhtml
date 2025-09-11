@@ -113,17 +113,17 @@
     <li><span class="bullets">Execute (X)</span> - The Ability To Run A Script Or Program Or Perform A Task On That Directory.</li>
   </ul>
   <p>These Permissions Can Be Applied In The Context Of The Owner User (U), A Group Account (G) And All Other Users/World (O).</p>
-  <p><span class="keyword">D RWX R-X R-X Home</span></p>
+  <p><code>D RWX R-X R-X Home</code></p>
   <p>The String Above Shows That For The Directory (D), The Owner Has Read, Write And Execute Permissions While The Group Context And Others Have Read And Execute Permissions</p>
   <p>The Chmod Command Is Used To Modify Permissions And Can Be Used Either In Symbolic Or Absolute Mode.</p>
   <h3>In Symbolic Mode, The Command Works As Follows:</h3>
-  <p><span class="keyword">chmod G+W, O-X Home</span></p>
+  <p><code>chmod G+W, O-X Home</code></p>
   <p>The Effect Of This Command Is To Append Write Permission To The Group Context And Remove Execute Permission From The Other Context.</p>
   <p>By Contrast, The Command Can Also Be Used To Replace Existing Permissions.</p>
-  <p><span class="keyword">chmod U=Rwx, G=Rx, O=Rx Home</span></p>
-  <p><span class="keyword">D rwx r-x r-x Home </span></p>
+  <p><code>chmod U=Rwx, G=Rx, O=Rx Home</code></p>
+  <p><code>D rwx r-x r-x Home </code></p>
   <p>In absolute mode, permissions are assigned using octal notation where r=4, w=2 and x=1</p>
-  <p><span class="keyword">chmod 755 Home</span></p>
+  <p><code>chmod 755 Home</code></p>
   <p>Mandatory access control (MAC) - this is based on the idea of security clearance levels (labels) instead of ACLs. In a hierarchical one, subjects are only permitted to access objects at their own clearance level or below.</p>
   <p>Attribute-based access control (ABAC) - this is the most fine-grained type of access control mode and it is capable of making access decisions based on a combination of subject and object attributes plus any system-wide attributes.</p>
   <p>This system can monitor the number of events or alerts associated with a user account or track resources to ensure they are consistent in terms of timing of requests.</p>
