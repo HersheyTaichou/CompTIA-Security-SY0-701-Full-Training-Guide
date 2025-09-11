@@ -11,10 +11,8 @@
 <body>
   <h1>Section 7 - <span class="section"></span>Explain Resiliency and Site Security Concept</h1>
   <h2>7.1  Backup Strategies &amp; Storage</h2>
-<p>&#160;</p>
 <p><b>Backups &amp; Retention Policies -</b> As Backups Take Up Space, There Is The Need For Storage Management Routines While Also Giving Adequate Coverage Of The Required Window.</p>
 <p>The Recovery Window Is Determined By The Recovery Point Objective (Rpo) Which Is Determined Through Business Continuity Planning.</p>
-<p>&#160;</p>
 <p><span><b>Backup Types</b></span></p>
 <p> Full includes all files and directories while incremental and differential check the status of </p>
 <p>the archive attribute before including a file. The archive attribute is set whenever the file </p>
@@ -30,7 +28,6 @@
 <p><b>Backup Storage Issues -</b> Backups Require Cia As Well And Must Be Secured At All Times. Natural Disasters Such As Fires And Earthquakes Must Also Be Accounted For.</p>
 <p><b>Distance Consideration</b> Is A Calculation Of How Far Offsite Backups Need To Be Kept Given Different Disaster Scenarios However They Mustn't Be Too Far To Slow Down A Recovery Operation.</p>
 <p>The 3-2-1 Rule States That You Should Have 4 Copies Of Your Data Across Two Media Types With One Copy Held Offline And Offsite.</p>
-<p>&#160;</p>
 <p><span><b>59</b></span></p>
 <p id="page_60"><span><b>Backup Media Types</b></span></p>
 <p> Disk </p>
@@ -49,7 +46,6 @@
 <p> Enable and test back-end and middleware (databases). verify data integrity </p>
 <p> Enable and test front-end applications </p>
 <p> Enable client workstations and devices and client browser access.</p>
-<p>&#160;</p>
 <p><span><b>Non-persistence</b></span></p>
 <p> <b>Snapshot/revert to known state -</b> A saved system state that can be reapplied to the </p>
 <p>instance. </p>
@@ -62,10 +58,8 @@
 <p> <b>Automated build from a template -</b>similar to a master image and is the build instructions </p>
 <p>for an instance. rather than storing a master image, the software may build and provision </p>
 <p>an instance according to the template instructions.</p>
-<p>&#160;</p>
 <p><span><b>60</b></span></p>
 <h2>7.2  Implementing Redundancy Strategies</h2>
-<p>&#160;</p>
 <p><b>High Availability -</b> A Key Property Of Any Resilient System And Is Typically Measured Over A Period Of One Year.</p>
 <p>The Maximum Tolerable Downtime (Mtd) Metric Expresses The Availability Requirement For A Particular Business Function.</p>
 <p>High Availability Also Means That A System Is Able To Cope With Rapid Growth In Demand.</p>
@@ -75,15 +69,12 @@
 <p>Elasticity Refers To The System's Ability To Handle These Changes On Demand In Real Time.</p>
 <p><b>Fault Tolerance &amp; Redundancy -</b> A System That Can Experience Failures And Continue To Provide The Same Or Nearly The Same Level Of Service Is Said To Be <b>Fault Tolerant.</b></p>
 <p>Fault Tolerance Is Often Achieved By Provisioning <b>Redundancy</b> For Critical Components And Single Points Of Failure.</p>
-<p>&#160;</p>
 <p><span><b>Power Redundancy</b></span></p>
 <p> Dual Power Supplies                      Battery Backups And Upss </p>
 <p> Managed Power Distribution Units (Pdus)     Generators</p>
-<p>&#160;</p>
 <p>A Ups Is Always Required To Protect              <b>Load Balancers -</b> Nic Teaming Provides Against Any Interruption As A Backup  <span>Load Balancing At The Adapter Level, Load </span></p>
 <p>Generator Cannot Be Brought Online Fast        Balancing And Clustering Can Also Be Enough To Respond To A Power Failure.          Provisioned At A Service Level.</p>
 <p><b>Network Redundancy -Network Interface </b>       A Load Balancing Switch Distributes <b>Card (Nic) Teaming</b> Means The Server              Workloads Between Available Servers. </p>
-<p>&#160;</p>
 <p>Connected To Separate Network Cabling.           Multiple Redundant Servers To Share Data And Session Information To For Example Four 1gb Ports Gives An Maintain A Consistent Service If There Is Overall Bandwidth Of 4gb So If One Port With Multiple Ports Or Both. Each Port Is            A Load Balancing Cluster Enables Is Installed With Multiple Nics Or Nics </p>
 <p>Failover From One Server To Another.</p>
 <p>Goes Down, 3gb Of Bandwidth Will Still Be </p>
@@ -94,23 +85,18 @@
 <p>Part Of The Network, The Rest Remains           To 6 Operational.</p>
 <p><span><b>61</b></span></p>
 <p id="page_62"><span><b>RAID Level</b></span>                    <span><b>Fault Tolerance</b></span></p>
-<p>&#160;</p>
 <p><span>Mirroring means that data is written to two disks simultaneously, providing </span></p>
 <p><span><b>Level 1</b></span>                         <span>redundancy (if one disk fails, there is a copy of data on the other). The main </span></p>
 <p><span>drawback is that storage efficiency is only 50%.</span></p>
-<p>&#160;</p>
 <p><span>Striping with parity means that data is written across three or more disks, </span><span>but additional information (parity) is calculated. This allows the volume to </span></p>
 <p><span><b>Level 5</b></span></p>
 <p><span>continue if one disk is lost. This solution has better storage efficiency than </span><span>RAID 1.</span></p>
-<p>&#160;</p>
 <p><span>Double parity, or level 5 with an additional parity stripe, allows the volume </span></p>
 <p><span><b>Level 6</b></span></p>
 <p><span>to continue when two devices have been lost.</span></p>
-<p>&#160;</p>
 <p><span>Nesting RAID sets generally improves performance or redundancy.For </span></p>
 <p><span><b>Nested (0+1, 1+0, or 5+0)</b></span>      <span>example, some nested RAID solutions can support the failure ofmore than </span></p>
 <p><span>one disk.</span></p>
-<p>&#160;</p>
 <p><b>Geographical Redundancy &amp; Replication -</b> Data Replication Can Be Applied In Many Contexts:</p>
 <p> <b>Storage Area Networks -</b> Redundancy Can Be Provided Within The San And Replication </p>
 <p>Can Also Take Place Between Sans Using Wan Links. </p>
@@ -118,17 +104,14 @@
 <p> <b>Virtual Machine -</b> The Same Vm Instance Can Be Deployed In Multiple Locations. This </p>
 <p>Can Be Achieved By Replicating The Vm's Disk Image And Configuration Settings.</p>
 <p><b>Geographical Dispersal </b>Refers To Data Replicating Hot And Warm Sites That Are Physically Distant From One Another. This Means That Data Is Protected Against A Natural Disaster Wiping Out Storage At One Of The Sites.</p>
-<p>&#160;</p>
 <p><span><b>Asynchronous &amp; Synchronous Replication</b></span></p>
 <p> Synchronous Replication Is Designed To Write Data To All Replicas Simultaneously </p>
 <p>Therefore All Replicas Should Always Have The Same Data All The Time. </p>
 <p> Asynchronous Replication Writes Data To The Primary Storage First And Then Copies </p>
 <p>Data To The Replicas Scheduled Intervals. It Isn't A Good Choice For A Solution That </p>
 <p>Requires Data In Multiple Locations To Be Consistent</p>
-<p>&#160;</p>
 <p><span><b>62</b></span></p>
 <h2>7.3  Cyber Security Resilient Strategies</h2>
-<p>&#160;</p>
 <p><b>Configuration management -</b>                  in the network directory. Configuration management ensures that </p>
 <p>each component of ict infrastructure is in a        <b>Change control &amp; change management -</b></p>
 <p>A change control process can be used to </p>
@@ -137,24 +120,16 @@
 <p>documented properties.</p>
 <p>and controlled way. change requests are </p>
 <p>Change control and change management        usually generated when</p>
-<p>&#160;</p>
 <p>reduce the risk that changes to these              Something needs to be corrected components could cause service </p>
 <p>disruption.                                          When something changes </p>
 <p><b>Asset management -</b> An asset                   Where there is room for improvement in management process tracks all the                  a process or system currently in place.</p>
-<p>&#160;</p>
 <p>organization's critical systems, components,       In a formal change management process, devices and other objects of value in an the need or reasons for change and the inventory. procedure for implementing the change An asset management database can be          is captured in a request for change (rfc) configured to store as much or as little             document and submitted for approval.</p>
-<p>&#160;</p>
 <p>information as it deemed necessary though       The implementation of changes should typical data would be type, model, serial be carefully planned, with consideration number, asset id, location, user(s), value for how the change will affect dependent and service information. components.</p>
-<p>&#160;</p>
 <p><b>Asset identification &amp; standard naming </b>         For major changes, a trial change should <b>conventions -</b> Tangible assets can be be attempted first and every change should identified using a barcode label or be accompanied by a rollback plan so the frequency id (rfid) tag attached to the change can be reversed if it has a negative device. the rfid tag is a chip programmed impact. with asset data and can help to also track the location of the device making theft            <b>Site resiliency - </b>An alternate processing more difficult.                                        site might always be available and in use </p>
-<p>&#160;</p>
 <p>A standard naming convention for                set up or only be used in an emergency. while a recovery site might take longer to hardware and digital assets such as </p>
 <p>accounts and virtual machines makes the          A hot site can failover almost environment more consistent. This means           immediately. </p>
-<p>&#160;</p>
 <p>errors are easier to spot and it's easier to           A warm site could be similar but with automate through scripting. the requirement that the latest data set The naming strategy should allow admins            will need to be loaded. </p>
-<p>&#160;</p>
 <p>to identify the type and function of any             A cold site takes longer to set up and particular resource or location at any point could be an empty building waiting to </p>
-<p>&#160;</p>
 <p><span><b>63</b></span></p>
 <p id="page_64">have whatever equipment that is needed to be installed in it.</p>
 <p>Diversity and defense in depth - layered security is typically seen as improving cybersecurity resiliency because it provides defense in depth (multiple security controls).</p>
@@ -164,13 +139,11 @@
 <p> Not obtaining best-in-class performance </p>
 <p> Less complex attack surface. </p>
 <p> Less innovation</p>
-<p>&#160;</p>
 <p><span><b>Deception and disruption strategies</b></span></p>
 <p><b>Active defense</b> means an engagement with the adversary and can mean the deployment of decoy assets to act as lures or bait.</p>
 <p>A honey <b>pot</b> is a system set up to attract threat actors, with the intention of analyzing attack strategies and tools to provide early warnings of attack attempts. it could also be used to detect internal fraud, snooping and malpractice. </p>
 <p>A honeynet is an entire decoy network.</p>
 <p>On a production network, a honeypot is more likely to be located in a dmz, or on an isolated segment on the private network if the honeypot is seeking to draw out insider threats.</p>
-<p>&#160;</p>
 <p>A honeypot or honeynet can be combined with the concept of a <b>honeyfile</b> which is convincingly useful but actually fake data.</p>
 <p>Some examples of disruption strategies include:</p>
 <p> Using bogus dns entries to list multiple non-existent hosts </p>
@@ -178,22 +151,14 @@
 <p> Using port triggering or spoofing to return fake telemetry data when a host detects port </p>
 <p>scanning activity. This will result in multiple ports being falsely reported as open. </p>
 <p> Using a dns sinkhole to route suspect traffic to a different network such as a honeynet.</p>
-<p>&#160;</p>
 <p><span><b>64</b></span></p>
 <h2>7.4 - Physical Security Controls</h2>
-<p>&#160;</p>
 <p><b>Physical access controls -</b> These are                between zones. The flow should be security measures that restrict and monitor           “in and out” rather than “across and access to specific physical areas or assets.           between” </p>
-<p>&#160;</p>
 <p>They can control access to buildings,              Give high traffic public areas high server rooms, data centers, finance or legal visibility areas and so on.</p>
-<p>&#160;</p>
 <p>Physical access controls depend on the             facing toward pathways or windows.  In secure zones, do not display screens </p>
-<p>&#160;</p>
 <p>same access control fundamentals as               Alternatively use one-way glass so that network or os security: no one can look in through windows.</p>
-<p>&#160;</p>
 <p> <b>Authentication - </b>Create lists of                                      in order to secure a <b>Gateways and locks - </b>approved people gateway, it must be fitted with a lock. Lock  <b>Authorization -</b> Create barriers around        types can be categorized as follows:</p>
-<p>&#160;</p>
 <p>a resource so access to it is controlled          <b>Physical -</b> A conventional lock that through defined entry and exit points prevents the door handle from being  <b>Accounting -</b> Keep a record of when            operated without the use of a key. </p>
-<p>&#160;</p>
 <p>entry/exit points are used and detect           <b>Electronic -</b> Rather than a key, the lock security breaches. is operated by entering a pin on an <b>Site layout, fencing &amp; lighting -</b>                      electronic keypad. This type of lock is Given constraints of cost and existing                 also referred to as cipher, combination infrastructure, try to plan the site using the            or keyless. following principles</p>
 <p> <b>Biometric -</b> A lock may be integrated </p>
 <p> Locate secure zones                          with biometric scanner</p>
@@ -204,13 +169,10 @@
 <p> Use signage and warnings to enforce          <b>Card cloning - </b>Making one or more </p>
 <p>the idea that security is tightly                       copies of an existing card. A lost or </p>
 <p>controlled.                                         stolen card with no cryptographic </p>
-<p>&#160;</p>
 <p>                         protections can be physically Entry points to secure zones should duplicated. be discreet. Do not allow an intruder </p>
 <p>the opportunity to inspect security              <b>Skimming -</b> Refers to using a </p>
 <p>mechanisms.                                 counterfeit card to capture card details </p>
-<p>&#160;</p>
 <p>                         which are then used to program a Try to minimize traffic having to pass duplicate.</p>
-<p>&#160;</p>
 <p><span><b>65</b></span></p>
 <p id="page_66">Malicious usb charging cables and plugs are also a widespread problem. A usb data blocker can provide mitigation against “juice-jacking” attacks by preventing any sort of data transfer when the smartphone is connected to a charge point.</p>
 <p><span><b>Alarm systems &amp; sensors</b></span></p>
@@ -230,9 +192,7 @@
 <p><b>Reception personnel &amp; id badges -</b> A very important aspect of surveillance is the challenge policy and can be quite effective against social engineering attacks.</p>
 <p>An access list can be held at the reception area for each secure area to determine who is allowed to enter.</p>
 <p>Reception areas for high-security zones might be staffed by at least two people at all times</p>
-<p>&#160;</p>
 <h2>7.5 - physical host security controls</h2>
-<p>&#160;</p>
 <p><b>Secure Areas -</b> A secure area is designed to store critical assets with a higher level of access protection than general office areas. The most vulnerable point of the network infrastructure will be the communications or server room.</p>
 <p><b>Air gap/ dmz - </b>An air gapped host is one that is not physically connected to any network. Such a host would normally have stringent physical access controls.</p>
 <p>An air gap within a secure area serves the same function as a dmz. As well as being disconnected from any network, the physical space around the host makes it easier to detect unauthorized attempts to approach the asset.</p>
@@ -245,11 +205,9 @@
 <p><b>Hot and Cold Aisles -</b> A server room or data center should be designed in such a way as to maximize air flow across the server or racks.</p>
 <p>The servers are placed back-to-back not front-to-back so that the warm exhaust from one bank of servers is not forming the air intake for another bank. This is referred to as a hot/cold aisle arrangement.</p>
 <p><img src="../Images/index-67_1.png" alt=""/></p>
-<p>&#160;</p>
 <p><b>Fire detection &amp; suppression -</b> Fire suppression systems work on the basis of the fire triangle. This triangle works on the principle that a fire requires heat, oxygen and fuel to ignite and burn so removing any one of them will suppress the fire.</p>
 <p>Overhead sprinklers may also be installed but there is the risk of a burst pipe and accidental triggering as well as the damage it could cause in the event of an actual fire.</p>
 <p><b>Secure data destruction -</b> Physical security controls also need to take account of the disposal phase of the data life cycle. Media sanitization and remnant removal refer to erasing data from hard drives, flash drives and tape media before they are disposed of.</p>
-<p>&#160;</p>
 <p><span><b>67</b></span></p>
 <p id="page_68">There are several physical destruction options:</p>
 <p> Burning </p>
@@ -257,7 +215,6 @@
 <p> Pulverization </p>
 <p> <b>Degaussing - </b>Exposing a hard disk to a powerful electromagnet disrupts the magnetic </p>
 <p>pattern that stores the data.</p>
-<p>&#160;</p>
 <p><b>Data Sanitization Tools -</b> The standard method of sanitizing an hdd is called overwriting. This can be performed using the driver's firmware tools or a utility program.</p>
 <p>The most basic type of overwriting is called zero filling which just sets each bit to zero. Single pass zero filling can leave patterns that can be read with specialist tools.</p>
 <p><b>Secure Erase (SE) -</b>  Since 2001, the sata and serial attached scsi (sas) specifications have included a secure erase (se) command. This command can be invoked using a drive/array utility or the hdparm linux utility. On hdds, this performs a single pass of zero-filling.</p>

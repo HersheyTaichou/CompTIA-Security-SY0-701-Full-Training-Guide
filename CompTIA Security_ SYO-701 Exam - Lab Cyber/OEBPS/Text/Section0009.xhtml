@@ -11,16 +11,13 @@
 <body>
   <h1>Section 9 - <span class="section">Evaluate Network Security Capabilities</span></h1>
   <h2>9.1  Bench Marks &amp; Secure Configuration Guides  </h2>
-<p>&#160;</p>
 <p><b>Although frameworks provide a “high-level” view of how to plan its services, they generally don't provide detailed implementation guidance.</b></p>
 <p>At a system level, the deployment of servers and applications is covered by benchmarks and secure configuration guides.</p>
 <p><span><b>Center For Internet Security (CIS)</b></span></p>
 <p>A non profit organization that publishes the well-known (the cis critical security controls).</p>
 <p>They also produce benchmarks for different aspects of cybersecurity e.g benchmarks for compliance with it frameworks include pci dss and iso 27000.</p>
 <p>There are also product-focused benchmarks such as windows desktop, windows server, macos and web &amp; email servers.</p>
-<p>&#160;</p>
 <p><span><b>Os/Network Appliance Platform/</b></span>           Hardening Guidelines For A Variety Of <span><b>Vendor-Specific Guides</b></span>                    Software And Hardware Solutions. </p>
-<p>&#160;</p>
 <p>Operating System (Os) Best Practice              National Checklist Program (Ncp) By Nist Provides Checklists And Configuration Lists The Settings And Benchmarks For A Variety Of Operating Controls That Should Be Applied For A Systems And Applications. Computing Platform To Work In Defined </p>
 <p>Roles Such As Workstation, Server, </p>
 <p>Network Switch/Router Etc.                      <span><b>Application Servers</b></span></p>
@@ -29,81 +26,61 @@
 <p> Department Of Defense Cyber              Client, Server Or The Network Channel </p>
 <p>Exchange Provides Security Technical         Between Them.</p>
 <p>Implementation Guides (Stigs) With </p>
-<p>&#160;</p>
 <p><span><b>77</b></span></p>
 <p id="page_78"><span><b>Open Web Application Security Project (Owasp)</b></span></p>
 <p>A Non Profit Online Community That Publishes Several Secure Application Development Resources Such As The Owasp Top 10 That Lists The Most Critical Application Security Risks.</p>
-<p>&#160;</p>
 <h2>9.2 Hardening Concepts</h2>
-<p>&#160;</p>
 <p>Network equipment, software, and operating systems use default settings from the developer or manufacturer which attempt to balance ease of use with security. Unfortunately these default configurations are an attractive target for attackers as they usually include well-documented credentials, allow simple passwords and use insecure protocols which increase the likelihood of successful cyberattacks. Therefore, it's crucial to change these default settings to improve security.</p>
 <p>Hardening refers to the methods used to improve a device's security by changing its default configuration. There are various ways for hardening switches, routers, server hardware and operating systems.</p>
-<p>&#160;</p>
 <p><span><b>Switches &amp; Routers</b></span>               <span><b>Server Hardware and Operating Systems</b></span></p>
 <p> Change default credentials            Change default credentials</p>
 <p> Disable unnecessary services          Disable unnecessary services</p>
 <p>and interfaces                         Apply security patches and updates</p>
-<p>&#160;</p>
 <p> Use secure management             Use firewalls and intrusion detection systems protocols such as SSH and </p>
 <p>HTTPS instead of Telnet or HTTP       Secure configuration</p>
 <p> Implement Access Control Lists        Enable logging and monitoring</p>
 <p> Configure port security                Use Antivirus and Antimalware solutions</p>
 <p> Enforce strong password policies      Enforce physical security</p>
-<p>&#160;</p>
 <p><span><b>9.3- Wi-Fi Authentication Methods</b></span></p>
-<p>&#160;</p>
 <p><b>Wi-Fi Authentication Comes In Three Types - </b>Open, Personal And Enterprise.</p>
 <p>Within The Personal Category, There Are Two Methods:</p>
 <p> Pre-Shared Key Authentication (Psk) </p>
 <p> Simultaneous Authentication Of Equals (Sae)</p>
-<p>&#160;</p>
 <p><span><b>78</b></span></p>
 <p id="page_79"><b>WPA2 pre-shared key authentication -</b> In wpa2, pre-shared key (PSK) authentication uses a passphrase to generate the key for encryption.</p>
 <p>The passphrase length is typically between 8 and 63 ascii characters and is then converted to a 256-bit HMAC value.</p>
 <p><b>Wpa3 personal authentication -</b> Wpa3 also uses a passphrase like wpa2 but it changes the method by which this secret is used to agree on session keys. this scheme is called password authenticated key exchange (PAKE)</p>
 <p><b>Wi-fi protected setup (wps) -</b> This is a feature of both WPA and WPA2 that allows enrollment in a wireless network based on an 8-digit pin.</p>
 <p>It is vulnerable to brute force attacks and is set to be replaced by the easy connect method in wpa3 which uses quick response (qr) codes of each device.</p>
-<p>&#160;</p>
 <p><b>Open authentication and captive portals -</b>       between the supplicant and authentication Open authentication means that the client        server but only a server-side public key is not required to authenticate however           certificate is required.</p>
-<p>&#160;</p>
 <p>it can be combined with a secondary             Eap with flexible authentication via secure authentication mechanism via a browser. tunneling (eap-fast) - is also similar to peap When the client launches the browser,            but instead of a server side certificate, it the client is redirected to a <b>captive portal</b>         uses a protected access credential (pac) or splash page where they will be able            which is generated for each user from the to authenticate to the hotspot provider's          authentication server's master key.</p>
 <p>network.                                      Radius federation - most implementations <b>Enterprise/ieee 802.1x authentication -</b>          of eap use a radius server to validate the When a wireless station requests to join           authentication credentials for each user. the network, its credentials are passed to </p>
 <p>an aaa server on the wired network for           organizations allow access to one Radius federation means that multiple validation.</p>
 <p>another's users by joining their radius </p>
 <p>Once authenticated, the aaa server               servers into a radius hierarchy or mesh.</p>
-<p>&#160;</p>
 <p>transmits a master key (mk) to the station          Rogue access points &amp; evil twins - a rogue and then both of them will derive the same access point is one that has been installed pairwise master key (pmk) from the mk. on the network without authorization.</p>
-<p>&#160;</p>
 <p><b>Extensible authentication protocol (eap) </b>        A rogue wap masquerading as a legitimate <b>-</b> This defines a framework for negotiating one is called an evil twin. an evil twin might authentication mechanisms rather than the have a similar ssid as the real one or the details of the mechanisms themselves. attacker might use some dos technique to Eap implementations can include smart          overcome the legitimate wap.</p>
-<p>&#160;</p>
 <p>cards, one-time passwords and biometric         A rogue hardware WAP can be identified identifiers. through physical inspections. there are Peap, eap-ttls and eap-fast - in protected          also various wi-fi analyzers that can detect extensible authentication protocol (peap),         rogue waps including inssider and kismet</p>
 <p>an encrypted tunnel is established                Disassociation and replay attacks - a </p>
-<p>&#160;</p>
 <p><span><b>79</b></span></p>
 <p id="page_80">disassociation attack exploits the lack of encryption in management frame traffic to send spoofed frames.</p>
 <p>One type of disassociation attack injects management frames that spoof the MAC address of a single victim causing it to be disconnected from the network.</p>
 <p>Another variant broadcasts spoofed frames to disconnect all stations.</p>
 <p><b>Jamming Attacks -</b> A Wi-Fi Jamming Attack Can Be Performed By Setting Up A Wap With A Stronger Signal.</p>
 <p>The Only Way To Defeat This Attack Is To Either Locate The Offending Radio Source And Disable It Or To Boost The Signal From The Legitimate Equipment.</p>
-<p>&#160;</p>
 <h2>9.4  Network Access Control</h2>
-<p>&#160;</p>
 <p>Network Access Control (NAC )not only authenticates users and devices before allowing them access to the network but also checks and enforces compliance with established security policies. By evaluating the operating system version, patch level, antivirus status, or the presence of specific security software, NAC ensures that devices meet a minimum set of security standards before being granted network access.</p>
 <p>NAC also can restrict access based on user profile, device type, location, and other attributes, to ensure users and devices can only access the resources necessary to complete their duties. NAC plays a crucial role in identifying and quarantining suspicious or noncompliant devices.</p>
 <p>NAC and virtual local area networks (VLANs) work together to improve and automate network security. One of the primary ways NAC integrates with VLAN protections is through dynamic VLAN assignment. Dynamic VLAN assignment is a NAC feature that assigns a VLAN to a device based on the user's identity attributes, device type, device location, or health check results.</p>
-<p>&#160;</p>
 <p><span><b>Agent vs Agentless Configurations</b></span></p>
 <p>NAC can enforce security policies using agent-based and agentless methods.</p>
 <p>In an agent-based approach, a software agent is installed on the devices that connect to the network. This agent communicates with the NAC platform, providing detailed information about the device's status and compliance level. An agent-based NAC implementation can enable features such as automatic remediation, where the NAC agent can perform actions like updating software or disabling specific settings to bring a device into compliance with mandatory security configurations.</p>
 <p>In contrast, an agentless NAC approach uses port-based network access control or network scans to evaluate devices. For example, agentless NAC may use DHCP fingerprinting to identify the type and configuration of a device when it connects, or it might perform a network scan to detect open ports or active services.</p>
-<p>&#160;</p>
 <p><span><b>80</b></span></p>
 <h2>9.5  Network Security Monitoring</h2>
-<p>&#160;</p>
 <p><b>Network-based intrusion detection systems -</b> An ids is a means of using software tools to provide real-time analysis of either network traffic or system and application logs. a network-based ids captures traffic via a packet sniffer referred to as a sensor. when traffic matches a detection signature, it raises an alert but will not block the source host.</p>
 <p><b>Taps &amp; port mirrors -</b> Typically the packet capture sensor is placed inside a firewall or close to an important server and the idea is to identify malicious traffic that has managed to get past the firewall. depending on network size and resources, one or just a few sensors will be deployed to monitor key assets and network paths.</p>
 <p><img src="../Images/index-81_1.png" alt=""/></p>
-<p>&#160;</p>
 <p><b>Network-based intrusion prevention systems (IPS) -</b> An ips provides an active response to any network threat.</p>
 <p><img src="../Images/index-81_2.png" alt=""/></p>
 <p>Typical responses to a threat can include blocking the attacker's ip address (shunning), throttling the bandwidth to attacking hosts and applying complex firewall filters.</p>
@@ -112,15 +89,12 @@
 <p><b>Content/url filter -</b> A firewall typically has to sustain high loads of traffic which can increase latency and even cause network outages. a solution is to treat security solutions for server traffic differently from that of user traffic.</p>
 <p>A Content Filter Is Designed To Apply A Number Of User-Focused Filtering Rules Such As Applying Time-Based Restrictions To Browsing.</p>
 <p>Content Filters Are Now Implemented As A Class Of Product Called Secure Web Gateway (Swg) Which Can Also Integrate Filtering With The Functionality Of Data Loss Prevention.</p>
-<p>&#160;</p>
 <p><span><b>81</b></span></p>
 <p id="page_82"><b>Host-Based Ids -</b> A Host-Based Ids (Hids) Captures Information From A Single Host. The Core Ability Is To Capture And Analyze Log Files But More Sophisticated Systems Can Also Monitor Os Kernel Files, Monitor Ports And Network Interfaces.</p>
 <p>One Other Core Feature Is File Integrity Monitoring (Fim). Fim Software Will Audit Key System Files To Make Sure They Match The Authorized Versions.</p>
 <p><b>Web Application Firewall (Waf) -</b> A Waf Is Designed To Specifically Protect Software Running On Web Servers And Their Back-End Databases From Code Injection And Dos Attacks.</p>
 <p>They Use Application-Aware Processing Rules To Filter Traffic And Perform Application-Specific Intrusion Detection.</p>
-<p>&#160;</p>
 <h2>9.6  Web Filtering</h2>
-<p>&#160;</p>
 <p>Its primary function is to block users from          policies and rules and then apply them accessing malicious or inappropriate              locally on the device. websites, thereby protecting the network </p>
 <p>from potential threats.                             <span><b>Centralized Web Filtering</b></span></p>
 <p>Web filters analyze web traffic, often in            A centralized proxy server plays a crucial real time, and can restrict access based on  <span>role in web content filtering by acting as an </span></p>
@@ -129,9 +103,7 @@
 <p><span><b>Agent-Based Web Filtering</b></span>             through a centralized proxy server, it can </p>
 <p>effectively control and monitor all inbound </p>
 <p>Agent-based web filtering involves               and outbound web content.</p>
-<p>&#160;</p>
 <p>installing a software agent on desktop            The primary role of the proxy in web computers, laptops, and mobile devices. content filtering is to analyze web requests The agents enforce compliance with the from users and determine whether organization's web filtering policies. to permit or deny access based on Agents communicate with a centralized          established policies. management server to retrieve filtering </p>
-<p>&#160;</p>
 <p><span><b>Centralized Web Filtering Techniques</b></span></p>
 <p> <b>URL Scanning -</b> Where the proxy server examines the URLs requested by users. </p>
 <p> <b>Content Categorization -</b> Classifies websites into categories </p>

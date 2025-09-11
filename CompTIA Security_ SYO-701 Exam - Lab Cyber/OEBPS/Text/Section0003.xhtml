@@ -92,8 +92,7 @@
   <p>When you want others to send you confidential messages, you give them your public key to encrypt the message and then you decrypt the message with your private key.</p>
   <p>When You Want To Authenticate Yourself To Others, You Create A Signature And Sign It Using Your Private Key To Encrypt It. You Give Others Your Public Key To Decrypt The Signature.</p>
   <p><b>Certificate Authority -</b> This Is The Entity Responsible For Issuing And Guaranteeing Certificates.</p>
-  <p>&#160;</p>
-  <h3>PKI Trust Models Include:</h3>
+    <h3>PKI Trust Models Include:</h3>
   <ul>
     <li><span class="bullets">Single CA</span> - A Single CA Issues Certificates To Users And The Users Trust Certificates By That CA Exclusively. If The CA Is Compromised, The Entire PKI Collapses</li>
     <li><span class="bullets">Hierarchical (Intermediate CA)</span> - A Single CA Called The Root Issues Certificates To Several Intermediate CAs. The Intermediate CAs Issue Certificates To Subjects (Leaf Or End Entities). Each Leaf Certificate Can Be Traced Back To The Root CA Along The Certification Path And This Is Referred To As A Certificate Chain Or Chain Of Trust. The Root Is Still A Single Point Of Failure But It Can Be Taken Offline As Most Of The Regular CA Activities Are Handled By The Intermediate CA Servers.</li>
