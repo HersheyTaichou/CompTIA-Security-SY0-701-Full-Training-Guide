@@ -71,3 +71,25 @@ img {
 	margin-right: auto;
 	height: auto;
 }
+
+code {
+	padding: 2px;
+	color: darkred;
+	font-weight: bold;
+}
+
+.IPExample {
+	background-color: green;
+	width: 100%;
+	text-align: center;
+}
+
+.IPEmbedded {
+	background-color: white;
+	margin: auto;
+	text-align: center;
+}
+
+.tooltip {
+	text-decoration: underline;
+}
