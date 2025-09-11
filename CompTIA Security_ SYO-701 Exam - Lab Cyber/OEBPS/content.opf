@@ -1,87 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?>
-<package version="2.0" unique-identifier="uuid_id" xmlns="http://www.idpf.org/2007/opf">
-  <metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata">
-    <dc:language>en</dc:language>
-    <dc:title>CompTIA Security+ SYO-701 Exam Study Guide (Printer Friendly)</dc:title>
-    <dc:contributor opf:role="bkp">calibre (8.9.0) [https://calibre-ebook.com]</dc:contributor>
-    <dc:date>2024-12-30T11:21:25+00:00</dc:date>
-    <meta name="calibre:timestamp" content="2025-09-02T17:20:20.411248+00:00"/>
-    <dc:identifier opf:scheme="calibre">deb29bbc-bd8f-4e86-adc1-5e209f4bd50f</dc:identifier>
-    <dc:creator opf:file-as="Cyber, Lab" opf:role="aut">Lab Cyber</dc:creator>
-    <meta name="calibre:title_sort" content="CompTIA Security+ SYO-701 Exam Study Guide (Printer Friendly)"/>
-    <dc:publisher>Lab Cyber</dc:publisher>
-    <dc:identifier id="uuid_id" opf:scheme="uuid">deb29bbc-bd8f-4e86-adc1-5e209f4bd50f</dc:identifier>
-    <meta name="cover" content="cover"/>
-    <meta name="Sigil version" content="2.6.0"/>
-    <dc:date opf:event="modification" xmlns:opf="http://www.idpf.org/2007/opf">2025-09-03</dc:date>
-  </metadata>
-  <manifest>
-    <item id="cover" href="Images/cover.jpeg" media-type="image/jpeg"/>
-    <item id="titlepage" href="Text/titlepage.xhtml" media-type="application/xhtml+xml"/>
-    <item id="id111" href="Text/index_split_001.html" media-type="application/xhtml+xml"/>
-    <item id="id110" href="Text/index_split_002.html" media-type="application/xhtml+xml"/>
-    <item id="id11" href="Images/index-1_1.png" media-type="image/png"/>
-    <item id="id12" href="Images/index-1_2.png" media-type="image/png"/>
-    <item id="id2" href="Images/index-10_1.png" media-type="image/png"/>
-    <item id="id9" href="Images/index-18_1.png" media-type="image/png"/>
-    <item id="id10" href="Images/index-19_1.png" media-type="image/png"/>
-    <item id="id13" href="Images/index-20_1.png" media-type="image/png"/>
-    <item id="id14" href="Images/index-23_1.png" media-type="image/png"/>
-    <item id="id15" href="Images/index-23_2.png" media-type="image/png"/>
-    <item id="id16" href="Images/index-24_1.png" media-type="image/png"/>
-    <item id="id17" href="Images/index-24_2.png" media-type="image/png"/>
-    <item id="id18" href="Images/index-24_3.png" media-type="image/png"/>
-    <item id="id19" href="Images/index-24_4.png" media-type="image/png"/>
-    <item id="id20" href="Images/index-29_1.png" media-type="image/png"/>
-    <item id="id21" href="Images/index-29_2.png" media-type="image/png"/>
-    <item id="id22" href="Images/index-32_1.png" media-type="image/png"/>
-    <item id="id23" href="Images/index-32_2.png" media-type="image/png"/>
-    <item id="id24" href="Images/index-33_1.png" media-type="image/png"/>
-    <item id="id25" href="Images/index-33_2.png" media-type="image/png"/>
-    <item id="id26" href="Images/index-37_1.png" media-type="image/png"/>
-    <item id="id27" href="Images/index-37_2.png" media-type="image/png"/>
-    <item id="id28" href="Images/index-39_1.png" media-type="image/png"/>
-    <item id="id29" href="Images/index-40_1.png" media-type="image/png"/>
-    <item id="id30" href="Images/index-42_1.png" media-type="image/png"/>
-    <item id="id31" href="Images/index-46_1.png" media-type="image/png"/>
-    <item id="id32" href="Images/index-56_1.png" media-type="image/png"/>
-    <item id="id33" href="Images/index-67_1.png" media-type="image/png"/>
-    <item id="id34" href="Images/index-69_1.png" media-type="image/png"/>
-    <item id="id35" href="Images/index-74_1.png" media-type="image/png"/>
-    <item id="id36" href="Images/index-74_2.png" media-type="image/png"/>
-    <item id="id37" href="Images/index-81_1.png" media-type="image/png"/>
-    <item id="id38" href="Images/index-81_2.png" media-type="image/png"/>
-    <item id="id39" href="Images/index-93_1.png" media-type="image/png"/>
-    <item id="id40" href="Images/index-93_2.png" media-type="image/png"/>
-    <item id="id41" href="Images/index-98_1.png" media-type="image/png"/>
-    <item id="id42" href="Images/index-98_2.png" media-type="image/png"/>
-    <item id="id43" href="Images/index-99_1.png" media-type="image/png"/>
-    <item id="id44" href="Images/index-99_2.png" media-type="image/png"/>
-    <item id="id3" href="Images/index-116_1.png" media-type="image/png"/>
-    <item id="id4" href="Images/index-117_1.png" media-type="image/png"/>
-    <item id="id5" href="Images/index-119_1.png" media-type="image/png"/>
-    <item id="id6" href="Images/index-130_1.png" media-type="image/png"/>
-    <item id="id7" href="Images/index-131_1.png" media-type="image/png"/>
-    <item id="id8" href="Images/index-144_1.png" media-type="image/png"/>
-    <item id="page_css" href="Styles/page_styles.css" media-type="text/css"/>
-    <item id="css" href="Styles/stylesheet.css" media-type="text/css"/>
-    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
-    <item id="Section0001.xhtml" href="Text/Section0001.xhtml" media-type="application/xhtml+xml"/>
-    <item id="Section0002.xhtml" href="Text/Section0002.xhtml" media-type="application/xhtml+xml"/>
-    <item id="Section0003.xhtml" href="Text/Section0003.xhtml" media-type="application/xhtml+xml"/>
-    <item id="Section0004.xhtml" href="Text/Section0004.xhtml" media-type="application/xhtml+xml"/>
-    <item id="Screenshot_2025-09-02_150008.png" href="Images/bullet.png" media-type="image/png"/>
-  </manifest>
-  <spine toc="ncx">
-    <itemref idref="titlepage"/>
-    <itemref idref="id111"/>
-    <itemref idref="id110"/>
-    <itemref idref="Section0001.xhtml"/>
-    <itemref idref="Section0002.xhtml"/>
-    <itemref idref="Section0003.xhtml"/>
-    <itemref idref="Section0004.xhtml"/>
-  </spine>
-  <guide>
-    <reference type="cover" title="Cover" href="Text/titlepage.xhtml"/>
-  </guide>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<package version="3.0" unique-identifier="uuid_id" xmlns="http://www.idpf.org/2007/opf" prefix="rendition: http://www.idpf.org/vocab/rendition/#">
+<metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata">
+<dc:language>en</dc:language>
+<dc:title id="title1">CompTIA Security+ SYO-701 Exam Study Guide (Printer Friendly)</dc:title>
+<meta refines="#title1" property="title-type">main</meta>
+<dc:contributor id="contrib1">calibre (8.9.0) [https://calibre-ebook.com]</dc:contributor>
+<meta refines="#contrib1" property="role" scheme="marc:relators">bkp</meta>
+<meta name="calibre:timestamp" content="2025-09-02T17:20:20.411248+00:00" />
+<dc:identifier>urn:calibre:deb29bbc-bd8f-4e86-adc1-5e209f4bd50f</dc:identifier>
+<dc:creator id="create1">Lab Cyber</dc:creator>
+<meta refines="#create1" property="role" scheme="marc:relators">aut</meta>
+<meta refines="#create1" property="file-as">Cyber, Lab</meta>
+<meta refines="#title1" property="file-as">CompTIA Security+ SYO-701 Exam Study Guide (Printer Friendly)</meta>
+<dc:publisher>Lab Cyber</dc:publisher>
+<meta name="Sigil version" content="2.6.0" />
+<dc:identifier id="uuid_id">urn:uuid:deb29bbc-bd8f-4e86-adc1-5e209f4bd50f</dc:identifier>
+<meta name="cover" content="cover_jpg" />
+<meta property="dcterms:modified">2025-09-11T20:26:31Z</meta>
+</metadata>
+<manifest>
+<item id="cover_jpg" href="Images/cover.jpg" media-type="image/jpeg" properties="cover-image" />
+<item id="titlepage_xhtml" href="Text/titlepage.xhtml" media-type="application/xhtml+xml" properties="svg" />
+<item id="index-1_1_png" href="Images/index-1_1.png" media-type="image/png" />
+<item id="index-1_2_png" href="Images/index-1_2.png" media-type="image/png" />
+<item id="index-10_1_png" href="Images/index-10_1.png" media-type="image/png" />
+<item id="index-18_1_png" href="Images/index-18_1.png" media-type="image/png" />
+<item id="index-19_1_png" href="Images/index-19_1.png" media-type="image/png" />
+<item id="index-20_1_png" href="Images/index-20_1.png" media-type="image/png" />
+<item id="index-23_1_png" href="Images/index-23_1.png" media-type="image/png" />
+<item id="index-23_2_png" href="Images/index-23_2.png" media-type="image/png" />
+<item id="index-24_1_png" href="Images/index-24_1.png" media-type="image/png" />
+<item id="index-24_2_png" href="Images/index-24_2.png" media-type="image/png" />
+<item id="index-24_3_png" href="Images/index-24_3.png" media-type="image/png" />
+<item id="index-24_4_png" href="Images/index-24_4.png" media-type="image/png" />
+<item id="index-29_1_png" href="Images/index-29_1.png" media-type="image/png" />
+<item id="index-29_2_png" href="Images/index-29_2.png" media-type="image/png" />
+<item id="index-32_1_png" href="Images/index-32_1.png" media-type="image/png" />
+<item id="index-32_2_png" href="Images/index-32_2.png" media-type="image/png" />
+<item id="index-33_1_png" href="Images/index-33_1.png" media-type="image/png" />
+<item id="index-33_2_png" href="Images/index-33_2.png" media-type="image/png" />
+<item id="index-37_1_png" href="Images/index-37_1.png" media-type="image/png" />
+<item id="index-37_2_png" href="Images/index-37_2.png" media-type="image/png" />
+<item id="index-39_1_png" href="Images/index-39_1.png" media-type="image/png" />
+<item id="index-40_1_png" href="Images/index-40_1.png" media-type="image/png" />
+<item id="index-42_1_png" href="Images/index-42_1.png" media-type="image/png" />
+<item id="index-46_1_png" href="Images/index-46_1.png" media-type="image/png" />
+<item id="index-56_1_png" href="Images/index-56_1.png" media-type="image/png" />
+<item id="index-67_1_png" href="Images/index-67_1.png" media-type="image/png" />
+<item id="index-69_1_png" href="Images/index-69_1.png" media-type="image/png" />
+<item id="index-74_1_png" href="Images/index-74_1.png" media-type="image/png" />
+<item id="index-74_2_png" href="Images/index-74_2.png" media-type="image/png" />
+<item id="index-81_1_png" href="Images/index-81_1.png" media-type="image/png" />
+<item id="index-81_2_png" href="Images/index-81_2.png" media-type="image/png" />
+<item id="index-93_1_png" href="Images/index-93_1.png" media-type="image/png" />
+<item id="index-93_2_png" href="Images/index-93_2.png" media-type="image/png" />
+<item id="index-98_1_png" href="Images/index-98_1.png" media-type="image/png" />
+<item id="index-98_2_png" href="Images/index-98_2.png" media-type="image/png" />
+<item id="index-99_1_png" href="Images/index-99_1.png" media-type="image/png" />
+<item id="index-99_2_png" href="Images/index-99_2.png" media-type="image/png" />
+<item id="index-116_1_png" href="Images/index-116_1.png" media-type="image/png" />
+<item id="index-117_1_png" href="Images/index-117_1.png" media-type="image/png" />
+<item id="index-119_1_png" href="Images/index-119_1.png" media-type="image/png" />
+<item id="index-130_1_png" href="Images/index-130_1.png" media-type="image/png" />
+<item id="index-131_1_png" href="Images/index-131_1.png" media-type="image/png" />
+<item id="index-144_1_png" href="Images/index-144_1.png" media-type="image/png" />
+<item id="page_styles_css" href="Styles/page_styles.css" media-type="text/css" />
+<item id="toc_ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+<item id="bullet_png" href="Images/bullet.png" media-type="image/png" />
+<item id="sgc-toc_css" href="Styles/sgc-toc.css" media-type="text/css" />
+<item id="TOC_xhtml" href="Text/TOC.xhtml" media-type="application/xhtml+xml" />
+<item id="stylesheet.css" href="Styles/stylesheet.css" media-type="text/css" />
+<item id="Section0001.xhtml" href="Text/Section0001.xhtml" media-type="application/xhtml+xml" />
+<item id="Section0002.xhtml" href="Text/Section0002.xhtml" media-type="application/xhtml+xml" />
+<item id="Section0003.xhtml" href="Text/Section0003.xhtml" media-type="application/xhtml+xml" />
+<item id="Section0004.xhtml" href="Text/Section0004.xhtml" media-type="application/xhtml+xml" />
+<item id="Section0005.xhtml" href="Text/Section0005.xhtml" media-type="application/xhtml+xml" />
+<item id="Section0006.xhtml" href="Text/Section0006.xhtml" media-type="application/xhtml+xml" />
+<item id="Section0007.xhtml" href="Text/Section0007.xhtml" media-type="application/xhtml+xml" />
+<item id="Section0008.xhtml" href="Text/Section0008.xhtml" media-type="application/xhtml+xml" />
+<item id="Section0009.xhtml" href="Text/Section0009.xhtml" media-type="application/xhtml+xml" />
+<item id="Section0010.xhtml" href="Text/Section0010.xhtml" media-type="application/xhtml+xml" />
+<item id="Section0011.xhtml" href="Text/Section0011.xhtml" media-type="application/xhtml+xml" />
+<item id="Section0012.xhtml" href="Text/Section0012.xhtml" media-type="application/xhtml+xml" />
+<item id="Section0013.xhtml" href="Text/Section0013.xhtml" media-type="application/xhtml+xml" />
+<item id="Section0014.xhtml" href="Text/Section0014.xhtml" media-type="application/xhtml+xml" />
+<item id="Section0015.xhtml" href="Text/Section0015.xhtml" media-type="application/xhtml+xml" />
+<item id="Section0016.xhtml" href="Text/Section0016.xhtml" media-type="application/xhtml+xml" />
+<item id="Section0017.xhtml" href="Text/Section0017.xhtml" media-type="application/xhtml+xml" />
+<item id="navid" media-type="application/xhtml+xml" href="nav.xhtml" properties="nav" />
+</manifest>
+<spine toc="toc_ncx">
+<itemref idref="TOC_xhtml" />
+<itemref idref="titlepage_xhtml" />
+<itemref idref="Section0001.xhtml" />
+<itemref idref="Section0002.xhtml" />
+<itemref idref="Section0003.xhtml" />
+<itemref idref="Section0004.xhtml" />
+<itemref idref="Section0005.xhtml" />
+<itemref idref="Section0006.xhtml" />
+<itemref idref="Section0007.xhtml" />
+<itemref idref="Section0008.xhtml" />
+<itemref idref="Section0009.xhtml" />
+<itemref idref="Section0010.xhtml" />
+<itemref idref="Section0011.xhtml" />
+<itemref idref="Section0012.xhtml" />
+<itemref idref="Section0013.xhtml" />
+<itemref idref="Section0014.xhtml" />
+<itemref idref="Section0015.xhtml" />
+<itemref idref="Section0016.xhtml" />
+<itemref idref="Section0017.xhtml" />
+<itemref idref="navid" linear="no"/>
+</spine>
+<guide>
+<reference type="cover" title="Cover" href="Text/titlepage.xhtml" />
+<reference type="toc" title="Table of Contents" href="Text/TOC.xhtml" />
+</guide>
 </package>

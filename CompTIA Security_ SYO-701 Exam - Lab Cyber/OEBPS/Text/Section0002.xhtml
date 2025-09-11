@@ -1,123 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
   <title>Section 2 - Explaining Threat Actors and Threat Vectors</title>
   <link rel="stylesheet" type="text/css" href="../Styles/stylesheet.css"/>
 </head>
 
 <body>
-	<h1>Section 2 - <span class="section">Explaining Threat Actors and Threat Vectors</span></h1>
-	<h2>2.1  Vulnerability, Threat And Risk</h2>
-	<p><b>Vulnerability -</b> This Is A Weakness That Could Be Triggered Accidentally Or Exploited Intentionally To Cause A Security Breach. Threats Can Exist Even When There Are No Vulnerabilities.</p>
-	<p>Threats Can Exist Without Risks But A Risk Needs An Associated Threat To Exist</p>
-	<p>The Path Or Tool Used By A Malicious Threat Actor Can Be Referred To As The Attack Vector.</p>
-	<p>Risks Are Often Measured Based On The <span class="keyword">Probability</span> That An Event Might Occur As Well As The Impact Of The Event On The Business.</p>
-	<p>Threat Assessment Is The Combination Of A Threat Actor's <span class="keyword">Intentions</span> To Harm Combined With An Assessment Of That Actor's <span class="keyword">Capability</span> To Carry Out Those Intentions.</p>
-	<p>Risk Assessment Involves Identification Of Security Risks Through The Analysis Of Assets, Threats And Vulnerabilities, Including Their Impacts And Likelihood.</p>
-	<p>Risks Are Event Focused (The Database Server Goes Down) While Threats Focus On Intentions (A Hacker Wants To Take Down The Database Server)</p>
-	<h2>2.2  Attributes Of Threat Actors</h2>
-	<p><b>Location -</b> An external threat or actor is one that has no account or authorized access to the target system. such threats must use malware and or social engineering to infiltrate the security system. Conversely, an internal or insider threat actor is one that has been granted permissions on the system and typically means either an employee or a third party contractor.</p>
-	<p><b>Intent/motivation -</b> Intent describes what an attacker hopes to achieve from the attack while motivation is the reason for perpetuating the attack.motivation could be driven by greed, curiosity or grievance.</p>
-	<p>Threats can either be structured or unstructured. A criminal gang attempting to steal financial data is a structured targeted threat while a script kiddie launching a series of spam emails is unstructured and opportunistic.</p>
-	<p><b>Level of sophistication/capability -</b> the technical abilities and resources/funding the adversary possesses must also be considered. capability refers to a threat actor's ability to craft novel exploit techniques and tools.</p>
-	<h2>2.3 Threat Actors</h2>
-	<ul>
-		<li><span class="bullets">Script kiddie</span> - Use hacker tools without necessarily understanding how they work or have the ability to craft new attacks.</li>
-		<li><span class="bullets">Black hats</span> - Very skilled and have financial interests</li>
-		<li><span class="bullets">White hat</span> - Hack systems and networks with full authorization typically to discover vulnerabilities and test current security setup.</li>
-		<li><span class="bullets">Gray hats</span> - Are very skilled and typically employ black hat tactics for white hat objectives</li>
-		<li><span class="bullets">Hacktivists **</span> - Hacking for a cause. they might attempt to obtain and release confidential information to the public or deface a website. (anonymous, wikileaks)</li>
-		<li><span class="bullets">State actors &amp; advanced persistent threats</span> - The term atp was coined to understand the behavior underpinning modern types of cyber adversaries. it refers to the ongoing ability of an adversary to compromise network security and maintain access by using a variety of tools and techniques.</li>
-		<li><span class="bullets">Criminal syndicates</span> - Criminal syndicates can operate across the internet from different jurisdictions than its victim, increasing the complexity of prosecution.</li>
-		<li><span class="bullets">Insider threats</span> - These include, compromised employees, disgruntled employee (ex,) second streamer, spy/saboteur, shadow it, unintentional</li>
-	</ul>
-	<h2>2.4  Attack Surface &amp; Attack Vectors</h2>
-	<p><b>Attack Surface -</b> This refers to all the points at which a malicious threat actor could try to exploit a vulnerability. The attack surface for an external actor is and should be far smaller than that for an insider threat. Minimizing the attack surface means restricting access so that only a few known endpoints, protocols/ports and services are permitted.</p>
-	<p>The attack vector is the path that a threat actor uses to gain access to a secure system and can include</p>
-	<ul>
-		<li>Direct Access</li>
-		<li>Removable Media</li>
-		<li>Email</li>
-		<li>Remote &amp; Wireless</li>
-		<li>Supply Chain</li>
-		<li>Web &amp; Social Media</li>
-		<li>Cloud</li>
-	</ul>
+  <h1>Section 2 - <span class="section">Explaining Threat Actors and Threat Vectors</span></h1>
 
-	<h2>2.5  Vulnerable Software &amp; Network Vectors</h2>
-	<p><b>Vulnerable software</b> is one that contains a flaw in its code or design that can be exploited to circumvent access control or to crash the process.</p>
-	<p><b>Unsupported systems &amp; applications - </b>An unsupported system is one whose vendor no longer develops updates or patches for it.</p>
-	<p>One strategy for dealing with unsupported apps that cannot be replaced is to try to isolate them from other systems. The idea is to reduce opportunities for a threat actor to access the vulnerable app and run exploit code. Using isolation as a substitute for patch management is an example of a compensating control.</p>
-	<p><b>Network Vectors -</b> An exploit technique for any given software vulnerability can be classed as either remote or local.</p>
-	<ul>
-		<li>Remote means the vulnerability can be exploited by sending code to the target over a network.</li>
-		<li>Local means that the exploit code must be executed from an authenticated session on the computer.</li>
-	</ul>
-	<p>An unsecure network is one that lacks the attributes of CIA while a secure network uses an access control framework and cryptographic solutions to identify, authenticate, authorize and audit network users, hosts and traffic.</p>
-		<h3>Some specific threat vectors associated with unsecure networks are:</h3>
-	<ul>
-		<li><span class="bullets">Direct Access</span> - Getting physical access to an unlocked workstation, stealing a PC or maybe using a boot disk to install malicious tools.</li>
-		<li><span class="bullets">Wired Network</span> - A threat actor attaches an unauthorized device to a physical network port and is able to launch eavesdropping or DoS attacks.</li>
-		<li><span class="bullets">Remote &amp; Wireless Network</span> - The attacker either obtains credentials for a remote access or wireless connection to the network or cracks the security protocols used for authentication</li>
-		<li><span class="bullets">Cloud Access</span> - The attacker is likely to target the accounts used to develop services in the cloud or manage cloud systems. They may also try to attack the cloud service provider (CSP) as a way of accessing the victim system.</li>
-		<li><span class="bullets">Bluetooth Network</span> - The threat actor exploits a vulnerability or misconfiguration to transmit a malicious file to a user's device over the Bluetooth personal area wireless networking protocol.</li>
-		<li><span class="bullets">Default Credentials</span> - The attacker gains control of a network device or app because it has been left configured with a default password</li>
-		<li><span class="bullets">Open Service Port</span> - The threat actor is able to establish an unauthenticated connection to a logical TCP or UDP network port</li>
-	</ul>
-	<h2>2.6  Lure-Based &amp; Message-Based Vectors</h2>
-	<p>This is something superficially attractive that causes its target to want it even though it may be concealing something dangerous.</p>
-	<p>In cybersecurity terms, when the target opens the file bait, it delivers a malicious payload hook that will typically give the threat actor control over the system or perform service disruption</p>
-	<ul>
-		<li><span class="bullets">Removable Device</span> - The attacker conceals malware on a USB thumb drive or memory card and tries to trick employees into connecting the media to a PC or smartphone typically through a drop attack.</li>
-		<li><span class="bullets">Executable File</span> - The threat actor conceals exploit code in a program file (Trojan Malware).</li>
-		<li><span class="bullets">Document Files</span> - Malware is concealed by embedding it in word processing and PDF format files.</li>
-		<li><span class="bullets">Image Files</span> - The exploit code is concealed in an image file that targets a vulnerability in browser or document editing software.</li>
-	</ul>
-	<h3>Message-Based Vectors</h3>
-	<ul>
-		<li><span class="bullets">Email</span> - The attacker sends a malicious file attachment via email that allows attachments (phishing).</li>
-		<li>Short Message Service (SMS)</li>
-		<li><span class="bullets">Instant Messaging</span> - Most apps for this are more secure than SMS because they use encryption but they can still contain software vulnerabilities.</li>
-		<li><span class="bullets">Web &amp; Social Media</span> - Malware may be concealed in files attached to posts or presented as downloads.</li>
-	</ul>
-	<p>The most powerful exploits are zero-click which means that simply receiving an attachment or viewing an image on a webpage can trigger the exploit.</p>
-	<h2>2.7  Third Party Risks</h2>
-	<p>Vendor Management Is The Process Of Choosing Supplier Companies And Evaluating The Risks Inherent In Relying On A Third Party Product Or Service.</p>
-	<p>Within Vendor Management, System Integration Refers To The Process Of Using Components From Multiple Vendors To Implement A Business Workflow.</p>
-	<p>There Are Two Main Data Risks When Using Third Parties</p>
-	<ul>
-		<li>Vendor May Need To Be Granted Access To Your Data</li>
-		<li>The Vendor May Have To Be Used To Host The Data Or The Data Backups</li>
-	</ul>
-	<h3>Data Storage</h3>
-	<p>The Following Precautions Should Be Taken:</p>
-	<ul>
-		<li>Ensure The Same Protections For Data As Though It Were Stored On-Premises.</li>
-		<li>Monitor And Audit Third-Party Access To The Data</li>
-		<li>Evaluate Compliance Impacts From Storing Personal Data On A Third-Party System</li>
-	</ul>
-	<h2>2.8  Intro To Social Engineering</h2>
-	<p>This is the exploitation of human emotions and interactions to extract valuable information. more dangerous than traditional methods of hacking as it relies on human error which is subjective &amp; less predictable than software/hardware vulnerabilities.</p>
-	<p>Social engineering relies heavily on human emotions such as fear, curiosity, excitement, anger and guilt.</p>
-	<p><b>Phishing -</b> Relies on creating a sense of excitement or panic in the target using emails.</p>
-	<p><b>Spear phishing -</b> A phishing attack against a very specific individual or organization</p>
-	<p><b>Angler phishing -</b> A phishing attack directed specifically at social media users</p>
-	<p><b>Whaling -</b> A phishing attack targeted at senior executives of an organization</p>
-	<p><b>Tailgating -</b> The attacker without access authorization closely follows an authorized person in a reserved area</p>
-	<p><b>Vishing -</b> Relies on creating a sense of excitement or panic in the target using a phone call</p>
-	<p><b>Smishing -</b> Relies on creating a sense of excitement or panic in the target using a text message</p>
-	<p><b>Hoaxes -</b> The hacker impersonates an employee or angry customer</p>
-	<p><b>Baiting - </b>Dropping infected usb drives in the parking lot to influence employees.</p>
-	<p><b>Piggybacking -</b> An attacker enters a secure building with the permission of an employee</p>
-	<p><b>Shoulder Surfing - </b>Obtaining sensitive information by spying</p>
-	<p><b>Dumpster Diving -</b> Obtaining sensitive information by going through the company trash</p>
-	<p><b>Credential Darvesting -</b> Using phishing emails and spamming campaigns to gather information which can then be sold.</p>
-	<p><b>Pharming -</b> Redirecting victims to a malicious website using<a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a>cache poisoning.</p>
-	<p><b>Watering Hole Attack -</b> An attack that aims to compromise a specific group of end-users by infecting existing websites or creating a new one that will attract them.</p>
-	<p><b>Typo Squatting / url Hijacking - </b>Hackers register misspelled domain names of popular websites hoping to capture sensitive information. e.g facbook.com. instagarm.com</p>
-	<p><b>Influence Campaigns -</b> A major program launched by an adversary with a high level of capability such as a nation-state actor or terrorist group. the goal is to shift public opinion on some topic and when deployed along with espionage, disinformation/fake news and hacking, it can be characterized as hybrid warfare.</p>
+  <h2 id="sigil_toc_id_45">2.1 Vulnerability, Threat And Risk</h2>
+
+  <p><b>Vulnerability -</b> This Is A Weakness That Could Be Triggered Accidentally Or Exploited Intentionally To Cause A Security Breach. Threats Can Exist Even When There Are No Vulnerabilities.</p>
+
+  <p>Threats Can Exist Without Risks But A Risk Needs An Associated Threat To Exist</p>
+
+  <p>The Path Or Tool Used By A Malicious Threat Actor Can Be Referred To As The Attack Vector.</p>
+
+  <p>Risks Are Often Measured Based On The <span class="keyword">Probability</span> That An Event Might Occur As Well As The Impact Of The Event On The Business.</p>
+
+  <p>Threat Assessment Is The Combination Of A Threat Actor's <span class="keyword">Intentions</span> To Harm Combined With An Assessment Of That Actor's <span class="keyword">Capability</span> To Carry Out Those Intentions.</p>
+
+  <p>Risk Assessment Involves Identification Of Security Risks Through The Analysis Of Assets, Threats And Vulnerabilities, Including Their Impacts And Likelihood.</p>
+
+  <p>Risks Are Event Focused (The Database Server Goes Down) While Threats Focus On Intentions (A Hacker Wants To Take Down The Database Server)</p>
+
+  <h2 id="sigil_toc_id_46">2.2 Attributes Of Threat Actors</h2>
+
+  <p><b>Location -</b> An external threat or actor is one that has no account or authorized access to the target system. such threats must use malware and or social engineering to infiltrate the security system. Conversely, an internal or insider threat actor is one that has been granted permissions on the system and typically means either an employee or a third party contractor.</p>
+
+  <p><b>Intent/motivation -</b> Intent describes what an attacker hopes to achieve from the attack while motivation is the reason for perpetuating the attack.motivation could be driven by greed, curiosity or grievance.</p>
+
+  <p>Threats can either be structured or unstructured. A criminal gang attempting to steal financial data is a structured targeted threat while a script kiddie launching a series of spam emails is unstructured and opportunistic.</p>
+
+  <p><b>Level of sophistication/capability -</b> the technical abilities and resources/funding the adversary possesses must also be considered. capability refers to a threat actor's ability to craft novel exploit techniques and tools.</p>
+
+  <h2 id="sigil_toc_id_47">2.3 Threat Actors</h2>
+
+  <ul>
+    <li><span class="bullets">Script kiddie</span> - Use hacker tools without necessarily understanding how they work or have the ability to craft new attacks.</li>
+
+    <li><span class="bullets">Black hats</span> - Very skilled and have financial interests</li>
+
+    <li><span class="bullets">White hat</span> - Hack systems and networks with full authorization typically to discover vulnerabilities and test current security setup.</li>
+
+    <li><span class="bullets">Gray hats</span> - Are very skilled and typically employ black hat tactics for white hat objectives</li>
+
+    <li><span class="bullets">Hacktivists **</span> - Hacking for a cause. they might attempt to obtain and release confidential information to the public or deface a website. (anonymous, wikileaks)</li>
+
+    <li><span class="bullets">State actors &amp; advanced persistent threats</span> - The term atp was coined to understand the behavior underpinning modern types of cyber adversaries. it refers to the ongoing ability of an adversary to compromise network security and maintain access by using a variety of tools and techniques.</li>
+
+    <li><span class="bullets">Criminal syndicates</span> - Criminal syndicates can operate across the internet from different jurisdictions than its victim, increasing the complexity of prosecution.</li>
+
+    <li><span class="bullets">Insider threats</span> - These include, compromised employees, disgruntled employee (ex,) second streamer, spy/saboteur, shadow it, unintentional</li>
+  </ul>
+
+  <h2 id="sigil_toc_id_48">2.4 Attack Surface &amp; Attack Vectors</h2>
+
+  <p><b>Attack Surface -</b> This refers to all the points at which a malicious threat actor could try to exploit a vulnerability. The attack surface for an external actor is and should be far smaller than that for an insider threat. Minimizing the attack surface means restricting access so that only a few known endpoints, protocols/ports and services are permitted.</p>
+
+  <p>The attack vector is the path that a threat actor uses to gain access to a secure system and can include</p>
+
+  <ul>
+    <li>Direct Access</li>
+
+    <li>Removable Media</li>
+
+    <li>Email</li>
+
+    <li>Remote &amp; Wireless</li>
+
+    <li>Supply Chain</li>
+
+    <li>Web &amp; Social Media</li>
+
+    <li>Cloud</li>
+  </ul>
+
+  <h2 id="sigil_toc_id_49">2.5 Vulnerable Software &amp; Network Vectors</h2>
+
+  <p><b>Vulnerable software</b> is one that contains a flaw in its code or design that can be exploited to circumvent access control or to crash the process.</p>
+
+  <p><b>Unsupported systems &amp; applications - </b>An unsupported system is one whose vendor no longer develops updates or patches for it.</p>
+
+  <p>One strategy for dealing with unsupported apps that cannot be replaced is to try to isolate them from other systems. The idea is to reduce opportunities for a threat actor to access the vulnerable app and run exploit code. Using isolation as a substitute for patch management is an example of a compensating control.</p>
+
+  <p><b>Network Vectors -</b> An exploit technique for any given software vulnerability can be classed as either remote or local.</p>
+
+  <ul>
+    <li>Remote means the vulnerability can be exploited by sending code to the target over a network.</li>
+
+    <li>Local means that the exploit code must be executed from an authenticated session on the computer.</li>
+  </ul>
+
+  <p>An unsecure network is one that lacks the attributes of CIA while a secure network uses an access control framework and cryptographic solutions to identify, authenticate, authorize and audit network users, hosts and traffic.</p>
+
+  <h3 class="sigil_not_in_toc">Some specific threat vectors associated with unsecure networks are:</h3>
+
+  <ul>
+    <li><span class="bullets">Direct Access</span> - Getting physical access to an unlocked workstation, stealing a PC or maybe using a boot disk to install malicious tools.</li>
+
+    <li><span class="bullets">Wired Network</span> - A threat actor attaches an unauthorized device to a physical network port and is able to launch eavesdropping or DoS attacks.</li>
+
+    <li><span class="bullets">Remote &amp; Wireless Network</span> - The attacker either obtains credentials for a remote access or wireless connection to the network or cracks the security protocols used for authentication</li>
+
+    <li><span class="bullets">Cloud Access</span> - The attacker is likely to target the accounts used to develop services in the cloud or manage cloud systems. They may also try to attack the cloud service provider (CSP) as a way of accessing the victim system.</li>
+
+    <li><span class="bullets">Bluetooth Network</span> - The threat actor exploits a vulnerability or misconfiguration to transmit a malicious file to a user's device over the Bluetooth personal area wireless networking protocol.</li>
+
+    <li><span class="bullets">Default Credentials</span> - The attacker gains control of a network device or app because it has been left configured with a default password</li>
+
+    <li><span class="bullets">Open Service Port</span> - The threat actor is able to establish an unauthenticated connection to a logical TCP or UDP network port</li>
+  </ul>
+
+  <h2 id="sigil_toc_id_50">2.6 Lure-Based &amp; Message-Based Vectors</h2>
+
+  <p>This is something superficially attractive that causes its target to want it even though it may be concealing something dangerous.</p>
+
+  <p>In cybersecurity terms, when the target opens the file bait, it delivers a malicious payload hook that will typically give the threat actor control over the system or perform service disruption</p>
+
+  <ul>
+    <li><span class="bullets">Removable Device</span> - The attacker conceals malware on a USB thumb drive or memory card and tries to trick employees into connecting the media to a PC or smartphone typically through a drop attack.</li>
+
+    <li><span class="bullets">Executable File</span> - The threat actor conceals exploit code in a program file (Trojan Malware).</li>
+
+    <li><span class="bullets">Document Files</span> - Malware is concealed by embedding it in word processing and PDF format files.</li>
+
+    <li><span class="bullets">Image Files</span> - The exploit code is concealed in an image file that targets a vulnerability in browser or document editing software.</li>
+  </ul>
+
+  <h3 class="sigil_not_in_toc">Message-Based Vectors</h3>
+
+  <ul>
+    <li><span class="bullets">Email</span> - The attacker sends a malicious file attachment via email that allows attachments (phishing).</li>
+
+    <li>Short Message Service (SMS)</li>
+
+    <li><span class="bullets">Instant Messaging</span> - Most apps for this are more secure than SMS because they use encryption but they can still contain software vulnerabilities.</li>
+
+    <li><span class="bullets">Web &amp; Social Media</span> - Malware may be concealed in files attached to posts or presented as downloads.</li>
+  </ul>
+
+  <p>The most powerful exploits are zero-click which means that simply receiving an attachment or viewing an image on a webpage can trigger the exploit.</p>
+
+  <h2 id="sigil_toc_id_51">2.7 Third Party Risks</h2>
+
+  <p>Vendor Management Is The Process Of Choosing Supplier Companies And Evaluating The Risks Inherent In Relying On A Third Party Product Or Service.</p>
+
+  <p>Within Vendor Management, System Integration Refers To The Process Of Using Components From Multiple Vendors To Implement A Business Workflow.</p>
+
+  <p>There Are Two Main Data Risks When Using Third Parties</p>
+
+  <ul>
+    <li>Vendor May Need To Be Granted Access To Your Data</li>
+
+    <li>The Vendor May Have To Be Used To Host The Data Or The Data Backups</li>
+  </ul>
+
+  <h3 class="sigil_not_in_toc">Data Storage</h3>
+
+  <p>The Following Precautions Should Be Taken:</p>
+
+  <ul>
+    <li>Ensure The Same Protections For Data As Though It Were Stored On-Premises.</li>
+
+    <li>Monitor And Audit Third-Party Access To The Data</li>
+
+    <li>Evaluate Compliance Impacts From Storing Personal Data On A Third-Party System</li>
+  </ul>
+
+  <h2 id="sigil_toc_id_52">2.8 Intro To Social Engineering</h2>
+
+  <p>This is the exploitation of human emotions and interactions to extract valuable information. more dangerous than traditional methods of hacking as it relies on human error which is subjective &amp; less predictable than software/hardware vulnerabilities.</p>
+
+  <p>Social engineering relies heavily on human emotions such as fear, curiosity, excitement, anger and guilt.</p>
+
+  <p><b>Phishing -</b> Relies on creating a sense of excitement or panic in the target using emails.</p>
+
+  <p><b>Spear phishing -</b> A phishing attack against a very specific individual or organization</p>
+
+  <p><b>Angler phishing -</b> A phishing attack directed specifically at social media users</p>
+
+  <p><b>Whaling -</b> A phishing attack targeted at senior executives of an organization</p>
+
+  <p><b>Tailgating -</b> The attacker without access authorization closely follows an authorized person in a reserved area</p>
+
+  <p><b>Vishing -</b> Relies on creating a sense of excitement or panic in the target using a phone call</p>
+
+  <p><b>Smishing -</b> Relies on creating a sense of excitement or panic in the target using a text message</p>
+
+  <p><b>Hoaxes -</b> The hacker impersonates an employee or angry customer</p>
+
+  <p><b>Baiting - </b>Dropping infected usb drives in the parking lot to influence employees.</p>
+
+  <p><b>Piggybacking -</b> An attacker enters a secure building with the permission of an employee</p>
+
+  <p><b>Shoulder Surfing - </b>Obtaining sensitive information by spying</p>
+
+  <p><b>Dumpster Diving -</b> Obtaining sensitive information by going through the company trash</p>
+
+  <p><b>Credential Darvesting -</b> Using phishing emails and spamming campaigns to gather information which can then be sold.</p>
+
+  <p><b>Pharming -</b> Redirecting victims to a malicious website using<a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a>cache poisoning.</p>
+
+  <p><b>Watering Hole Attack -</b> An attack that aims to compromise a specific group of end-users by infecting existing websites or creating a new one that will attract them.</p>
+
+  <p><b>Typo Squatting / url Hijacking - </b>Hackers register misspelled domain names of popular websites hoping to capture sensitive information. e.g facbook.com. instagarm.com</p>
+
+  <p><b>Influence Campaigns -</b> A major program launched by an adversary with a high level of capability such as a nation-state actor or terrorist group. the goal is to shift public opinion on some topic and when deployed along with espionage, disinformation/fake news and hacking, it can be characterized as hybrid warfare.</p>
 </body>
 </html>

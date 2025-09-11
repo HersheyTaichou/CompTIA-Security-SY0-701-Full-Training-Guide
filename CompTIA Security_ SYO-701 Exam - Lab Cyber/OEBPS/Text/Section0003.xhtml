@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
   <title>Section 3 - Explain Cryptographic Solutions</title>
   <link rel="stylesheet" type="text/css" href="../Styles/stylesheet.css"/>
@@ -10,201 +9,381 @@
 
 <body>
   <h1>Section 3 - <span class="section">Explain Cryptographic Solutions</span></h1>
-  <h2>3.1  Introduction To Cryptography And Hashing</h2>
+
+  <h2 id="sigil_toc_id_53">3.1 Introduction To Cryptography And Hashing</h2>
+
   <p>Cryptography Is A Secure Communication Technique That Allows Only The Sender And Receiver Of A Message To View It.</p>
-  <p><b>Plaintext</b> - An Unencrypted Message </p>
+
+  <p><b>Plaintext</b> - An Unencrypted Message</p>
+
   <p><b>Ciphertext</b> - An Encrypted Message</p>
-  <p><b>Cipher</b> - The Process (Algorithm) Used To Encrypt And Decrypt A Message </p>
+
+  <p><b>Cipher</b> - The Process (Algorithm) Used To Encrypt And Decrypt A Message</p>
+
   <p><b>Cryptanalysis</b> - The Art Of Cracking Cryptographic Systems</p>
-  <h3>There Are Three Main Types Of Cryptographic Algorithms:</h3>
+
+  <h3 class="sigil_not_in_toc">There Are Three Main Types Of Cryptographic Algorithms:</h3>
+
   <ul>
     <li>Hashing Algorithms</li>
+
     <li>Symmetric Encryption Cipher</li>
+
     <li>Asymmetric Encryption Cipher</li>
   </ul>
+
   <p><b>Hashing Algorithms</b> - The Simplest Type Of Cryptographic Operation And Produces A Fixed Length String From An Input Plaintext That Can Be Of Any Length. A <span class="keyword">Hashing Collision</span> Occurs When Two Different Plain Texts Produce The Exact Same Hash Value. Encryption Algorithms Must Demonstrate Collision Avoidance.</p>
+
   <p><img src="../Images/index-18_1.png" alt=""/></p>
-  <h3>Hashing Algorithms</h3>
+
+  <h3 class="sigil_not_in_toc">Hashing Algorithms</h3>
+
   <ul>
-    <li><span class ="bullets">Secure Hash Algorithm (SHA)</span> - Considered To Be The Strongest Algorithm With The Most Popular Being The SHA-256 Which Produces A 256-Bit Digest.</li>
+    <li><span class="bullets">Secure Hash Algorithm (SHA)</span> - Considered To Be The Strongest Algorithm With The Most Popular Being The SHA-256 Which Produces A 256-Bit Digest.</li>
+
     <li><span>Message Direct Algorithm #5 (MD5)</span> - Produces A 128-Bit Digest</li>
+
     <li>Asymmetric Encryption Cipher</li>
   </ul>
+
   <p>Birthday Attack - A Brute Force Attack Aimed At Exploiting Collisions In Hash Functions. Could Be Used For Forging A Digital Signature</p>
-  <h2>3.2  Encryption</h2>
+
+  <h2 id="sigil_toc_id_54">3.2 Encryption</h2>
+
   <p>An encryption algorithm is a type of cryptographic process that encodes data so that it can be recovered or decrypted.</p>
+
   <p>The use of a key, with the encryption cipher ensures that decryption can only be performed by authorized persons.</p>
+
   <p>A substitution cipher involves replacing units in the plaintext with different ciphertext. e.g rot13 rotates each letter 13 places so a becomes n</p>
+
   <p>The ciphertext “uryyb jbeyq” means “hello world”</p>
+
   <p>In contrast to substitution ciphers, the units in a transposition cipher stay the same in plaintext and ciphertext but their order is changed according to some mechanism.</p>
+
   <p>Consider the ciphertext “hloolelwrd”</p>
+
   <p>h l o o l</p>
+
   <p>e l w r d</p>
+
   <p>The letters are simply written as columns and the rows are concatenated.</p>
+
   <p>symmetric encryption - here both encryption and decryption are performed by the same secret key and can be used for confidentiality. It is very fast and is used for bulk encryption of large amounts of data but can be vulnerable if the key is stolen.</p>
+
   <p><img src="../Images/index-19_1.png" alt=""/></p>
+
   <p><b>There are two types</b> - Stream ciphers &amp; block ciphers</p>
+
   <p><b>Stream cipher</b> - The plaintext is combined with a separate randomly generated message calculated from the key and an initialization vector (iv). each byte or bit of data is encrypted one at a time.</p>
+
   <p><b>Block cipher</b> - The plaintext is divided into equal-size blocks (usually 128-bit). if there is not enough data in the plaintext, it is padded to the correct size. e.g, a 1200-bit plaintext would be padded with an extra 80 bits to fit into 10 x 128-bit blocks.</p>
+
   <p><b>Asymmetric Encryption -</b> Here both encryption and decryption are performed by two different but related public and private keys in a key pair. Each key is capable of reversing the operation of its pair and they are linked in such a way as to make it impossible to derive one from the other.</p>
+
   <p><img src="../Images/index-20_1.png" alt=""/></p>
+
   <p>Can Be Used To Prove Identity As The Holder Of The Private Key Cannot Be Impersonated By Anyone Else.</p>
+
   <p>The Major Drawback Of This Encryption Is That It Involves Substantial Computing Resources.</p>
+
   <p>Mostly Used For Authentication And Non-Repudiation And For Key Agreement And Exchange.</p>
+
   <p>Asymmetric Encryption Is Often Referred To As Public Key Cryptography And The Products Are Based On The RSA Algorithm.</p>
+
   <p>Ron Rivest, Adi Shamir And Leonard Adleman Published The RSA Cipher In 1977.</p>
-  <h2>3.3  Cryptographic Modes Of Operation &amp; Cipher Suites</h2>
+
+  <h2 id="sigil_toc_id_55">3.3 Cryptographic Modes Of Operation &amp; Cipher Suites</h2>
+
   <p>A Mode Of Operation Is A Means Of Using A Cipher Within A Product To Achieve A Security Goal Such As Confidentiality Or Integrity.</p>
+
   <p>Public Key Cryptography Can Authenticate A Sender While Hashing Can Prove Integrity.</p>
+
   <p>Both Can Be Combined To Authenticate A Sender And Prove The Integrity Of A Message And This Usage Is Called A <span class="keyword">Digital Signature</span>.</p>
+
   <p>Symmetric Encryption Can Encrypt And Decrypt Large Amounts Of Data But It's Difficult To Distribute The Secret Key Securely.</p>
+
   <p>Asymmetric (Pkc) Encryption Can Distribute The Key Easily But Cannot Be Used For Large Amounts Of Data.</p>
+
   <p>Digital Certificates - Public Keys Are Used And Are Freely Available But How Can Anyone Trust The Identity Of The Person Or Server Issuing A Public Key?</p>
+
   <p>A Third Party Known As A <span class="keyword">Certificate Authority (CA)</span> Can Validate The Owner Of The Public Key By Issuing The Subject With A Certificate.</p>
+
   <p>The Process Of Issuing And Verifying Certificates Is Called <span class="keyword">Public Key Infrastructure (PKI)</span></p>
+
   <p><b>Cipher Suite</b> - This Is The Combination Of Ciphers Supported And Is Made Up Of</p>
+
   <ul>
-    <li><span class ="bullets">Signature Algorithm</span> - Used To Assert The Identity Of The Server's Public Key And Facilitate Authentication</li>
-    <li><span class ="bullets">Key Exchange/Agreement Algorithm</span> - Used By The Client And Server To Derive The Same Bulk Encryption Symmetric Key.</li>
+    <li><span class="bullets">Signature Algorithm</span> - Used To Assert The Identity Of The Server's Public Key And Facilitate Authentication</li>
+
+    <li><span class="bullets">Key Exchange/Agreement Algorithm</span> - Used By The Client And Server To Derive The Same Bulk Encryption Symmetric Key.</li>
   </ul>
-  <h2>3.4  Cryptographic Use Cases</h2>
+
+  <h2 id="sigil_toc_id_56">3.4 Cryptographic Use Cases</h2>
+
   <p>Cryptography supporting authentication &amp; non-repudiation - a single hash function, symmetric or asymmetric cipher is called a cryptographic primitive. A complete cryptographic system or product is likely to use multiple cryptographic primitives such as within a cipher suite.</p>
+
   <p>Authentication &amp; non-repudiation depend on the recipient not being able to encrypt the message or the recipient would be able to impersonate the sender. Basically the recipient must be able to use the cryptographic process to decrypt authentication and integrity data but not to encrypt it.</p>
+
   <p>Cryptography supporting confidentiality - cryptography removes the need to store data in secure media as even if the ciphertext is stolen, the threat actor will not be able to understand or change what has been stolen.</p>
+
   <p>Cryptography supporting integrity &amp; resiliency - integrity is proved by hashing algorithms which allow two parties to derive the same checksum and show that a message or data has not been tampered with. Cryptography can be used to design highly resilient control systems and secure computer code.</p>
+
   <p>A developer can make tampering more difficult through obfuscation which is the art of making a message difficult to understand. Cryptography is a very effective way of obfuscating code but it also means the computer might not be able to understand and execute the code.</p>
-  <h2>3.5  Longevity, Salting , Stretching &amp; Other Types Of Cryptographic Technologies</h2>
-  <p><span class ="bullets">Longevity</span> - This Refers To The Measure Of Confidence That People Have In A Given Cipher. In Another Sense, It Is The Consideration Of How Long Data Must Be Kept Secure.</p>
+
+  <h2 id="sigil_toc_id_57">3.5 Longevity, Salting , Stretching &amp; Other Types Of Cryptographic Technologies</h2>
+
+  <p><span class="bullets">Longevity</span> - This Refers To The Measure Of Confidence That People Have In A Given Cipher. In Another Sense, It Is The Consideration Of How Long Data Must Be Kept Secure.</p>
+
   <p><span class="bullets">Salting</span> - Passwords Stored As Hashes Are Vulnerable To Brute Force And Dictionary Attacks. A Password Hash Cannot Be Decrypted As They Are One-Way. However, An Attacker Can Generate Hashes To Try And Find A Match For The Captured Password Hash Through A Brute Force Or Dictionary Attack.</p>
+
   <p>A Brute Force Attack Will Run Through A Combination Of Letters, Numbers And Symbols While A Dictionary Attack Creates Hashes Of Common Words And Phrases.</p>
-  <h3>Both Attacks Can Be Slowed Down By Adding A Salt Value When Creating The Hash.</h3>
+
+  <h3 class="sigil_not_in_toc">Both Attacks Can Be Slowed Down By Adding A Salt Value When Creating The Hash.</h3>
+
   <p><b>(Salt + Password) * SHA = Hash</b></p>
+
   <p>The Salt Is Not Kept Secret Because Any System Verifying The Hash Must Know The Value Of The Salt But It's Presence Means That An Attacker Cannot Use Pre-Computed Tables Of Hashes</p>
+
   <p><span class="bullets">Key Stretching</span> - This Takes A Key That's Generated From A User Password Plus A Random Salt Value And Repeatedly Converts It To A Longer And More Random Key. This Means The Attacker Will Have To Do Extra Processing For Each Possible Key Value Thus Make The Attack Even Slower.</p>
-  <p>This Can Be Performed By Using A Particular Software Library To Hash And Save Passwords When They Are Created. 
-  The <span class="keyword">Password-Based Key Derivation Function 2 (PBKDF2)</span> Is Widely Used For This Purpose.</p>
+
+  <p>This Can Be Performed By Using A Particular Software Library To Hash And Save Passwords When They Are Created. The <span class="keyword">Password-Based Key Derivation Function 2 (PBKDF2)</span> Is Widely Used For This Purpose.</p>
+
   <p><span class="bullets">Homomorphic Encryption</span> - This Is The Conversion Of Data Into Ciphertext That Can Be Analyzed And Worked With As If It Were Still In Its Original Form.</p>
+
   <p>It Enables Complex Mathematical Operations To Be Performed On Encrypted Data Without Compromising The Encryption.</p>
+
   <p><span class="bullets">Blockchain</span> - This is a concept in which an expanding list of transactional records is secured using cryptography. Each record is referred to as a block and is run through a hash function. The hash value of the previous block in the chain is added to the hash calculation of the next block and thus ensures that each successive block is cryptographically linked.</p>
+
   <p><span class="bullets">Steganography</span> - This is a technique for obscuring the presence of a message such as hiding a message in a picture. the container document or file is called the covertext.</p>
-  <h2>3.6  Certificates, PKIs, RAs &amp; CSRs</h2>
+
+  <h2 id="sigil_toc_id_58">3.6 Certificates, PKIs, RAs &amp; CSRs</h2>
+
   <p>Public &amp; Private Key Usage</p>
+
   <p>When you want others to send you confidential messages, you give them your public key to encrypt the message and then you decrypt the message with your private key.</p>
+
   <p>When You Want To Authenticate Yourself To Others, You Create A Signature And Sign It Using Your Private Key To Encrypt It. You Give Others Your Public Key To Decrypt The Signature.</p>
+
   <p><b>Certificate Authority -</b> This Is The Entity Responsible For Issuing And Guaranteeing Certificates.</p>
-    <h3>PKI Trust Models Include:</h3>
+
+  <h3 class="sigil_not_in_toc">PKI Trust Models Include:</h3>
+
   <ul>
     <li><span class="bullets">Single CA</span> - A Single CA Issues Certificates To Users And The Users Trust Certificates By That CA Exclusively. If The CA Is Compromised, The Entire PKI Collapses</li>
+
     <li><span class="bullets">Hierarchical (Intermediate CA)</span> - A Single CA Called The Root Issues Certificates To Several Intermediate CAs. The Intermediate CAs Issue Certificates To Subjects (Leaf Or End Entities). Each Leaf Certificate Can Be Traced Back To The Root CA Along The Certification Path And This Is Referred To As A Certificate Chain Or Chain Of Trust. The Root Is Still A Single Point Of Failure But It Can Be Taken Offline As Most Of The Regular CA Activities Are Handled By The Intermediate CA Servers.</li>
+
     <li><span class="bullets">Online Versus Offline CAs</span> - An online CA is one that is available to accept and process certificate signing requests and management tasks. Because of the high risk posed by a compromised root CA, a secure configuration will involve making the root an offline CA meaning it is disconnected from any network and only brought back online to add or update intermediate CAs.</li>
   </ul>
+
   <div class="row">
-    <img src="../Images/index-23_2.png" alt="An image showing the certificate chain for www.globalsign.com" class="column"/>
-    <p><b>Registration authorities and CSRs</b> - registration is the process by which end users create an account with the CA and become authorized to request certificates. </p>
+    <img src="../Images/index-23_2.png" alt="An image showing the certificate chain for www.globalsign.com" class="column"/> 
+
+    <p><b>Registration authorities and CSRs</b> - registration is the process by which end users create an account with the CA and become authorized to request certificates.</p>
+
     <p>When A Subject Wants To Obtain A Certificate, It Completes A Certificate Signing Request (CSR) And Submits It To The CA.</p>
+
     <p>The CA Reviews The Certificate And Checks That The Information Is Valid. If The Request Is Accepted, The CA Signs The Certificate And Sends It To The Subject.</p>
   </div>
-  <h2>3.7  Digital Certificates</h2>
+
+  <h2 id="sigil_toc_id_59">3.7 Digital Certificates</h2>
+
   <p>A Digital Certificate Is Essentially A Wrapper For A Subject's Public Key. As Well As The Public Key, It Contains Information About The Subject And The Certificate's Issuer.</p>
+
   <div class="row">
     <div class="column">
-      <img src="../Images/index-24_2.png" alt="An example certificate as shown in Windows, on the Details tab, with the Public Key displayed" />
+      <img src="../Images/index-24_2.png" alt="An example certificate as shown in Windows, on the Details tab, with the Public Key displayed"/> 
+
       <p>When Certificates Were First Introduced, The Common Name (CN) Attribute Was Used To Identify The FQDN By Which The Server Is Accessed.</p>
+
       <p>The <span class="keyword">Subject Alternative Name (SAN)</span> Extension Field Is Structured To Represent Different Types Of Identifiers Including Domain Names.</p>
+
       <p>A <span class="keyword">Wildcard</span> Domain Such As *.Comptia.Org Means That The Certificate Issued To The Parent Domain Will Be Accepted As Valid For All Subdomains.</p>
     </div>
+
     <div class="column">
       <table>
-        <tr>
-          <th>Field</th>
-          <th>Usage</th>
-        </tr>
-        <tr>
-          <td class="tdleft">Serial Number</td>
-          <td>A number uniquely identifying the certificate within the domain of its CA.</td>
-        </tr>
-        <tr>
-          <td class="tdleft">Signature algorithm</td>
-          <td>The algorithm used by the CA to sign the certificate.</td>
-        </tr>
-        <tr>
-          <td class="tdleft">Issuer</td>
-          <td>The name of the CA.</td>
-        </tr>
-        <tr>
-          <td class="tdleft">Valid from/to</td>
-          <td>Date and time during which the certificate is valid.</td>
-        </tr>
-        <tr>
-          <td class="tdleft">Subject</td>
-          <td>The name of the certificate holder, expressed as a distinguished name (DN). Within this, the common name (CN) part should usually match either the fully qualified domain name (FQDN) of the server or a user email address.</td>
-        </tr>
-        <tr>
-          <td class="tdleft">Public key</td>
-          <td>Public key Public key and algorithm used by the certificate holder.</td>
-        </tr>
-        <tr>
-          <td class="tdleft">Extensions</td>
-          <td>V3 certificates can be defined with extended attributes, such as friendly subject or issuer names, contact email addresses, and intended key usage.</td>
-        </tr>
-        <tr>
-          <td class="tdleft">Subject Alternative Name</td>
-          <td>This extension field is the preferred mechanism to identify the<a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a>name or names by which a host is identified.</td>
-        </tr>
+        <tbody>
+          <tr>
+            <th>
+              Field
+            </th>
+
+            <th>
+              Usage
+            </th>
+          </tr>
+
+          <tr>
+            <td class="tdleft">
+              Serial Number
+            </td>
+
+            <td>
+              A number uniquely identifying the certificate within the domain of its CA.
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tdleft">
+              Signature algorithm
+            </td>
+
+            <td>
+              The algorithm used by the CA to sign the certificate.
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tdleft">
+              Issuer
+            </td>
+
+            <td>
+              The name of the CA.
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tdleft">
+              Valid from/to
+            </td>
+
+            <td>
+              Date and time during which the certificate is valid.
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tdleft">
+              Subject
+            </td>
+
+            <td>
+              The name of the certificate holder, expressed as a distinguished name (DN). Within this, the common name (CN) part should usually match either the fully qualified domain name (FQDN) of the server or a user email address.
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tdleft">
+              Public key
+            </td>
+
+            <td>
+              Public key Public key and algorithm used by the certificate holder.
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tdleft">
+              Extensions
+            </td>
+
+            <td>
+              V3 certificates can be defined with extended attributes, such as friendly subject or issuer names, contact email addresses, and intended key usage.
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tdleft">
+              Subject Alternative Name
+            </td>
+
+            <td>
+              This extension field is the preferred mechanism to identify the<a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a>name or names by which a host is identified.
+            </td>
+          </tr>
+        </tbody>
       </table>
+
       <p><img src="../Images/index-24_4.png" alt="" class="fright"/></p>
     </div>
   </div>
+
   <div class="row">
     <div class="column">
-      <h3>EKU Field - Can Have The Following Values</h3>
+      <h3 class="sigil_not_in_toc">EKU Field - Can Have The Following Values</h3>
+
       <ul>
         <li>Server Authentication</li>
+
         <li>Client Authentication</li>
+
         <li>Code Signing</li>
+
         <li>Email Protection</li>
       </ul>
     </div>
+
     <div class="column">
-      <h3>Other Certificate Types Include:</h3>
+      <h3 class="sigil_not_in_toc">Other Certificate Types Include:</h3>
+
       <ul>
         <li>Machine/Computer Certificates</li>
+
         <li>Email/User Certificates</li>
+
         <li>Code Signing Certificates</li>
+
         <li>Root Certificate</li>
+
         <li>Self-Signed Certificates</li>
       </ul>
     </div>
   </div>
-  <h3>Web Server Certificate Types Include:</h3>
+
+  <h3 class="sigil_not_in_toc">Web Server Certificate Types Include:</h3>
+
   <ul>
     <li>Domain Validation (DV) - Proves The Ownership Of A Particular Domain</li>
+
     <li>Extended Validation (EV) - Subjecting To A Process That Requires More Rigorous Checks On The Subject's Legal Identity And Control Over The Domain.</li>
   </ul>
-  <h2>3.8  Key Management</h2>
+
+  <h2 id="sigil_toc_id_60">3.8 Key Management</h2>
+
   <p>This Refers To Operational Considerations For The Various Stages In A Key's Life Cycle And Can Be <b>Centralized</b> Meaning One Admin Controls The Process Or <b>Decentralized</b> In Which Each User Is Responsible For His Or Her Keys.</p>
-  <h3>Key Life Cycle</h3>
+
+  <h3 class="sigil_not_in_toc">Key Life Cycle</h3>
+
   <ul>
     <li>Key Generation</li>
+
     <li>Certificate Generation</li>
+
     <li>Storage</li>
+
     <li>Revocation</li>
+
     <li>Expiration And Renewal</li>
   </ul>
+
   <p>If The Key Used To Decrypt Data Is Lost Or Damaged, Encrypted Data Cannot Be Recovered Unless A Backup Of The Key Exists. However Making Too Many Backups Can Make It More Difficult To Keep The Key Secure.</p>
+
   <p><span class="keyword">Escrow</span> Means That Something Is Held Independently Which In Terms Of Key Management, Means A Third Party Is Trusted To Store The Key Securely.</p>
-  <h2>3.9  Certificate Management</h2>
+
+  <h2 id="sigil_toc_id_61">3.9 Certificate Management</h2>
+
   <p>When You Are Renewing A Certificate, It Is Possible To Use The Existing Key Referred To Specifically As <span class="keyword">Key Renewal</span> Or Generate A New Key In Which Case, The Certificate Is <span class="keyword">Rekeyed</span>.</p>
-<p>Certificates Are Issued With A Limited Duration Set By The Ca Policy For The Certificate Type E.G A Root Certificate Might Have A 10 Year Expiry Date While A Web Server Certificate Might Be Issued For 1 Year Only.</p>
-<p>A Certificate May Be Revoked Or Suspended. A Revoked Certificate Is No Longer Valid And Cannot Be Reinstated While A Suspended Certificate Can Be Re-Enabled.</p>
-<p>A Certificate May Be Revoked Or Suspended For A Variety Of Reasons Such As The Private Key Compromise, Business Closure Or A User Leaving The Company. These Reasons Are Codified Under</p>
+
+  <p>Certificates Are Issued With A Limited Duration Set By The Ca Policy For The Certificate Type E.G A Root Certificate Might Have A 10 Year Expiry Date While A Web Server Certificate Might Be Issued For 1 Year Only.</p>
+
+  <p>A Certificate May Be Revoked Or Suspended. A Revoked Certificate Is No Longer Valid And Cannot Be Reinstated While A Suspended Certificate Can Be Re-Enabled.</p>
+
+  <p>A Certificate May Be Revoked Or Suspended For A Variety Of Reasons Such As The Private Key Compromise, Business Closure Or A User Leaving The Company. These Reasons Are Codified Under</p>
+
   <ul>
     <li>Unspecified</li>
+
     <li>Key Compromise</li>
+
     <li>CA Compromise</li>
+
     <li>Superseded</li>
+
     <li>Cessation Of Operation</li>
   </ul>
-<p>A Suspended Key Is Given The Code <span class="keyword">Certificate Hold</span></p>
+
+  <p>A Suspended Key Is Given The Code <span class="keyword">Certificate Hold</span></p>
 </body>
 </html>

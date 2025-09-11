@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
   <title>Section 8 - Explain Vulnerability Management</title>
   <link rel="stylesheet" type="text/css" href="../Styles/stylesheet.css"/>
@@ -10,176 +9,345 @@
 
 <body>
   <h1>Section 8 - <span class="section">Explain Vulnerability Management</span></h1>
-<h2>8.1  Vulnerability Discover</h2>
-<p>A zero-day vulnerability refers to a vulnerability that is actively being exploited by attackers before the vendor has had an opportunity to develop and release a patch or fix for it. </p>
-<p>A bug bounty program is an incentive program that compensates participants for discovering and ethically reporting the bugs or vulnerabilities. The program could be Open or Closed.</p>
-<p><b>Ethical Disclosure -</b> This is the practice </p>
-<p><img src="../Images/index-69_1.png" alt=""/></p>
-<p>of publishing information related </p>
-<p>to a vulnerability or finding in order </p>
-<p>to inform users so they can make </p>
-<p>informed decisions.</p>
-<p> <b>Full Disclosure -</b> Making all details </p>
-<p>public without regard to additional </p>
-<p>harm that may be caused to </p>
-<p>others including exploitation by </p>
-<p>adversaries.</p>
-<p> <b>Responsible Disclosure -</b> Making enough information known so that informed decisions </p>
-<p>can be made while not releasing sensitive details that could be useful to an adversary.</p>
-<p><b>CVE Program -</b> This is an international community driven effort to catalog hardware and software vulnerabilities for public access.</p>
-<p>The CVSS is an open framework for communicating the characteristics and severity of hardware and software vulnerabilities.</p>
-<p><b>There are five ratings -</b> None, low, medium, high and critical.</p>
-<p>The National Vulnerability Database (NVD) provides CVSS scores for almost all known vulnerabilities.</p>
-<p><span><b>69</b></span></p>
-<h2>8.2  Weak host &amp; Network configurations</h2>
-<p>Using the default manufacturer settings is an example of weak configuration. The root account or the default admin account typically has no restrictions set over system access and can have an extremely serious impact if an attacker gains control of it.</p>
-<p><b>Open Permissions -</b> This refers to provisioning data files or applications without differentiating access rights for user groups. This can lead to permitting unauthenticated guests to view confidential data or allowing write access to read only files. servers must operate with at least some open ports but security best practice dictates that these should be restricted to only necessary services.</p>
-<p><b>Weak encryption - this can arise from the following:</b></p>
-<p> the key is generated from a simple password making it easy to brute-force </p>
-<p> the algorithm or cipher used for the encryption has known weaknesses </p>
-<p> the key is not distributed securely and can easily fall into the attacker's hands.</p>
-<p> <b>Errors - </b> weakly configured applications may display unformatted error messages under </p>
-<p>certain conditions and can provide threat actors with valuable information.</p>
-<h2>8.3  Evaluation Scope</h2>
-<p>Evaluation target or scope refers to the product, system, or service being analyzed for potential security vulnerabilities.</p>
-<p>The target is the focus of a specific evaluation process, where it is subjected to rigorous testing and analysis to identify any possible weaknesses or vulnerabilities in its design, implementation, or operation</p>
-<p>For application vulnerabilities, the target would refer to a specific software application.</p>
-<p>The primary goal of the evaluation is to mitigate risk, improve the application's security posture, and ensure compliance with relevant security standards or regulations.</p>
-<p><span><b>70</b></span></p>
-<p id="page_71"><span>Conducting vulnerability assessments and penetration testing to identify </span></p>
-<p><span><b>Security Testing</b></span></p>
-<p><span>potential weaknesses, vulnerabilities or misconfigurations</span></p>
-<p><span>Reviewing documentation such as design specifications, architecture </span></p>
-<p><span><b>Documentation Review</b></span></p>
-<p><span>diagrams, security policies and procedures</span></p>
-<p><span>Analyzing source code to identify potential security vulnerabilities or </span></p>
-<p><span><b>Secure Code Analysis</b></span>          <span>coding errors to uncover issues related to input validation and coding </span></p>
-<p><span>standards.</span></p>
-<p><span><b>Cryptographic Analysis</b></span>         <span>Assessing cryptographic mechanisms</span></p>
-<p><span>Verifying compliance with standards specified by relevant regulations, </span></p>
-<p><span><b>Compliance Verification</b></span></p>
-<p><span>frameworks or security certifications </span></p>
-<p><span>Evaluating security architecture and design to identify potential </span></p>
-<p><span><b>Security Architecture</b></span></p>
-<p><span>weaknesses or gaps in security controls</span></p>
-<h2>8.4  Overflows, Resource Exhaustion, Memory</h2>
-<p><span><b>Leaks &amp; Race Conditions</b></span></p>
-<p><b>Buffer overflow -</b> A buffer is an area of memory reserved by the application to store working data. the attacker passes data that deliberately overfills the buffer. One of the most common vulnerabilities is stack overflow.</p>
-<p><b>Integer overflow - </b>An integer is a whole number and integers are used as a valid data type with fixed lower and upper bounds. an integer flow attack causes the target software to calculate a value that exceeds these bounds and can even cause a positive number to become negative.</p>
-<p><b>Eternal blue</b> is an example of an attack that uses vulnerabilities in integer overflow to gain system privileges on a windows host.</p>
-<p>Null pointer dereferencing &amp; race conditions - in c/c++ programming, a pointer is a variable that stores a memory location rather than a value. attempting to read/write that memory address via the pointer is called <b>dereferencing</b>.</p>
-<p>If the memory location is invalid or null this can create a <b>null pointer dereference</b> and cause the process to crash and in other cases might allow the threat actor to run arbitrary code.</p>
-<p>A <b>race condition</b> is a way of engineering a null pointer dereference exception.</p>
-<p>This occurs when the outcome from an execution process is directly dependent on the order and timing of certain events and those events fail to execute in the order and timing intended by the developer.</p>
-<p><span><b>71</b></span></p>
-<p id="page_72"><b>Memory leaks &amp; resource exhaustion -</b> A        and a malware can force a legitimate process should release its block of memory       process to load a malicious link library.</p>
-<p>used when it no longer requires it but if           To perform dll injection, the malware it doesn't, it can lead to memory leaks. must already be operating with sufficient such a situation can lead to less memory privileges and evade detection by anti-available for other applications and could virus software. lead to a system crash.</p>
-<p>Avoiding detection is done through a </p>
-<p>Resources refer to cpu time, system </p>
-<p>memory, fixed disk capacity &amp; network           process called <b>code refactoring</b> where </p>
-<p>the code performs the same function by </p>
-<p>utilization. a malicious process could </p>
-<p>spawn multiple looping threads to use cpu       control blocks). using different methods (variable types and time or write thousands of files to disk.</p>
-<p><b>Dll injection &amp; driver manipulation -</b> Dll  <span>harvesting an account's cached credentials  Pass the hash attack - pth is the process of </span></p>
-<p>(dynamic link library) is a binary package </p>
-<p>that implements some sort of standard  <span>on (sso) system so the attacker can use the  when the user is logged into a single sign-</span></p>
-<p>functionality such as establishing a network </p>
-<p>credentials on other systems.</p>
-<p>connection or performing cryptography.</p>
-<p>If the attacker can obtain the hash of </p>
-<p>The main process of a software application </p>
-<p>is likely to load several DLLS  during the           it (without cracking) to authenticate the user password, it is possible to use normal course of operations.</p>
-<p>to network protocols that accept ntlm </p>
-<p>DLL injection is a vulnerability where the          (windows new technology lan manager) OS allows one process to attach to another       hashes as authentication credentials.</p>
-<h2>8.5  Sideloading, Rooting &amp; Jailbreaking</h2>
-<p>Mobile devices introduce unique security vulnerabilities related to their operation, specialized software, ubiquity, and ability to store and collect vast amounts of personal and professional data.</p>
-<p> <b>Rooting -</b> Associated with Android devices and typically involves using custom firmware</p>
-<p> <b>Jailbreaking -</b> Associated with iOS and is accomplished by booting the device with a </p>
-<p>patched kernel</p>
-<p> <b>Carrier Unlocking -</b> For either iOS or Android and it means removing the restrictions that </p>
-<p>lock a device to a single carrier.</p>
-<p>Rooting or jailbreaking mobile devices involves subverting the security measures on the device to gain super administrative access to it but also has the side effect of permanently disabling certain security features</p>
-<p><b>Sideloading - </b>This is the practice of installing applications from sources other than the official app store of the platform such as the Play store or App store..</p>
-<p>Additionally, apps that require excessive access permissions can raise significant security and privacy concerns.</p>
-<p><span><b>72</b></span></p>
-<p id="page_73">App permissions should align with the app's purpose. Apps with excessive permissions may access sensitive user data without a legitimate need, including personal information, corporate data, contacts, call logs, location data, or device identifiers. </p>
-<p>Granting unnecessary permissions to apps increases the device's attack surface and the potential for security vulnerabilities.</p>
-<h2>8.6  Threat Research Sources</h2>
-<p>Threat Research Is A Counterintelligence Gathering Effort In Which Security Companies And Researchers Attempt To Discover The Tactics, Techniques And Procedures (Ttps) Of Modern Cyber Adversaries.</p>
-<p>Another Primary Source Of Threat Intelligence Is The Deep Web.</p>
-<p>The Deep Web Is Any Part Of The World Wide Web That Is Not Indexed By A Search Engine E.G Registration Pages, Unlinked Pages And Pages That Block Search Indexing.</p>
-<h2>8.7  Threat Intelligence Providers</h2>
-<p>The outputs from the primary research           correlate events observed on a customer's undertaken by security solutions providers       own networks and logs with known TTP can take three main forms.                      and threat actor indicators.</p>
-<p><b>Behavioral threat research -</b> Narrative            Threat data can be packaged as feeds that commentary describing examples of             integrate with a security information and attacks and TTPs gathered through primary      event management (SIEM) platform. research sources.</p>
-<p>These feeds are usually described as cyber </p>
-<p><b>Reputational threat intelligence -</b> List of          threat intelligence (cti) data.</p>
-<p>ip addresses and domains associated with       Threat intelligence platforms and feeds malicious behavior are supplied as one of four different <b>Threat data -</b> Computer data that can            commercial models</p>
-<p> <b>Closed/proprietary -</b> The threat research and cti data is made available as a paid </p>
-<p>subscription to a commercial threat intelligence platform.</p>
-<p> <b>Vendor websites -</b> This is proprietary threat intelligence that is not provided at a cost but </p>
-<p>is provided as a general benefit to customers e.g microsoft's security intelligence blog.</p>
-<p> <b>Public/private information sharing centers -</b> In many critical industries, <b>information </b></p>
-<p><b>sharing and analysis centers (isacs)</b> have been set up to share threat intelligence and </p>
-<p>promote best practice.</p>
-<p><span><b>73</b></span></p>
-<p id="page_74"> <b>Open source intelligence (OSINT) -</b> Some companies operate threat intelligence </p>
-<p>services on an open-source basis earning income from consultancy</p>
-<p> <b>Other threat intelligence research resources include -</b> Academic journals, conferences, </p>
-<p>request for comments (RFC) and social media</p>
-<h2>8.8  Threat Data Feeds</h2>
-<p>There Are Various Ways That A Threat Data Feed Can Be Implemented.</p>
-<p><b>Structured Threat Information Expression (Stix) -</b> Describes Standard Terminology For Iocs And Ways Of Indicating Relationships Between Them.</p>
-<p><img src="../Images/index-74_1.png" alt=""/></p>
-<p><b>Trusted automated exchange of indicator </b>      <b>Vulnerability databases &amp; feeds -</b> Another <b>information (taxii) -</b> Protocol provides a           source of threat intelligence is identifying means for transmitting cti data between          vulnerabilities in os, software applications servers and clients.                               and firmware code. vulnerability databases </p>
-<p><img src="../Images/index-74_2.png" alt=""/></p>
-<p><b>Automated indicator sharing (ais) -</b> Is a             include the common vulnerabilities and exposure (CVE). service offered by the dhs for companies to participate in threat intelligence sharing.        <b>Artificial Intelligence -</b> Ai is the science ais is based on the stix and taxii standards        of creating machine systems that can and protocols.                                   simulate or demonstrate a similar general </p>
-<p>intelligence capability to humans.</p>
-<p><b>Threat map -</b> A threat map is an animated graphic showing the source, target and           <b>Predictive analysis -</b> This refers to when type of attacks detected by a cti platform.         a system can anticipate an attack and </p>
-<p><b>File/code repositories -</b> such a repository         possibly identify the threat actor before the attack is fully realized. holds signatures of known malware code.</p>
-<p><span><b>74</b></span></p>
-<h2>8.9  Vulnerability Response &amp; Remediation</h2>
-<p><b>Vulnerability scanning -</b> This is an automated activity that relies on a database of known vulnerabilities such as the CVE.</p>
-<p>Web app vulnerability scanners are specialized automated tools designed to identify vulnerabilities such as XSS and SQL injection attacks in websites and other web-based applications.</p>
-<p>This category of tools is frequently referred to as the Dynamic Application Security Testing (DAST) tools.</p>
-<p>True Positive          False Positive          True Negative         False Negative</p>
-<p>Normal or xpected     Normal or xpected                              Abnormal or Abnormal or       unexpected activity is </p>
-<p>activity is incorrectly  </p>
-<p>activity is correctly                                 unexpected activity    incorrectly identified </p>
-<p>identified                                  is correctly identified        as normal or abnormal identified as </p>
-<p>expected</p>
-<p>GOOD        PROBLEMATIC        GOOD         DANGEROUS</p>
-<p><span><b>Vulnerability Scanning &amp; Assessments</b></span></p>
-<p> <b>System Configuration -</b> Identify issues related to security configurations, compliance and </p>
-<p>nonconformance.</p>
-<p> <b>Vulnerability Assessment -</b> Identify host attributes and known Common Vulnerabilities </p>
-<p>and Exposures (CVE)</p>
-<p> <b>Penetration Testing - </b>Evaluate the security of a target by identifying and providing proof </p>
-<p>of concept of flaws and vulnerabilities by performing compromise exploitation.</p>
-<p><b>Vulnerability Analysis -</b>This focuses on analyzing the results gotten from vulnerability scans and assessments to determine the level of risk associated with each identified vulnerability.</p>
-<p>Very useful for prioritizing vulnerabilities.</p>
-<p><span><b>75</b></span></p>
-<p id="page_76"><span><b>Vulnerability Severity Levels</b></span></p>
-<p> <b>High -</b> This can also be critical levels and such vulnerabilities have the potential to cause </p>
-<p>significant damage and require immediate attention.</p>
-<p> <b>Medium -</b> Could result in adverse consequences eventually and should be prioritized </p>
-<p>based on their potential impact on the organization.</p>
-<p> <b>Low -</b> Have limited impact and should be remediated as part of ongoing vulnerability </p>
-<p>management efforts.</p>
-<p><b>Patch Management -</b>This is the process of identifying, acquiring, installing and verifying patches (updates)</p>
-<p>The time from when an exploit first becomes active to the time it becomes insignificant is known as the <b>Window of Vulnerability.</b></p>
-<p><span><b>Patch Classifications</b></span></p>
-<p>CRITICAL           DEFINITION           DRIVERS         FEATURE PACKS</p>
-<p>Fixes for critical                                       For software Updates to virus and            Provides new product functionality </p>
-<p>non- security related                              components that </p>
-<p>definition files                                  for the next product </p>
-<p>issues.                                  control or regulate a</p>
-<p>release</p>
-<p>SECURITY        SERVICE PACKS     UPDATE ROLLUPS       UPDATES</p>
-<p>Provides a fix for a          Provides a              Provides a cumulative set of cumulative set of       Provides fixes that product- specific, security updates, security updates, hot address non-critical, security-related hotfixes and design fixes and updates in non-security bugs vulnerability change or features one package</p>
-<p><span><b>Patch Management Challenges</b></span></p>
-<p> Unintentional consequences                 Approach - manual, automated, hybrid? </p>
-<p> Roll-back issues                             Access to unmanaged mobile or </p>
-<p>                         remote devices Prioritization, timing and testing </p>
 
+  <h2 id="sigil_toc_id_94">8.1 Vulnerability Discover</h2>
+
+  <p>A zero-day vulnerability refers to a vulnerability that is actively being exploited by attackers before the vendor has had an opportunity to develop and release a patch or fix for it.</p>
+
+  <p>A bug bounty program is an incentive program that compensates participants for discovering and ethically reporting the bugs or vulnerabilities. The program could be Open or Closed.</p>
+
+  <p><b>Ethical Disclosure -</b> This is the practice</p>
+
+  <p><img src="../Images/index-69_1.png" alt=""/></p>
+
+  <p>of publishing information related</p>
+
+  <p>to a vulnerability or finding in order</p>
+
+  <p>to inform users so they can make</p>
+
+  <p>informed decisions.</p>
+
+  <p><b>Full Disclosure -</b> Making all details</p>
+
+  <p>public without regard to additional</p>
+
+  <p>harm that may be caused to</p>
+
+  <p>others including exploitation by</p>
+
+  <p>adversaries.</p>
+
+  <p><b>Responsible Disclosure -</b> Making enough information known so that informed decisions</p>
+
+  <p>can be made while not releasing sensitive details that could be useful to an adversary.</p>
+
+  <p><b>CVE Program -</b> This is an international community driven effort to catalog hardware and software vulnerabilities for public access.</p>
+
+  <p>The CVSS is an open framework for communicating the characteristics and severity of hardware and software vulnerabilities.</p>
+
+  <p><b>There are five ratings -</b> None, low, medium, high and critical.</p>
+
+  <p>The National Vulnerability Database (NVD) provides CVSS scores for almost all known vulnerabilities.</p>
+
+  <p><span><b>69</b></span></p>
+
+  <h2 id="sigil_toc_id_95">8.2 Weak host &amp; Network configurations</h2>
+
+  <p>Using the default manufacturer settings is an example of weak configuration. The root account or the default admin account typically has no restrictions set over system access and can have an extremely serious impact if an attacker gains control of it.</p>
+
+  <p><b>Open Permissions -</b> This refers to provisioning data files or applications without differentiating access rights for user groups. This can lead to permitting unauthenticated guests to view confidential data or allowing write access to read only files. servers must operate with at least some open ports but security best practice dictates that these should be restricted to only necessary services.</p>
+
+  <p><b>Weak encryption - this can arise from the following:</b></p>
+
+  <p>the key is generated from a simple password making it easy to brute-force</p>
+
+  <p>the algorithm or cipher used for the encryption has known weaknesses</p>
+
+  <p>the key is not distributed securely and can easily fall into the attacker's hands.</p>
+
+  <p><b>Errors - </b> weakly configured applications may display unformatted error messages under</p>
+
+  <p>certain conditions and can provide threat actors with valuable information.</p>
+
+  <h2 id="sigil_toc_id_96">8.3 Evaluation Scope</h2>
+
+  <p>Evaluation target or scope refers to the product, system, or service being analyzed for potential security vulnerabilities.</p>
+
+  <p>The target is the focus of a specific evaluation process, where it is subjected to rigorous testing and analysis to identify any possible weaknesses or vulnerabilities in its design, implementation, or operation</p>
+
+  <p>For application vulnerabilities, the target would refer to a specific software application.</p>
+
+  <p>The primary goal of the evaluation is to mitigate risk, improve the application's security posture, and ensure compliance with relevant security standards or regulations.</p>
+
+  <p><span><b>70</b></span></p>
+
+  <p id="page_71"><span>Conducting vulnerability assessments and penetration testing to identify </span></p>
+
+  <p><span><b>Security Testing</b></span></p>
+
+  <p><span>potential weaknesses, vulnerabilities or misconfigurations</span></p>
+
+  <p><span>Reviewing documentation such as design specifications, architecture </span></p>
+
+  <p><span><b>Documentation Review</b></span></p>
+
+  <p><span>diagrams, security policies and procedures</span></p>
+
+  <p><span>Analyzing source code to identify potential security vulnerabilities or </span></p>
+
+  <p><span><b>Secure Code Analysis</b></span> <span>coding errors to uncover issues related to input validation and coding </span></p>
+
+  <p><span>standards.</span></p>
+
+  <p><span><b>Cryptographic Analysis</b></span> <span>Assessing cryptographic mechanisms</span></p>
+
+  <p><span>Verifying compliance with standards specified by relevant regulations, </span></p>
+
+  <p><span><b>Compliance Verification</b></span></p>
+
+  <p><span>frameworks or security certifications </span></p>
+
+  <p><span>Evaluating security architecture and design to identify potential </span></p>
+
+  <p><span><b>Security Architecture</b></span></p>
+
+  <p><span>weaknesses or gaps in security controls</span></p>
+
+  <h2 id="sigil_toc_id_97">8.4 Overflows, Resource Exhaustion, Memory</h2>
+
+  <p><span><b>Leaks &amp; Race Conditions</b></span></p>
+
+  <p><b>Buffer overflow -</b> A buffer is an area of memory reserved by the application to store working data. the attacker passes data that deliberately overfills the buffer. One of the most common vulnerabilities is stack overflow.</p>
+
+  <p><b>Integer overflow - </b>An integer is a whole number and integers are used as a valid data type with fixed lower and upper bounds. an integer flow attack causes the target software to calculate a value that exceeds these bounds and can even cause a positive number to become negative.</p>
+
+  <p><b>Eternal blue</b> is an example of an attack that uses vulnerabilities in integer overflow to gain system privileges on a windows host.</p>
+
+  <p>Null pointer dereferencing &amp; race conditions - in c/c++ programming, a pointer is a variable that stores a memory location rather than a value. attempting to read/write that memory address via the pointer is called <b>dereferencing</b>.</p>
+
+  <p>If the memory location is invalid or null this can create a <b>null pointer dereference</b> and cause the process to crash and in other cases might allow the threat actor to run arbitrary code.</p>
+
+  <p>A <b>race condition</b> is a way of engineering a null pointer dereference exception.</p>
+
+  <p>This occurs when the outcome from an execution process is directly dependent on the order and timing of certain events and those events fail to execute in the order and timing intended by the developer.</p>
+
+  <p><span><b>71</b></span></p>
+
+  <p id="page_72"><b>Memory leaks &amp; resource exhaustion -</b> A and a malware can force a legitimate process should release its block of memory process to load a malicious link library.</p>
+
+  <p>used when it no longer requires it but if To perform dll injection, the malware it doesn't, it can lead to memory leaks. must already be operating with sufficient such a situation can lead to less memory privileges and evade detection by anti-available for other applications and could virus software. lead to a system crash.</p>
+
+  <p>Avoiding detection is done through a</p>
+
+  <p>Resources refer to cpu time, system</p>
+
+  <p>memory, fixed disk capacity &amp; network process called <b>code refactoring</b> where</p>
+
+  <p>the code performs the same function by</p>
+
+  <p>utilization. a malicious process could</p>
+
+  <p>spawn multiple looping threads to use cpu control blocks). using different methods (variable types and time or write thousands of files to disk.</p>
+
+  <p><b>Dll injection &amp; driver manipulation -</b> Dll <span>harvesting an account's cached credentials Pass the hash attack - pth is the process of </span></p>
+
+  <p>(dynamic link library) is a binary package</p>
+
+  <p>that implements some sort of standard <span>on (sso) system so the attacker can use the when the user is logged into a single sign-</span></p>
+
+  <p>functionality such as establishing a network</p>
+
+  <p>credentials on other systems.</p>
+
+  <p>connection or performing cryptography.</p>
+
+  <p>If the attacker can obtain the hash of</p>
+
+  <p>The main process of a software application</p>
+
+  <p>is likely to load several DLLS during the it (without cracking) to authenticate the user password, it is possible to use normal course of operations.</p>
+
+  <p>to network protocols that accept ntlm</p>
+
+  <p>DLL injection is a vulnerability where the (windows new technology lan manager) OS allows one process to attach to another hashes as authentication credentials.</p>
+
+  <h2 id="sigil_toc_id_98">8.5 Sideloading, Rooting &amp; Jailbreaking</h2>
+
+  <p>Mobile devices introduce unique security vulnerabilities related to their operation, specialized software, ubiquity, and ability to store and collect vast amounts of personal and professional data.</p>
+
+  <p><b>Rooting -</b> Associated with Android devices and typically involves using custom firmware</p>
+
+  <p><b>Jailbreaking -</b> Associated with iOS and is accomplished by booting the device with a</p>
+
+  <p>patched kernel</p>
+
+  <p><b>Carrier Unlocking -</b> For either iOS or Android and it means removing the restrictions that</p>
+
+  <p>lock a device to a single carrier.</p>
+
+  <p>Rooting or jailbreaking mobile devices involves subverting the security measures on the device to gain super administrative access to it but also has the side effect of permanently disabling certain security features</p>
+
+  <p><b>Sideloading - </b>This is the practice of installing applications from sources other than the official app store of the platform such as the Play store or App store..</p>
+
+  <p>Additionally, apps that require excessive access permissions can raise significant security and privacy concerns.</p>
+
+  <p><span><b>72</b></span></p>
+
+  <p id="page_73">App permissions should align with the app's purpose. Apps with excessive permissions may access sensitive user data without a legitimate need, including personal information, corporate data, contacts, call logs, location data, or device identifiers.</p>
+
+  <p>Granting unnecessary permissions to apps increases the device's attack surface and the potential for security vulnerabilities.</p>
+
+  <h2 id="sigil_toc_id_99">8.6 Threat Research Sources</h2>
+
+  <p>Threat Research Is A Counterintelligence Gathering Effort In Which Security Companies And Researchers Attempt To Discover The Tactics, Techniques And Procedures (Ttps) Of Modern Cyber Adversaries.</p>
+
+  <p>Another Primary Source Of Threat Intelligence Is The Deep Web.</p>
+
+  <p>The Deep Web Is Any Part Of The World Wide Web That Is Not Indexed By A Search Engine E.G Registration Pages, Unlinked Pages And Pages That Block Search Indexing.</p>
+
+  <h2 id="sigil_toc_id_100">8.7 Threat Intelligence Providers</h2>
+
+  <p>The outputs from the primary research correlate events observed on a customer's undertaken by security solutions providers own networks and logs with known TTP can take three main forms. and threat actor indicators.</p>
+
+  <p><b>Behavioral threat research -</b> Narrative Threat data can be packaged as feeds that commentary describing examples of integrate with a security information and attacks and TTPs gathered through primary event management (SIEM) platform. research sources.</p>
+
+  <p>These feeds are usually described as cyber</p>
+
+  <p><b>Reputational threat intelligence -</b> List of threat intelligence (cti) data.</p>
+
+  <p>ip addresses and domains associated with Threat intelligence platforms and feeds malicious behavior are supplied as one of four different <b>Threat data -</b> Computer data that can commercial models</p>
+
+  <p><b>Closed/proprietary -</b> The threat research and cti data is made available as a paid</p>
+
+  <p>subscription to a commercial threat intelligence platform.</p>
+
+  <p><b>Vendor websites -</b> This is proprietary threat intelligence that is not provided at a cost but</p>
+
+  <p>is provided as a general benefit to customers e.g microsoft's security intelligence blog.</p>
+
+  <p><b>Public/private information sharing centers -</b> In many critical industries, <b>information </b></p>
+
+  <p><b>sharing and analysis centers (isacs)</b> have been set up to share threat intelligence and</p>
+
+  <p>promote best practice.</p>
+
+  <p><span><b>73</b></span></p>
+
+  <p id="page_74"><b>Open source intelligence (OSINT) -</b> Some companies operate threat intelligence</p>
+
+  <p>services on an open-source basis earning income from consultancy</p>
+
+  <p><b>Other threat intelligence research resources include -</b> Academic journals, conferences,</p>
+
+  <p>request for comments (RFC) and social media</p>
+
+  <h2 id="sigil_toc_id_101">8.8 Threat Data Feeds</h2>
+
+  <p>There Are Various Ways That A Threat Data Feed Can Be Implemented.</p>
+
+  <p><b>Structured Threat Information Expression (Stix) -</b> Describes Standard Terminology For Iocs And Ways Of Indicating Relationships Between Them.</p>
+
+  <p><img src="../Images/index-74_1.png" alt=""/></p>
+
+  <p><b>Trusted automated exchange of indicator </b> <b>Vulnerability databases &amp; feeds -</b> Another <b>information (taxii) -</b> Protocol provides a source of threat intelligence is identifying means for transmitting cti data between vulnerabilities in os, software applications servers and clients. and firmware code. vulnerability databases</p>
+
+  <p><img src="../Images/index-74_2.png" alt=""/></p>
+
+  <p><b>Automated indicator sharing (ais) -</b> Is a include the common vulnerabilities and exposure (CVE). service offered by the dhs for companies to participate in threat intelligence sharing. <b>Artificial Intelligence -</b> Ai is the science ais is based on the stix and taxii standards of creating machine systems that can and protocols. simulate or demonstrate a similar general</p>
+
+  <p>intelligence capability to humans.</p>
+
+  <p><b>Threat map -</b> A threat map is an animated graphic showing the source, target and <b>Predictive analysis -</b> This refers to when type of attacks detected by a cti platform. a system can anticipate an attack and</p>
+
+  <p><b>File/code repositories -</b> such a repository possibly identify the threat actor before the attack is fully realized. holds signatures of known malware code.</p>
+
+  <p><span><b>74</b></span></p>
+
+  <h2 id="sigil_toc_id_102">8.9 Vulnerability Response &amp; Remediation</h2>
+
+  <p><b>Vulnerability scanning -</b> This is an automated activity that relies on a database of known vulnerabilities such as the CVE.</p>
+
+  <p>Web app vulnerability scanners are specialized automated tools designed to identify vulnerabilities such as XSS and SQL injection attacks in websites and other web-based applications.</p>
+
+  <p>This category of tools is frequently referred to as the Dynamic Application Security Testing (DAST) tools.</p>
+
+  <p>True Positive False Positive True Negative False Negative</p>
+
+  <p>Normal or xpected Normal or xpected Abnormal or Abnormal or unexpected activity is</p>
+
+  <p>activity is incorrectly</p>
+
+  <p>activity is correctly unexpected activity incorrectly identified</p>
+
+  <p>identified is correctly identified as normal or abnormal identified as</p>
+
+  <p>expected</p>
+
+  <p>GOOD PROBLEMATIC GOOD DANGEROUS</p>
+
+  <p><span><b>Vulnerability Scanning &amp; Assessments</b></span></p>
+
+  <p><b>System Configuration -</b> Identify issues related to security configurations, compliance and</p>
+
+  <p>nonconformance.</p>
+
+  <p><b>Vulnerability Assessment -</b> Identify host attributes and known Common Vulnerabilities</p>
+
+  <p>and Exposures (CVE)</p>
+
+  <p><b>Penetration Testing - </b>Evaluate the security of a target by identifying and providing proof</p>
+
+  <p>of concept of flaws and vulnerabilities by performing compromise exploitation.</p>
+
+  <p><b>Vulnerability Analysis -</b>This focuses on analyzing the results gotten from vulnerability scans and assessments to determine the level of risk associated with each identified vulnerability.</p>
+
+  <p>Very useful for prioritizing vulnerabilities.</p>
+
+  <p><span><b>75</b></span></p>
+
+  <p id="page_76"><span><b>Vulnerability Severity Levels</b></span></p>
+
+  <p><b>High -</b> This can also be critical levels and such vulnerabilities have the potential to cause</p>
+
+  <p>significant damage and require immediate attention.</p>
+
+  <p><b>Medium -</b> Could result in adverse consequences eventually and should be prioritized</p>
+
+  <p>based on their potential impact on the organization.</p>
+
+  <p><b>Low -</b> Have limited impact and should be remediated as part of ongoing vulnerability</p>
+
+  <p>management efforts.</p>
+
+  <p><b>Patch Management -</b>This is the process of identifying, acquiring, installing and verifying patches (updates)</p>
+
+  <p>The time from when an exploit first becomes active to the time it becomes insignificant is known as the <b>Window of Vulnerability.</b></p>
+
+  <p><span><b>Patch Classifications</b></span></p>
+
+  <p>CRITICAL DEFINITION DRIVERS FEATURE PACKS</p>
+
+  <p>Fixes for critical For software Updates to virus and Provides new product functionality</p>
+
+  <p>non- security related components that</p>
+
+  <p>definition files for the next product</p>
+
+  <p>issues. control or regulate a</p>
+
+  <p>release</p>
+
+  <p>SECURITY SERVICE PACKS UPDATE ROLLUPS UPDATES</p>
+
+  <p>Provides a fix for a Provides a Provides a cumulative set of cumulative set of Provides fixes that product- specific, security updates, security updates, hot address non-critical, security-related hotfixes and design fixes and updates in non-security bugs vulnerability change or features one package</p>
+
+  <p><span><b>Patch Management Challenges</b></span></p>
+
+  <p>Unintentional consequences Approach - manual, automated, hybrid?</p>
+
+  <p>Roll-back issues Access to unmanaged mobile or</p>
+
+  <p>remote devices Prioritization, timing and testing</p>
 </body>
 </html>

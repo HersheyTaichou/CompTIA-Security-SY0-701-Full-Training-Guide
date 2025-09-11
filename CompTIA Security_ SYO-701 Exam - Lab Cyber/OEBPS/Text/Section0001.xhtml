@@ -1,106 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
   <title>Section 1 - Summarize Fundamental Security Concepts</title>
   <link rel="stylesheet" type="text/css" href="../Styles/stylesheet.css"/>
 </head>
 
 <body>
-	<h1>Section 1 - <span class="section">Summarize Fundamental Security Concepts</span></h1>
-		<h2 id="sigil_toc_id_1">1.1 Introduction to Information Security</h2>
-	<p>Information security is based on the CIA and DAD triads. Information and cyber security professionals strive to accomplish the CIA triad.</p>
-	<ul>
-		<li><span class="bullets">Confidentiality</span>  - Data is accessed by only those with the right permit and can be achieved with the use of encryption, passwords, biometrics, 2FA and so on.</li>
-		<li><span class="bullets">Integrity</span> - This ensures that data has not been tampered or altered in any way with the use of hashing, checksums etc</li>
-		<li><span class="bullets">Availability</span> - Data and resources are available to be accessed or shared at all times. This can be achieved with network access, server and data availability.</li>
-	</ul>
-	<p>Black hat hackers and cyber criminals aim for the DAD triad.</p>
-	<ul>
-		<li><span class="bullets">Disclosure</span> - Where data is accessed by non-authorized users with the use of trojans, brute force attacks and theft</li>
-		<li><span class="bullets">Alteration</span> - This means data has been compromised or tampered with. This can be attained by malware, viruses and attacks like SQL injection.</li>
-		<li><span class="bullets">Deniability</span> - This means data is not made available to those who need it with the use of attacks like DOS and DDOS as well as ransomware.</li>
-	</ul>
-	<p>Non-repudiation - means a subject cannot deny something such as creating, modifying or sending a resource.</p>
-		<h2 id="sigil_toc_id_2">1.2 Cybersecurity Framework</h2>
-	<p>Information security and cyber tasks can be classified as five functions following the framework developed by the National Institute of Standards and Technology (NIST).</p>
-	<h3 class="sigil_not_in_toc">The <a href="Section0017.xhtml#NIST" epub:type="noteref">NIST</a> Framework Has 5 Parts</h3>
-	<ul>
-		<li><span class="bullets">Identify</span> - Evaluate Risks, Threats &amp; Vulnerabilities And Recommend Security Controls To Mitigate Them.</span></li>
-		<li><span class="bullets">Protect</span> - Procure/Develop, Install, Operate And Decommission IT Hardware &amp; Software Assets With Security As An Embedded Requirement At Every Stage.</span></li>
-		<li><span class="bullets">Detect</span> - Perform Ongoing Proactive Monitoring To Ensure That Security Controls Are Effective And Capable Of Protection Against New Types Of Threats.</span></li>
-		<li><span class="bullets">Respond</span> - Identify, Analyze, Contain And Eradicate Threats To Systems And Data Security</span></li>
-		<li><span class="bullets">Recover</span> - Implement Cyber Security Resilience To Restore Systems And Data If Other Controls Are Unable To Prevent Attacks</span></li>
-	</ul>
-		<h2 id="sigil_toc_id_3">1.3  Gap Analysis</h2>
-	<p>Gap analysis is a process that identifies how an organization's security systems deviate from those required or recommended by a framework. This will be performed when first adopting a framework or when meeting a new industry or legal compliance requirement. The analysis might be repeated every few years to meet compliance requirements or to validate any changes.</p>
-	<p>For each section of the framework, a gap analysis report will provide an overall score, a detailed list of missing or poorly configured controls associated with that section, and recommendations for remediation.</p>
-	<p>While some or all work involved in gap analysis could be performed by the internal security team, a gap analysis is likely to involve third-party consultants. Frameworks and compliance requirements from regulations and legislation can be complex enough to require a specialist. Advice and feedback from an external party can alert the internal security team to oversights and to new trends and changes in best practice.</p>
-		<h2 id="sigil_toc_id_4">1.4  Control Objectives</h2>
-	<p>Controls are tactics or strategies that proactively minimize risk by reducing or eliminating:</p>
-	<ul>
-		<li><span> A vulnerability</span></li>
-		<li><span> The likelihood that a threat actor will exploit a vulnerability</span></li>
-		<li><span> The impact of an exploit</span></li>
-	</ul>
-	<p>Countermeasures are controls implemented to address a <span class="keyword">specific</span> threat.</p>
-	<h3 class="sigil_not_in_toc">Controls can be measured by</h3>
-	<ul>
-		<li><span class="bullets">Functionality - </span>what the control does</span></li>
-		<li><span class="bullets">Effectiveness -</span> how well a control works (consistency, reliability, timely)</span></li>
-		<li><span class="bullets">Assurance -</span> a measure of confidence that intended security controls are effective in their application</span></li>
-		<li><span>Cost-Benefit</span></li>
-	</ul>
+  <h1>Section 1 - <span class="section">Summarize Fundamental Security Concepts</span></h1>
 
-	<p>Control objectives refer to a statement of a desired result that should be achieved by implementing a control or set of controls.</p>
-	<h3 class="sigil_not_in_toc">Defense-in-depth</h3>
-	<p>Design and implementation of multiple overlapping layers of diverse controls. Controls should maintain independence and not be subject to the cascading effect.</p>
-	<h3 class="sigil_not_in_toc">Security Control Baselines</h3>
-	<p>these express the minimum standards for a given environment</p>
-	<h3 class="sigil_not_in_toc">Fine-Tuning Controls</h3>
-	<ul>
-		<li><span class="bullets">Scoping - </span>Eliminating unnecessary baseline recommendations that are not applicable</span></li>
-		<li><span class="bullets">Tailoring -</span> Customizing baseline recommendations to align with objectives</span></li>
-		<li><span class="bullets">Compensating -</span> Substituting a recommended baseline control with a similar control</span></li>
-		<li><span class="bullets">Supplementing -</span> Adding to the baseline recommendations</span></li>
-	</ul>
+  <h2 id="sigil_toc_id_1">1.1 Introduction to Information Security</h2>
 
-	<img src="../Images/index-10_1.png" alt=""/>
-		<h2 id="sigil_toc_id_5">1.5  Security Control Categories </h2>
-	<p>A Security Control Is Something Designed To Give A System Or Digital Asset The Properties Of CIA &amp; Non-Repudiation.</p>
-	<p>There Are Three Main Security Control Categories</p>
-	<ul>
-		<li><span class="bullets">Technical -</span> Implemented As A System Such As Firewalls, Anti-Malware And OS Access Control. They Can Also Be Referred To As Logical Controls.</span></li>
-		<li><span class="bullets">Operational -</span> Implemented Primarily By People Rather Than Systems E.G Security Guards And Training Programs</span></li>
-		<li><span class="bullets">Managerial - </span>These Controls Give Oversight Of The Information System E.G Risk Identification Tools Or Security Policies.</span></li>
-	</ul>
-		<h2 id="sigil_toc_id_6">1.6  Security Control Functional Types</h2>
-	<ul>
-		<li><span class="bullets">Preventive - </span>These Controls Act To Eliminate Or Reduce The Likelihood That An Attack Can Succeed E.G ACLs, Anti-Malware. Directives And Standard Operating Procedures (SOPs) Can Be Regarded As Administrative Versions Of Preventative Controls.</span></li>
-		<li><span class="bullets">Detective -</span>These Controls May Not Deter Access But Will Identify And Record Any Attempted Or Successful Intrusion E.G Logs &amp; Audits</span></li>
-		<li><span class="bullets">Corrective -</span>These Controls Act To Eliminate Or Reduce The Impact Of An Intrusion Event E.G Backups And Patch Management.</span></li>
-		<li><span class="bullets">Physical -</span>These Include Alarms, Security Cameras And Guards And Can Be Used To Deter Physical Access To Premises And Hardware</span></li>
-		<li><span class="bullets">Deterrent -</span>These Controls Can Psychologically Discourage An Attacker From Attempting An Intrusion E.G Signs And Warnings Of Legal Penalties.</span></li>
-		<li><span class="bullets">Compensating -</span>These Controls Serve As A Substitute For A Principal Control By A Security Standard And Affords The Same (Or Better) Level Of Protection But Uses A Different Methodology Or Technology.</span></li>
-	</ul>
-		<h2 id="sigil_toc_id_7">1.7  Security Roles &amp; Responsibilities</h2>
-<p>Security Professionals Must Be Competent In A Wide Range Of Disciplines From Network To Application Design And Procurement Of Security Resources.</p>
-	<ul>
-		<li><span>Participate In Risk Assessments</span></li>
-		<li><span>Source, Install And Configure Security Devices And Software</span></li>
-		<li><span>Set Up And Maintain Document Access Control</span></li>
-		<li><span>Monitor Audit Logs And Review User Privileges</span></li>
-		<li><span>Manage Security-Related Incident Response And Reporting</span></li>
-		<li><span>Create And Test Business Continuity And Disaster Recovery Plans</span></li>
-		<li><span>Participate In Security Training And Education Programs</span></li>
-	</ul>
-	<p>A security policy is a formalized statement that defines how security will be implemented within an organization and can contain multiple individual policies.</p>
-	<p>Overall internal responsibility might be allocated to a dedicated department run by a director of security, chief security officer or chief information security officer</p>
-	<p>Managers may have responsibility for a domain such as building control, ict or even accounting.</p>
-	<p><b>Security Operations Center (SOC) -</b> This Is A Location Where Security Professionals Monitor And Protect Critical Information Assets Across Other Business Functions Such As Finance, Operations And Marketing. Typically Employed By Larger Corporations Such As Government Agencies Or A Healthcare Company.</p>
-	<p><b>DevSecOps -</b> Devops is a cultural shift within an organization to encourage much more collaboration between developers and system admins. DevSecOps extends the boundary to security specialists reflecting the principle that security is a primary consideration at every stage of software development <span class="keyword">(known as shift left)</span></p>
-	<p><b>Incident Response -</b> A Dedicated Cyber Incident Response Team (CIRT) / Computer Security Incident Response Team (CSIRT) / Computer Emergency Response Team (CERT) As  A Single Point-Of-Contact For The Notification Of Security Incidents.</p>
+  <p>Information security is based on the CIA and DAD triads. Information and cyber security professionals strive to accomplish the CIA triad.</p>
+
+  <ul>
+    <li><span class="bullets">Confidentiality</span> - Data is accessed by only those with the right permit and can be achieved with the use of encryption, passwords, biometrics, 2FA and so on.</li>
+
+    <li><span class="bullets">Integrity</span> - This ensures that data has not been tampered or altered in any way with the use of hashing, checksums etc</li>
+
+    <li><span class="bullets">Availability</span> - Data and resources are available to be accessed or shared at all times. This can be achieved with network access, server and data availability.</li>
+  </ul>
+
+  <p>Black hat hackers and cyber criminals aim for the DAD triad.</p>
+
+  <ul>
+    <li><span class="bullets">Disclosure</span> - Where data is accessed by non-authorized users with the use of trojans, brute force attacks and theft</li>
+
+    <li><span class="bullets">Alteration</span> - This means data has been compromised or tampered with. This can be attained by malware, viruses and attacks like SQL injection.</li>
+
+    <li><span class="bullets">Deniability</span> - This means data is not made available to those who need it with the use of attacks like DOS and DDOS as well as ransomware.</li>
+  </ul>
+
+  <p>Non-repudiation - means a subject cannot deny something such as creating, modifying or sending a resource.</p>
+
+  <h2 id="sigil_toc_id_2">1.2 Cybersecurity Framework</h2>
+
+  <p>Information security and cyber tasks can be classified as five functions following the framework developed by the National Institute of Standards and Technology (NIST).</p>
+
+  <h3 class="sigil_not_in_toc">The <a href="Section0017.xhtml#NIST" epub:type="noteref">NIST</a> Framework Has 5 Parts</h3>
+
+  <ul>
+    <li><span class="bullets">Identify</span> - Evaluate Risks, Threats &amp; Vulnerabilities And Recommend Security Controls To Mitigate Them.</li>
+
+    <li><span class="bullets">Protect</span> - Procure/Develop, Install, Operate And Decommission IT Hardware &amp; Software Assets With Security As An Embedded Requirement At Every Stage.</li>
+
+    <li><span class="bullets">Detect</span> - Perform Ongoing Proactive Monitoring To Ensure That Security Controls Are Effective And Capable Of Protection Against New Types Of Threats.</li>
+
+    <li><span class="bullets">Respond</span> - Identify, Analyze, Contain And Eradicate Threats To Systems And Data Security</li>
+
+    <li><span class="bullets">Recover</span> - Implement Cyber Security Resilience To Restore Systems And Data If Other Controls Are Unable To Prevent Attacks</li>
+  </ul>
+
+  <h2 id="sigil_toc_id_3">1.3 Gap Analysis</h2>
+
+  <p>Gap analysis is a process that identifies how an organization's security systems deviate from those required or recommended by a framework. This will be performed when first adopting a framework or when meeting a new industry or legal compliance requirement. The analysis might be repeated every few years to meet compliance requirements or to validate any changes.</p>
+
+  <p>For each section of the framework, a gap analysis report will provide an overall score, a detailed list of missing or poorly configured controls associated with that section, and recommendations for remediation.</p>
+
+  <p>While some or all work involved in gap analysis could be performed by the internal security team, a gap analysis is likely to involve third-party consultants. Frameworks and compliance requirements from regulations and legislation can be complex enough to require a specialist. Advice and feedback from an external party can alert the internal security team to oversights and to new trends and changes in best practice.</p>
+
+  <h2 id="sigil_toc_id_4">1.4 Control Objectives</h2>
+
+  <p>Controls are tactics or strategies that proactively minimize risk by reducing or eliminating:</p>
+
+  <ul>
+    <li><span> A vulnerability</span></li>
+
+    <li><span> The likelihood that a threat actor will exploit a vulnerability</span></li>
+
+    <li><span> The impact of an exploit</span></li>
+  </ul>
+
+  <p>Countermeasures are controls implemented to address a <span class="keyword">specific</span> threat.</p>
+
+  <h3 class="sigil_not_in_toc">Controls can be measured by</h3>
+
+  <ul>
+    <li><span class="bullets">Functionality - </span>what the control does</li>
+
+    <li><span class="bullets">Effectiveness -</span> how well a control works (consistency, reliability, timely)</li>
+
+    <li><span class="bullets">Assurance -</span> a measure of confidence that intended security controls are effective in their application</li>
+
+    <li><span>Cost-Benefit</span></li>
+  </ul>
+
+  <p>Control objectives refer to a statement of a desired result that should be achieved by implementing a control or set of controls.</p>
+
+  <h3 class="sigil_not_in_toc">Defense-in-depth</h3>
+
+  <p>Design and implementation of multiple overlapping layers of diverse controls. Controls should maintain independence and not be subject to the cascading effect.</p>
+
+  <h3 class="sigil_not_in_toc">Security Control Baselines</h3>
+
+  <p>these express the minimum standards for a given environment</p>
+
+  <h3 class="sigil_not_in_toc">Fine-Tuning Controls</h3>
+
+  <ul>
+    <li><span class="bullets">Scoping - </span>Eliminating unnecessary baseline recommendations that are not applicable</li>
+
+    <li><span class="bullets">Tailoring -</span> Customizing baseline recommendations to align with objectives</li>
+
+    <li><span class="bullets">Compensating -</span> Substituting a recommended baseline control with a similar control</li>
+
+    <li><span class="bullets">Supplementing -</span> Adding to the baseline recommendations</li>
+  </ul>
+
+  <img src="../Images/index-10_1.png" alt=""/>
+
+  <h2 id="sigil_toc_id_5">1.5 Security Control Categories</h2>
+
+  <p>A Security Control Is Something Designed To Give A System Or Digital Asset The Properties Of CIA &amp; Non-Repudiation.</p>
+
+  <p>There Are Three Main Security Control Categories</p>
+
+  <ul>
+    <li><span class="bullets">Technical -</span> Implemented As A System Such As Firewalls, Anti-Malware And OS Access Control. They Can Also Be Referred To As Logical Controls.</li>
+
+    <li><span class="bullets">Operational -</span> Implemented Primarily By People Rather Than Systems E.G Security Guards And Training Programs</li>
+
+    <li><span class="bullets">Managerial - </span>These Controls Give Oversight Of The Information System E.G Risk Identification Tools Or Security Policies.</li>
+  </ul>
+
+  <h2 id="sigil_toc_id_6">1.6 Security Control Functional Types</h2>
+
+  <ul>
+    <li><span class="bullets">Preventive - </span>These Controls Act To Eliminate Or Reduce The Likelihood That An Attack Can Succeed E.G ACLs, Anti-Malware. Directives And Standard Operating Procedures (SOPs) Can Be Regarded As Administrative Versions Of Preventative Controls.</li>
+
+    <li><span class="bullets">Detective -</span>These Controls May Not Deter Access But Will Identify And Record Any Attempted Or Successful Intrusion E.G Logs &amp; Audits</li>
+
+    <li><span class="bullets">Corrective -</span>These Controls Act To Eliminate Or Reduce The Impact Of An Intrusion Event E.G Backups And Patch Management.</li>
+
+    <li><span class="bullets">Physical -</span>These Include Alarms, Security Cameras And Guards And Can Be Used To Deter Physical Access To Premises And Hardware</li>
+
+    <li><span class="bullets">Deterrent -</span>These Controls Can Psychologically Discourage An Attacker From Attempting An Intrusion E.G Signs And Warnings Of Legal Penalties.</li>
+
+    <li><span class="bullets">Compensating -</span>These Controls Serve As A Substitute For A Principal Control By A Security Standard And Affords The Same (Or Better) Level Of Protection But Uses A Different Methodology Or Technology.</li>
+  </ul>
+
+  <h2 id="sigil_toc_id_7">1.7 Security Roles &amp; Responsibilities</h2>
+
+  <p>Security Professionals Must Be Competent In A Wide Range Of Disciplines From Network To Application Design And Procurement Of Security Resources.</p>
+
+  <ul>
+    <li><span>Participate In Risk Assessments</span></li>
+
+    <li><span>Source, Install And Configure Security Devices And Software</span></li>
+
+    <li><span>Set Up And Maintain Document Access Control</span></li>
+
+    <li><span>Monitor Audit Logs And Review User Privileges</span></li>
+
+    <li><span>Manage Security-Related Incident Response And Reporting</span></li>
+
+    <li><span>Create And Test Business Continuity And Disaster Recovery Plans</span></li>
+
+    <li><span>Participate In Security Training And Education Programs</span></li>
+  </ul>
+
+  <p>A security policy is a formalized statement that defines how security will be implemented within an organization and can contain multiple individual policies.</p>
+
+  <p>Overall internal responsibility might be allocated to a dedicated department run by a director of security, chief security officer or chief information security officer</p>
+
+  <p>Managers may have responsibility for a domain such as building control, ict or even accounting.</p>
+
+  <p><b>Security Operations Center (SOC) -</b> This Is A Location Where Security Professionals Monitor And Protect Critical Information Assets Across Other Business Functions Such As Finance, Operations And Marketing. Typically Employed By Larger Corporations Such As Government Agencies Or A Healthcare Company.</p>
+
+  <p><b>DevSecOps -</b> Devops is a cultural shift within an organization to encourage much more collaboration between developers and system admins. DevSecOps extends the boundary to security specialists reflecting the principle that security is a primary consideration at every stage of software development <span class="keyword">(known as shift left)</span></p>
+
+  <p><b>Incident Response -</b> A Dedicated Cyber Incident Response Team (CIRT) / Computer Security Incident Response Team (CSIRT) / Computer Emergency Response Team (CERT) As A Single Point-Of-Contact For The Notification Of Security Incidents.</p>
 </body>
 </html>

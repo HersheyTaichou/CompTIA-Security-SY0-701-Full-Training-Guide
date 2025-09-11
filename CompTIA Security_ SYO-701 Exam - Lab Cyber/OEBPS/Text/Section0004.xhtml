@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
   <title>Section 4 - Implement Identity and Access Management</title>
   <link rel="stylesheet" type="text/css" href="../Styles/stylesheet.css"/>
@@ -10,185 +9,336 @@
 
 <body>
   <h1>Section 4 - <span class="section">Implement Identity and Access Management</span></h1>
-  <h2>4.1  Identity Access Management</h2>
+
+  <h2 id="sigil_toc_id_62">4.1 Identity Access Management</h2>
+
   <p>Covers The Authentication &amp; Authorization Aspects Of A System And How Privileged Users Are Managed.</p>
+
   <div class="row">
     <div class="column">
-      <h3>There Are Four Phases Involved In IAM</h3>
+      <h3 class="sigil_not_in_toc">There Are Four Phases Involved In IAM</h3>
+
       <ul>
         <li>Identity - Supply Identification Information</li>
+
         <li>Authenticate - Identity Information Is Verified</li>
+
         <li>Authorize - Allows Actions Based On Verified Identification</li>
+
         <li>Audit - Keeps Track Of Actions Performed With The Identification</li>
       </ul>
     </div>
+
     <div class="column">
-      <h3><div title="Identity Management" style="text-decoration-line: underline;">IM</div> Tools &amp; Techniques</h3>
+      <h3 class="sigil_not_in_toc"><div title="Identity Management" style="text-decoration-line: underline;">
+        IM
+      </div>
+
+ Tools &amp; Techniques</h3>
+
       <ul>
         <li>Identity Manager</li>
+
         <li>Fraud Analytics</li>
+
         <li>Multi Factor Authentication</li>
       </ul>
     </div>
   </div>
+
   <div class="row">
     <div class="column">
-      <h3>Identity &amp; Access Threats</h3>
+      <h3 class="sigil_not_in_toc">Identity &amp; Access Threats</h3>
+
       <ul>
         <li>Spoofing</li>
+
         <li>Identity Theft</li>
+
         <li>Keylogging</li>
+
         <li>Escalation Of Privilege</li>
+
         <li>Information Leakage</li>
       </ul>
     </div>
+
     <div class="column">
-      <h3><div title="Authentication Management" style="text-decoration-line: underline;">AM</div> Tools &amp; Techniques</h3>
+      <h3 class="sigil_not_in_toc"><div title="Authentication Management" style="text-decoration-line: underline;">
+        AM
+      </div>
+
+ Tools &amp; Techniques</h3>
+
       <ul>
         <li>Single Sign On</li>
+
         <li>Behavior Analytics</li>
+
         <li>Role Based Approach</li>
       </ul>
     </div>
   </div>
-  <h2>4.2  Authentication Factors, Design And Attributes</h2>
-  <h3>Authentication Factors</h3>
+
+  <h2 id="sigil_toc_id_63">4.2 Authentication Factors, Design And Attributes</h2>
+
+  <h3 class="sigil_not_in_toc">Authentication Factors</h3>
+
   <ul>
     <li><span class="bullets">Something You Know</span> - This Includes Passwords, Passphrases Or Pins. A <span class="keyword">Knowledge Factor</span> Is Also Used For Account Reset Mechanisms.</li>
+
     <li><span class="bullets">Something You Have</span> - An <span class="keyword">Ownership Factor</span> Means That The Account Holder Possesses Something That No One Else Does Such As A Smart Card, Hardware Token Or Smartphone.</li>
+
     <li><span class="bullets">Something You Are/Do</span> - A <span class="keyword">Biometric Factor</span> Uses Either Physiological Identifiers Like Fingerprints Or Behavioral Identifiers Such As The Way Someone Walks And Talks.</li>
   </ul>
+
   <p>Multi Factor Authentication - This Combines The Use Of More Than One Authentication Factor And Can Either Be 2-Factor Or 3-Factor Authentication.</p>
+
   <p>Multifactor authentication requires a combination of different technologies. for example, requiring a pin along with a date of birth isn't multifactor.</p>
-  <h3>Authentication Attributes</h3>
+
+  <h3 class="sigil_not_in_toc">Authentication Attributes</h3>
+
   <p>Compared to the authentication factors, an authentication attribute is either a non-unique property or a factor that cannot be used independently.</p>
+
   <ul>
     <li><span class="bullets">Somewhere you are</span> - This could be a geographic location measured using a device's location service or ip address. This isn't used as a primary authentication factor but may be used as a continuous authentication mechanism.</li>
+
     <li><span class="bullets">Something you can do</span> - Behavioral characteristics such as the way you walk or hold your smartphone can be used to identify you to a considerable degree of activity.</li>
+
     <li><span class="bullets">Something you exhibit</span> - This also refers to a behavioral-based authentication and authorization with specific emphasis on personality traits such as the way you use smartphone apps or web search engines.</li>
+
     <li><span class="bullets">Someone you know</span> - This uses a web of trust model where new users are vouched for by existing users.</li>
   </ul>
-  <h2>4.3  Biometric Authentication</h2>
+
+  <h2 id="sigil_toc_id_64">4.3 Biometric Authentication</h2>
+
   <p>The first step is enrollment and the chosen biometric is scanned by a biometric reader and converted to binary information. The biometric template is kept in the authentication server database and when a user wants to access a resource, they are scanned and the scan is compared to the template to determine if access will be granted or denied.</p>
+
   <ul>
     <li><span class="bullets">False rejection rate (FRR)</span> - Where a legitimate user is not recognized. also referred to as a type 1 error or false non-match rate (FNMR).</li>
+
     <li><span class="bullets">False acceptance rate (FAR)</span> - Where an interloper is accepted. also referred to as type 2 error or false match rate (FMR)</li>
+
     <li><span class="bullets">Crossover error rate (CER)</span> - The point at which FRR and FAR meet. the lower the CER, the more efficient and reliable the technology.</li>
   </ul>
+
   <p><b>Fingerprint &amp; facial recognition</b> - Fingerprint recognition is the most widely used as it's inexpensive and non-intrusive. Facial recognition records multiple factors about the size and shape of the face</p>
+
   <p><img src="../Images/index-29_2.png" alt=""/></p>
-  <h3>Facial Recognition</h3>
+
+  <h3 class="sigil_not_in_toc">Facial Recognition</h3>
+
   <ul>
     <li><span class="bullets">Retinal Scan</span> - An Infrared Light Is Shone Into The Eye To Identify The Pattern Of Blood Vessels. It Is Very Accurate, Secure But Also Quite Expensive</li>
+
     <li><span class="bullets">Iris Scan</span> - Matches Patterns On The Surface Of The Eye Using Near-Infrared Imaging And Is Less Intrusive Than Retinal Scan.</li>
+
     <li><span class="bullets">Voice Recognition</span> - Relatively Cheap But Subject To Impersonation And Background Noise</li>
+
     <li><span class="bullets">Gait Analysis</span> - Human Movement</li>
+
     <li><span class="bullets">Signature Recognition</span> - Records The User Applying Their Signature (Stroke, Speed And Pressure Of The Stylus)</li>
+
     <li><span class="bullets">Typing</span> - Matches The Speed And Pattern Of A User's Input Of A Passphrase</li>
   </ul>
+
   <p><b>Behavioral Technology</b> - A Template Is Created By Analyzing A Behavior Such As Typing Or Walking.</p>
+
   <p>Continuous Authentication Verifies That The User Who Logged On Is Still Operating The Device.</p>
-  <h2>4.4  Password Concepts</h2>
+
+  <h2 id="sigil_toc_id_65">4.4 Password Concepts</h2>
+
   <p><span class="bullets">Password Length</span> - Enforces a minimum length for passwords</p>
+
   <p><span class="bullets">Password Complexity</span> - Enforces password complexity rules</p>
+
   <p><span class="bullets">Password Aging</span> - Forces the user to select a new password after a set period</p>
+
   <p><span class="bullets">Password Reuse and History</span> - Prevents the selection of a password that has been used already.</p>
+
   <p>Under the most recent <a href="Section0017.xhtml#NIST" epub:type="noteref">NIST</a> guidelines:</p>
+
   <p>Complexity rules should not be enforced and the only restriction should be to block common passwords.</p>
+
   <p>Aging policies should not be enforced. Users should be able to select if and when a password should be changed</p>
+
   <p>Password hints should not be used.</p>
+
   <p><b>Password Managers</b> - These are used to mitigate poor credential management practices that are hard to control.</p>
+
   <p>The main risks involved are selection of a weak master password, compromise of the vendor's cloud storage or systems and impersonation attacks designed to trick the manager into filling a password to a spoofed site.</p>
-  <h2>4.5  Authorization Solutions - Part 1</h2>
+
+  <h2 id="sigil_toc_id_66">4.5 Authorization Solutions - Part 1</h2>
+
   <p>An Important Consideration When Designing A Security System Is To Determine How Users Receive Rights Or Permissions.</p>
+
   <p>The Different Models Are Referred To As Access Control Schemes.</p>
+
   <p><b>Discretionary Access Control (DAC)</b> - It Is Very Flexible But Also The Easiest To Compromise As It's Vulnerable To Insider Threats And Abuse Of Compromised Accounts.</p>
+
   <p>This Is Based On The Primacy Of The Resource Owner And This Means The Owner Has Full Control Over The Resource And Can Decide Who To Grant Rights To.</p>
+
   <p><b>Role-Based Access Control (RBAC)</b> - RBAC Can Be Partially Implemented Through The Use Of Security Group Accounts.</p>
+
   <p>This Adds An Extra Degree Of Centralized Control To The DAC Model Where Users Are Not Granted Rights Explicitly (Assigned Directly) But Rather Implicitly (Through Being Assigned A Role)</p>
-  <h3>File System Permissions (Linux) - In Linux, There Are Three Basic Permissions:</h3>
+
+  <h3 class="sigil_not_in_toc">File System Permissions (Linux) - In Linux, There Are Three Basic Permissions:</h3>
+
   <ul>
     <li><span class="bullets">Read (R)</span> - The Ability To Access And View The File</li>
+
     <li><span class="bullets">Write (W)</span> - The Ability To Modify The File</li>
+
     <li><span class="bullets">Execute (X)</span> - The Ability To Run A Script Or Program Or Perform A Task On That Directory.</li>
   </ul>
+
   <p>These Permissions Can Be Applied In The Context Of The Owner User (U), A Group Account (G) And All Other Users/World (O).</p>
+
   <p><code>D RWX R-X R-X Home</code></p>
+
   <p>The String Above Shows That For The Directory (D), The Owner Has Read, Write And Execute Permissions While The Group Context And Others Have Read And Execute Permissions</p>
+
   <p>The Chmod Command Is Used To Modify Permissions And Can Be Used Either In Symbolic Or Absolute Mode.</p>
-  <h3>In Symbolic Mode, The Command Works As Follows:</h3>
+
+  <h3 class="sigil_not_in_toc">In Symbolic Mode, The Command Works As Follows:</h3>
+
   <p><code>chmod G+W, O-X Home</code></p>
+
   <p>The Effect Of This Command Is To Append Write Permission To The Group Context And Remove Execute Permission From The Other Context.</p>
+
   <p>By Contrast, The Command Can Also Be Used To Replace Existing Permissions.</p>
+
   <p><code>chmod U=Rwx, G=Rx, O=Rx Home</code></p>
+
   <p><code>D rwx r-x r-x Home </code></p>
+
   <p>In absolute mode, permissions are assigned using octal notation where r=4, w=2 and x=1</p>
+
   <p><code>chmod 755 Home</code></p>
+
   <p>Mandatory access control (MAC) - this is based on the idea of security clearance levels (labels) instead of ACLs. In a hierarchical one, subjects are only permitted to access objects at their own clearance level or below.</p>
+
   <p>Attribute-based access control (ABAC) - this is the most fine-grained type of access control mode and it is capable of making access decisions based on a combination of subject and object attributes plus any system-wide attributes.</p>
+
   <p>This system can monitor the number of events or alerts associated with a user account or track resources to ensure they are consistent in terms of timing of requests.</p>
+
   <p>Rule-based access control - this is a term that can refer to any sort of access control model where access control policies are determined by system-enforced rules rather than system users.</p>
+
   <p>As such RBAC, ABAC and MAC are all examples of rule-based (or non-discretionary) access control.</p>
-  <h2>4.6  Authorization Solutions - Part 2</h2>
+
+  <h2 id="sigil_toc_id_67">4.6 Authorization Solutions - Part 2</h2>
+
   <p><b>Directory Services</b> - Directory services are the principal means of providing privilege management and authorization on an enterprise network as well as storing information about users, security groups and services.</p>
+
   <p>The types of attributes, what information they contain and the way object types are defined through attributes is described by the directory schema.</p>
+
   <p><b>CN - Common Name</b></p>
+
   <p><b>OU - Organizational Unit</b></p>
+
   <p><b>C - Country</b></p>
+
   <p><b>DC - Domain Component</b></p>
+
   <p><b>E.G. The distinguished name of a web server operated by widget in the uk might be:</b></p>
+
   <p><b>cn = widgetweb, ou = marketing, o = widget, c= uk, dc = widget, dc = foo</b></p>
+
   <p><b>Federation</b> - Federation means that the company trusts accounts created and managed by a different network.</p>
+
   <p>This is the notion that a network needs to be accessible to more than just a well-defined group of employees. In business, a company might need to make parts of its network open to partners, suppliers and customers.</p>
+
   <p><b>Cloud versus on-premises requirements -</b> Where a company needs to make use of cloud services or share resources with business partner networks, authorization and authentication design comes with more constraints and additional requirements.</p>
+
   <p><b>OAuth and OpenID Connect</b> - Many public clouds use application programming interfaces (APIs) based on representational state transfer (rest) rather than soap.</p>
+
   <p>Authentication and authorization for a restful api is often implemented using the open authorization (OAuth) protocol. OAuth is designed to facilitate sharing of information within a user profile between sites.</p>
-  <h2>4.7  Account Attributes &amp; Access Policies</h2>
+
+  <h2 id="sigil_toc_id_68">4.7 Account Attributes &amp; Access Policies</h2>
+
   <p>A user account is defined by a unique security identifier (SID), a name and a credential. Each account is associated with a profile which can be defined with custom identity attributes describing the user, such as full name, email address, contact number etc.</p>
+
   <p>Each account can be assigned permissions over files and other network resources. These permissions might be assigned directly to the account or inherited through membership of a security group or role. On a Windows Active Directory network, access policies can be configured via Group Policy Objects (GPOs)</p>
+
   <p><img src="../Images/index-32_2.png" alt=""/></p>
+
   <p id="page_33"><b>Location-Based Policies</b> - A User Or Device Can Have A Logical Network Location Identified By An IP Address Which Can Be Used As An Account Restriction Mechanism.</p>
+
   <p>The Geographical Location Of A User Or Device Can Be Calculated Using A Geographical Mechanism.</p>
+
   <p><span class="keyword">Geofencing</span> Refers To Accepting Or Rejecting Access Requests Based On Location.</p>
+
   <p><b>Time-Based Restrictions</b> - There Are Three Main Types Of Time-Based Policies.</p>
+
   <ul>
     <li>A Time Of Day Policy Established Authorized Logon Hours For An Account</li>
+
     <li>A Time-Based Login Policy Established The Maximum Amount Of Time An Account May Be Logged In For</li>
+
     <li>An Impossible Travel Time/Risky Login Policy Tracks The Location Of Logon Events Over Time.</li>
   </ul>
+
   <p><b>Account &amp; Usage Audits</b> - Accounting And Auditing Processes Are Used To Detect Whether An Account Has Been Compromised Or Is Being Misused. Usage Auditing Means Configuring The Security Log To Record Key Indicators And Then Reviewing The Logs For Suspicious Activity.</p>
+
   <p><b>Account Lockout &amp; Disablement</b> - If Account Misuse Is Detected Or Suspected, The Account Can Be Manually Disabled By Setting An Account Property. An Account Lockout Means That Login Is Prevented For A Period</p>
+
   <p><img src="../Images/index-33_2.png" alt=""/></p>
-  <h2>4.8  Privileged Access Management</h2>
+
+  <h2 id="sigil_toc_id_69">4.8 Privileged Access Management</h2>
+
   <p>A privileged account is one that can make significant configuration changes to a host, such as installing software or disabling a firewall or other security system. Privileged accounts also have the right to manage network appliances, application servers, and databases.</p>
+
   <p><b>Privileged Access Management (PAM)</b> refers to policies, procedures and technical controls to prevent compromise of privileged accounts.</p>
+
   <p>It is a good idea to restrict the number of administrative accounts as much as possible. The more accounts there are, the more likely it is that one of them will be compromised. On the other hand, you do not want administrators to share accounts or to use default accounts, as that compromises accountability.</p>
+
   <p>To protect privileged account credentials, it is important not to sign in on untrusted workstations. A <b>secure administrative workstation (SAW)</b> is a computer with a very low attack surface running the minimum possible apps.</p>
+
   <p>Traditional administrator accounts have standing permissions. <b>Just-in-time (JIT)</b> permissions means that an account's elevated privileges are not assigned at log-in. Instead, the permissions must be explicitly requested and are only granted for a limited period. This is referred to as zero standing privileges (ZSP).</p>
+
   <p>There are three main models for implementing this</p>
+
   <ul>
     <li><span class="bullets">Temporary Elevation</span> - Means that the account gains administrative rights for a limited period. The User Account Control (UAC) feature of Windows and the sudo command in Linux use this concept.</li>
+
     <li><span class="bullets">Password Vaulting/Brokering</span> - The privileged account must be “checked out” from a repository and is made available for a limited amount of time. The administrator must log a justification for using the privileges.</li>
+
     <li><span class="bullets">Ephemeral Credentials</span> - Means the system generates or enables an account to use to perform the administrative task and then destroys or disables it once the task has been performed. Temporary or ephemeral membership of security groups or roles can serve a similar purpose.</li>
   </ul>
-  <h2>4.9  Local, Network &amp; Remote Authentication</h2>
+
+  <h2 id="sigil_toc_id_70">4.9 Local, Network &amp; Remote Authentication</h2>
+
   <p>This involves a complex architecture of components but the following three scenarios are typical:</p>
-  <h3>Windows Authentication</h3>
+
+  <h3 class="sigil_not_in_toc">Windows Authentication</h3>
+
   <ul>
     <li><span class="bullets">Windows local sign-in</span> - The Local Security Authority (LSA) compares the submitted credential to a hash stored in the Security Accounts Manager (SAM) database.</li>
+
     <li><span class="bullets">Windows network sign-in</span> - The LSA can pass the credentials for authentication to a network service either Kerberos or NT LAN Manager (NTLM) authentication.</li>
+
     <li><span class="bullets">Remote sign-in</span> - If the user's device is not connected to the local network, authentication can take place over some type of virtual private network (VPN) or web portal.</li>
   </ul>
-  <p><b>Linux Authentication</b> - Local user account names are stored in <span class="keyword">/etc/passwd</span>.  When a user logs in to a local interactive shell, the password is checked against a hash stored in /etc/shadow.</p>
+
+  <p><b>Linux Authentication</b> - Local user account names are stored in <span class="keyword">/etc/passwd</span>. When a user logs in to a local interactive shell, the password is checked against a hash stored in /etc/shadow.</p>
+
   <p>A pluggable authentication module (PAM) is a package for enabling different authentication providers.</p>
+
   <p><b>Single Sign-On (SSO)</b> - This system allows the user to authenticate once to a local device and be authenticated to compatible application servers without having to enter credentials again.</p>
+
   <p>In Windows, SSO is provided by the Kerberos framework.</p>
-  <h2>4.10  Kerberos Authentication &amp; Authorization</h2>
+
+  <h2 id="sigil_toc_id_71">4.10 Kerberos Authentication &amp; Authorization</h2>
+
   <p>Kerberos is a single sign-on network authentication and authorization protocol used on many networks notably as implemented by Microsoft's Active Directory (AD) service.</p>
+
   <p>Kerberos Authentication - This protocol is made up of 3 parts</p>
+
   <ul>
     <li>KDC (Authentication Service)</li>
+
     <li>Principal</li>
+
     <li>Application Server</li>
   </ul>
 </body>

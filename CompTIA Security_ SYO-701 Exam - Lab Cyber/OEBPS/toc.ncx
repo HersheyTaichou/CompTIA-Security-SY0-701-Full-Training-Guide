@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN"
- "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd"><ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
   <head>
-    <meta name="dtb:uid" content="deb29bbc-bd8f-4e86-adc1-5e209f4bd50f"/>
+    <meta name="dtb:uid" content="urn:uuid:deb29bbc-bd8f-4e86-adc1-5e209f4bd50f"/>
     <meta name="dtb:depth" content="2"/>
     <meta name="dtb:totalPageCount" content="0"/>
     <meta name="dtb:maxPageNumber" content="0"/>
@@ -68,7 +69,769 @@
         <navLabel>
           <text>2.1 Vulnerability, Threat And Risk</text>
         </navLabel>
-        <content src="Text/Section0002.xhtml#sigil_toc_id_8"/>
+        <content src="Text/Section0002.xhtml#sigil_toc_id_45"/>
+      </navPoint>
+      <navPoint id="navPoint-11" playOrder="11">
+        <navLabel>
+          <text>2.2 Attributes Of Threat Actors</text>
+        </navLabel>
+        <content src="Text/Section0002.xhtml#sigil_toc_id_46"/>
+      </navPoint>
+      <navPoint id="navPoint-12" playOrder="12">
+        <navLabel>
+          <text>2.3 Threat Actors</text>
+        </navLabel>
+        <content src="Text/Section0002.xhtml#sigil_toc_id_47"/>
+      </navPoint>
+      <navPoint id="navPoint-13" playOrder="13">
+        <navLabel>
+          <text>2.4 Attack Surface &amp; Attack Vectors</text>
+        </navLabel>
+        <content src="Text/Section0002.xhtml#sigil_toc_id_48"/>
+      </navPoint>
+      <navPoint id="navPoint-14" playOrder="14">
+        <navLabel>
+          <text>2.5 Vulnerable Software &amp; Network Vectors</text>
+        </navLabel>
+        <content src="Text/Section0002.xhtml#sigil_toc_id_49"/>
+      </navPoint>
+      <navPoint id="navPoint-15" playOrder="15">
+        <navLabel>
+          <text>2.6 Lure-Based &amp; Message-Based Vectors</text>
+        </navLabel>
+        <content src="Text/Section0002.xhtml#sigil_toc_id_50"/>
+      </navPoint>
+      <navPoint id="navPoint-16" playOrder="16">
+        <navLabel>
+          <text>2.7 Third Party Risks</text>
+        </navLabel>
+        <content src="Text/Section0002.xhtml#sigil_toc_id_51"/>
+      </navPoint>
+      <navPoint id="navPoint-17" playOrder="17">
+        <navLabel>
+          <text>2.8 Intro To Social Engineering</text>
+        </navLabel>
+        <content src="Text/Section0002.xhtml#sigil_toc_id_52"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-18" playOrder="18">
+      <navLabel>
+        <text>Section 3 - Explain Cryptographic Solutions</text>
+      </navLabel>
+      <content src="Text/Section0003.xhtml"/>
+      <navPoint id="navPoint-19" playOrder="19">
+        <navLabel>
+          <text>3.1 Introduction To Cryptography And Hashing</text>
+        </navLabel>
+        <content src="Text/Section0003.xhtml#sigil_toc_id_53"/>
+      </navPoint>
+      <navPoint id="navPoint-20" playOrder="20">
+        <navLabel>
+          <text>3.2 Encryption</text>
+        </navLabel>
+        <content src="Text/Section0003.xhtml#sigil_toc_id_54"/>
+      </navPoint>
+      <navPoint id="navPoint-21" playOrder="21">
+        <navLabel>
+          <text>3.3 Cryptographic Modes Of Operation &amp; Cipher Suites</text>
+        </navLabel>
+        <content src="Text/Section0003.xhtml#sigil_toc_id_55"/>
+      </navPoint>
+      <navPoint id="navPoint-22" playOrder="22">
+        <navLabel>
+          <text>3.4 Cryptographic Use Cases</text>
+        </navLabel>
+        <content src="Text/Section0003.xhtml#sigil_toc_id_56"/>
+      </navPoint>
+      <navPoint id="navPoint-23" playOrder="23">
+        <navLabel>
+          <text>3.5 Longevity, Salting , Stretching &amp; Other Types Of Cryptographic Technologies</text>
+        </navLabel>
+        <content src="Text/Section0003.xhtml#sigil_toc_id_57"/>
+      </navPoint>
+      <navPoint id="navPoint-24" playOrder="24">
+        <navLabel>
+          <text>3.6 Certificates, PKIs, RAs &amp; CSRs</text>
+        </navLabel>
+        <content src="Text/Section0003.xhtml#sigil_toc_id_58"/>
+      </navPoint>
+      <navPoint id="navPoint-25" playOrder="25">
+        <navLabel>
+          <text>3.7 Digital Certificates</text>
+        </navLabel>
+        <content src="Text/Section0003.xhtml#sigil_toc_id_59"/>
+      </navPoint>
+      <navPoint id="navPoint-26" playOrder="26">
+        <navLabel>
+          <text>3.8 Key Management</text>
+        </navLabel>
+        <content src="Text/Section0003.xhtml#sigil_toc_id_60"/>
+      </navPoint>
+      <navPoint id="navPoint-27" playOrder="27">
+        <navLabel>
+          <text>3.9 Certificate Management</text>
+        </navLabel>
+        <content src="Text/Section0003.xhtml#sigil_toc_id_61"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-28" playOrder="28">
+      <navLabel>
+        <text>Section 4 - Implement Identity and Access Management</text>
+      </navLabel>
+      <content src="Text/Section0004.xhtml"/>
+      <navPoint id="navPoint-29" playOrder="29">
+        <navLabel>
+          <text>4.1 Identity Access Management</text>
+        </navLabel>
+        <content src="Text/Section0004.xhtml#sigil_toc_id_62"/>
+      </navPoint>
+      <navPoint id="navPoint-30" playOrder="30">
+        <navLabel>
+          <text>4.2 Authentication Factors, Design And Attributes</text>
+        </navLabel>
+        <content src="Text/Section0004.xhtml#sigil_toc_id_63"/>
+      </navPoint>
+      <navPoint id="navPoint-31" playOrder="31">
+        <navLabel>
+          <text>4.3 Biometric Authentication</text>
+        </navLabel>
+        <content src="Text/Section0004.xhtml#sigil_toc_id_64"/>
+      </navPoint>
+      <navPoint id="navPoint-32" playOrder="32">
+        <navLabel>
+          <text>4.4 Password Concepts</text>
+        </navLabel>
+        <content src="Text/Section0004.xhtml#sigil_toc_id_65"/>
+      </navPoint>
+      <navPoint id="navPoint-33" playOrder="33">
+        <navLabel>
+          <text>4.5 Authorization Solutions - Part 1</text>
+        </navLabel>
+        <content src="Text/Section0004.xhtml#sigil_toc_id_66"/>
+      </navPoint>
+      <navPoint id="navPoint-34" playOrder="34">
+        <navLabel>
+          <text>4.6 Authorization Solutions - Part 2</text>
+        </navLabel>
+        <content src="Text/Section0004.xhtml#sigil_toc_id_67"/>
+      </navPoint>
+      <navPoint id="navPoint-35" playOrder="35">
+        <navLabel>
+          <text>4.7 Account Attributes &amp; Access Policies</text>
+        </navLabel>
+        <content src="Text/Section0004.xhtml#sigil_toc_id_68"/>
+      </navPoint>
+      <navPoint id="navPoint-36" playOrder="36">
+        <navLabel>
+          <text>4.8 Privileged Access Management</text>
+        </navLabel>
+        <content src="Text/Section0004.xhtml#sigil_toc_id_69"/>
+      </navPoint>
+      <navPoint id="navPoint-37" playOrder="37">
+        <navLabel>
+          <text>4.9 Local, Network &amp; Remote Authentication</text>
+        </navLabel>
+        <content src="Text/Section0004.xhtml#sigil_toc_id_70"/>
+      </navPoint>
+      <navPoint id="navPoint-38" playOrder="38">
+        <navLabel>
+          <text>4.10 Kerberos Authentication &amp; Authorization</text>
+        </navLabel>
+        <content src="Text/Section0004.xhtml#sigil_toc_id_71"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-39" playOrder="39">
+      <navLabel>
+        <text>Section 5 - Secure Enterprise Network Architecture</text>
+      </navLabel>
+      <content src="Text/Section0005.xhtml"/>
+      <navPoint id="navPoint-40" playOrder="40">
+        <navLabel>
+          <text>5.1 Secure Network Designs</text>
+        </navLabel>
+        <content src="Text/Section0005.xhtml#sigil_toc_id_72"/>
+      </navPoint>
+      <navPoint id="navPoint-41" playOrder="41">
+        <navLabel>
+          <text>5.2 Network Segmentation, Topology &amp; DMZs</text>
+        </navLabel>
+        <content src="Text/Section0005.xhtml#sigil_toc_id_73"/>
+      </navPoint>
+      <navPoint id="navPoint-42" playOrder="42">
+        <navLabel>
+          <text>5.3 Device Placement &amp; Attributes</text>
+        </navLabel>
+        <content src="Text/Section0005.xhtml#sigil_toc_id_74"/>
+      </navPoint>
+      <navPoint id="navPoint-43" playOrder="43">
+        <navLabel>
+          <text>5.4 Device Placement &amp; Attributes</text>
+        </navLabel>
+        <content src="Text/Section0005.xhtml#sigil_toc_id_75"/>
+      </navPoint>
+      <navPoint id="navPoint-44" playOrder="44">
+        <navLabel>
+          <text>5.5 Routing &amp; Switching Protocols</text>
+        </navLabel>
+        <content src="Text/Section0005.xhtml#sigil_toc_id_76"/>
+      </navPoint>
+      <navPoint id="navPoint-45" playOrder="45">
+        <navLabel>
+          <text>5.6 Using Secure Protocols</text>
+        </navLabel>
+        <content src="Text/Section0005.xhtml#sigil_toc_id_77"/>
+      </navPoint>
+      <navPoint id="navPoint-46" playOrder="46">
+        <navLabel>
+          <text>5.7 Attack Surface</text>
+        </navLabel>
+        <content src="Text/Section0005.xhtml#sigil_toc_id_78"/>
+      </navPoint>
+      <navPoint id="navPoint-47" playOrder="47">
+        <navLabel>
+          <text>5.8 Firewalls</text>
+        </navLabel>
+        <content src="Text/Section0005.xhtml#sigil_toc_id_79"/>
+      </navPoint>
+      <navPoint id="navPoint-48" playOrder="48">
+        <navLabel>
+          <text>5.9 Firewall Implementation</text>
+        </navLabel>
+        <content src="Text/Section0005.xhtml#sigil_toc_id_80"/>
+      </navPoint>
+      <navPoint id="navPoint-49" playOrder="49">
+        <navLabel>
+          <text>5.10 Remote Access Architecture</text>
+        </navLabel>
+        <content src="Text/Section0005.xhtml#sigil_toc_id_81"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-50" playOrder="50">
+      <navLabel>
+        <text>Section 6 - Secure Cloud Network Architecture</text>
+      </navLabel>
+      <content src="Text/Section0006.xhtml"/>
+      <navPoint id="navPoint-51" playOrder="51">
+        <navLabel>
+          <text>6.1 Cloud Deployment Models</text>
+        </navLabel>
+        <content src="Text/Section0006.xhtml#sigil_toc_id_82"/>
+      </navPoint>
+      <navPoint id="navPoint-52" playOrder="52">
+        <navLabel>
+          <text>6.2 Responsibility Matrix</text>
+        </navLabel>
+        <content src="Text/Section0006.xhtml#sigil_toc_id_83"/>
+      </navPoint>
+      <navPoint id="navPoint-53" playOrder="53">
+        <navLabel>
+          <text>6.3 Cloud Security Solutions</text>
+        </navLabel>
+        <content src="Text/Section0006.xhtml#sigil_toc_id_84"/>
+      </navPoint>
+      <navPoint id="navPoint-54" playOrder="54">
+        <navLabel>
+          <text>6.4 Infrastructure As Code Concepts</text>
+        </navLabel>
+        <content src="Text/Section0006.xhtml#sigil_toc_id_85"/>
+      </navPoint>
+      <navPoint id="navPoint-55" playOrder="55">
+        <navLabel>
+          <text>6.5 Zero Trust</text>
+        </navLabel>
+        <content src="Text/Section0006.xhtml#sigil_toc_id_86"/>
+      </navPoint>
+      <navPoint id="navPoint-56" playOrder="56">
+        <navLabel>
+          <text>6.6 Embedded Systems</text>
+        </navLabel>
+        <content src="Text/Section0006.xhtml#sigil_toc_id_87"/>
+      </navPoint>
+      <navPoint id="navPoint-57" playOrder="57">
+        <navLabel>
+          <text>6.7 Industrial Control Systems &amp; Internet Of Things</text>
+        </navLabel>
+        <content src="Text/Section0006.xhtml#sigil_toc_id_88"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-58" playOrder="58">
+      <navLabel>
+        <text>Section 7 - Explain Resiliency and Site Security Concept</text>
+      </navLabel>
+      <content src="Text/Section0007.xhtml"/>
+      <navPoint id="navPoint-59" playOrder="59">
+        <navLabel>
+          <text>7.1 Backup Strategies &amp; Storage</text>
+        </navLabel>
+        <content src="Text/Section0007.xhtml#sigil_toc_id_89"/>
+      </navPoint>
+      <navPoint id="navPoint-60" playOrder="60">
+        <navLabel>
+          <text>7.2 Implementing Redundancy Strategies</text>
+        </navLabel>
+        <content src="Text/Section0007.xhtml#sigil_toc_id_90"/>
+      </navPoint>
+      <navPoint id="navPoint-61" playOrder="61">
+        <navLabel>
+          <text>7.3 Cyber Security Resilient Strategies</text>
+        </navLabel>
+        <content src="Text/Section0007.xhtml#sigil_toc_id_91"/>
+      </navPoint>
+      <navPoint id="navPoint-62" playOrder="62">
+        <navLabel>
+          <text>7.4 - Physical Security Controls</text>
+        </navLabel>
+        <content src="Text/Section0007.xhtml#sigil_toc_id_92"/>
+      </navPoint>
+      <navPoint id="navPoint-63" playOrder="63">
+        <navLabel>
+          <text>7.5 - physical host security controls</text>
+        </navLabel>
+        <content src="Text/Section0007.xhtml#sigil_toc_id_93"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-64" playOrder="64">
+      <navLabel>
+        <text>Section 8 - Explain Vulnerability Management</text>
+      </navLabel>
+      <content src="Text/Section0008.xhtml"/>
+      <navPoint id="navPoint-65" playOrder="65">
+        <navLabel>
+          <text>8.1 Vulnerability Discover</text>
+        </navLabel>
+        <content src="Text/Section0008.xhtml#sigil_toc_id_94"/>
+      </navPoint>
+      <navPoint id="navPoint-66" playOrder="66">
+        <navLabel>
+          <text>8.2 Weak host &amp; Network configurations</text>
+        </navLabel>
+        <content src="Text/Section0008.xhtml#sigil_toc_id_95"/>
+      </navPoint>
+      <navPoint id="navPoint-67" playOrder="67">
+        <navLabel>
+          <text>8.3 Evaluation Scope</text>
+        </navLabel>
+        <content src="Text/Section0008.xhtml#sigil_toc_id_96"/>
+      </navPoint>
+      <navPoint id="navPoint-68" playOrder="68">
+        <navLabel>
+          <text>8.4 Overflows, Resource Exhaustion, Memory</text>
+        </navLabel>
+        <content src="Text/Section0008.xhtml#sigil_toc_id_97"/>
+      </navPoint>
+      <navPoint id="navPoint-69" playOrder="69">
+        <navLabel>
+          <text>8.5 Sideloading, Rooting &amp; Jailbreaking</text>
+        </navLabel>
+        <content src="Text/Section0008.xhtml#sigil_toc_id_98"/>
+      </navPoint>
+      <navPoint id="navPoint-70" playOrder="70">
+        <navLabel>
+          <text>8.6 Threat Research Sources</text>
+        </navLabel>
+        <content src="Text/Section0008.xhtml#sigil_toc_id_99"/>
+      </navPoint>
+      <navPoint id="navPoint-71" playOrder="71">
+        <navLabel>
+          <text>8.7 Threat Intelligence Providers</text>
+        </navLabel>
+        <content src="Text/Section0008.xhtml#sigil_toc_id_100"/>
+      </navPoint>
+      <navPoint id="navPoint-72" playOrder="72">
+        <navLabel>
+          <text>8.8 Threat Data Feeds</text>
+        </navLabel>
+        <content src="Text/Section0008.xhtml#sigil_toc_id_101"/>
+      </navPoint>
+      <navPoint id="navPoint-73" playOrder="73">
+        <navLabel>
+          <text>8.9 Vulnerability Response &amp; Remediation</text>
+        </navLabel>
+        <content src="Text/Section0008.xhtml#sigil_toc_id_102"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-74" playOrder="74">
+      <navLabel>
+        <text>Section 9 - Evaluate Network Security Capabilities</text>
+      </navLabel>
+      <content src="Text/Section0009.xhtml"/>
+      <navPoint id="navPoint-75" playOrder="75">
+        <navLabel>
+          <text>9.1 Bench Marks &amp; Secure Configuration Guides</text>
+        </navLabel>
+        <content src="Text/Section0009.xhtml#sigil_toc_id_103"/>
+      </navPoint>
+      <navPoint id="navPoint-76" playOrder="76">
+        <navLabel>
+          <text>9.2 Hardening Concepts</text>
+        </navLabel>
+        <content src="Text/Section0009.xhtml#sigil_toc_id_104"/>
+      </navPoint>
+      <navPoint id="navPoint-77" playOrder="77">
+        <navLabel>
+          <text>9.4 Network Access Control</text>
+        </navLabel>
+        <content src="Text/Section0009.xhtml#sigil_toc_id_105"/>
+      </navPoint>
+      <navPoint id="navPoint-78" playOrder="78">
+        <navLabel>
+          <text>9.5 Network Security Monitoring</text>
+        </navLabel>
+        <content src="Text/Section0009.xhtml#sigil_toc_id_106"/>
+      </navPoint>
+      <navPoint id="navPoint-79" playOrder="79">
+        <navLabel>
+          <text>9.6 Web Filtering</text>
+        </navLabel>
+        <content src="Text/Section0009.xhtml#sigil_toc_id_107"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-80" playOrder="80">
+      <navLabel>
+        <text>Section 10 - Assess Endpoint Security Capabilities</text>
+      </navLabel>
+      <content src="Text/Section0010.xhtml"/>
+      <navPoint id="navPoint-81" playOrder="81">
+        <navLabel>
+          <text>10.1 Endpoint Security</text>
+        </navLabel>
+        <content src="Text/Section0010.xhtml#sigil_toc_id_108"/>
+      </navPoint>
+      <navPoint id="navPoint-82" playOrder="82">
+        <navLabel>
+          <text>10.2 Segmentation</text>
+        </navLabel>
+        <content src="Text/Section0010.xhtml#sigil_toc_id_109"/>
+      </navPoint>
+      <navPoint id="navPoint-83" playOrder="83">
+        <navLabel>
+          <text>10.3 Mobile Device Management</text>
+        </navLabel>
+        <content src="Text/Section0010.xhtml#sigil_toc_id_110"/>
+      </navPoint>
+      <navPoint id="navPoint-84" playOrder="84">
+        <navLabel>
+          <text>10.4 Secure Mobile Device Connections</text>
+        </navLabel>
+        <content src="Text/Section0010.xhtml#sigil_toc_id_111"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-85" playOrder="85">
+      <navLabel>
+        <text>Section 11 - Enhance Application Security Capabilities</text>
+      </navLabel>
+      <content src="Text/Section0011.xhtml"/>
+      <navPoint id="navPoint-86" playOrder="86">
+        <navLabel>
+          <text>11.1 DNSSecurity, Directory Services &amp; Snmp</text>
+        </navLabel>
+        <content src="Text/Section0011.xhtml#sigil_toc_id_112"/>
+      </navPoint>
+      <navPoint id="navPoint-87" playOrder="87">
+        <navLabel>
+          <text>11.2 Secure Application Operations Protocols</text>
+        </navLabel>
+        <content src="Text/Section0011.xhtml#sigil_toc_id_113"/>
+      </navPoint>
+      <navPoint id="navPoint-88" playOrder="88">
+        <navLabel>
+          <text>11.3 File Transfer, Email &amp; Video Services</text>
+        </navLabel>
+        <content src="Text/Section0011.xhtml#sigil_toc_id_114"/>
+      </navPoint>
+      <navPoint id="navPoint-89" playOrder="89">
+        <navLabel>
+          <text>11.4 Email Security</text>
+        </navLabel>
+        <content src="Text/Section0011.xhtml#sigil_toc_id_115"/>
+      </navPoint>
+      <navPoint id="navPoint-90" playOrder="90">
+        <navLabel>
+          <text>11.5 Secure Coding Techniques</text>
+        </navLabel>
+        <content src="Text/Section0011.xhtml#sigil_toc_id_116"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-91" playOrder="91">
+      <navLabel>
+        <text>Section 12 - Explain Incident Response and Monitoring Concepts</text>
+      </navLabel>
+      <content src="Text/Section0012.xhtml"/>
+      <navPoint id="navPoint-92" playOrder="92">
+        <navLabel>
+          <text>12.1 Incident Response Process</text>
+        </navLabel>
+        <content src="Text/Section0012.xhtml#sigil_toc_id_117"/>
+      </navPoint>
+      <navPoint id="navPoint-93" playOrder="93">
+        <navLabel>
+          <text>12.2 Cyber Incident Response Team</text>
+        </navLabel>
+        <content src="Text/Section0012.xhtml#sigil_toc_id_118"/>
+      </navPoint>
+      <navPoint id="navPoint-94" playOrder="94">
+        <navLabel>
+          <text>12.3 Incident Response Plan</text>
+        </navLabel>
+        <content src="Text/Section0012.xhtml#sigil_toc_id_119"/>
+      </navPoint>
+      <navPoint id="navPoint-95" playOrder="95">
+        <navLabel>
+          <text>12.4 Incident Response Exercises, Recovery And Retention Policy</text>
+        </navLabel>
+        <content src="Text/Section0012.xhtml#sigil_toc_id_120"/>
+      </navPoint>
+      <navPoint id="navPoint-96" playOrder="96">
+        <navLabel>
+          <text>12.5 Incident Identification</text>
+        </navLabel>
+        <content src="Text/Section0012.xhtml#sigil_toc_id_121"/>
+      </navPoint>
+      <navPoint id="navPoint-97" playOrder="97">
+        <navLabel>
+          <text>12.6 Digital Forensics Documentation</text>
+        </navLabel>
+        <content src="Text/Section0012.xhtml#sigil_toc_id_122"/>
+      </navPoint>
+      <navPoint id="navPoint-98" playOrder="98">
+        <navLabel>
+          <text>12.7 Digital Forensics Evidence Acquisition</text>
+        </navLabel>
+        <content src="Text/Section0012.xhtml#sigil_toc_id_123"/>
+      </navPoint>
+      <navPoint id="navPoint-99" playOrder="99">
+        <navLabel>
+          <text>12.8 Data Sources</text>
+        </navLabel>
+        <content src="Text/Section0012.xhtml#sigil_toc_id_124"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-100" playOrder="100">
+      <navLabel>
+        <text>Section 13 - Analyze Indicators of Malicious Activity</text>
+      </navLabel>
+      <content src="Text/Section0013.xhtml"/>
+      <navPoint id="navPoint-101" playOrder="101">
+        <navLabel>
+          <text>13.1 Malware Classification</text>
+        </navLabel>
+        <content src="Text/Section0013.xhtml#sigil_toc_id_125"/>
+      </navPoint>
+      <navPoint id="navPoint-102" playOrder="102">
+        <navLabel>
+          <text>13.2 Computer Viruses</text>
+        </navLabel>
+        <content src="Text/Section0013.xhtml#sigil_toc_id_126"/>
+      </navPoint>
+      <navPoint id="navPoint-103" playOrder="103">
+        <navLabel>
+          <text>13.3 Computer Worms &amp; Fileless Malware</text>
+        </navLabel>
+        <content src="Text/Section0013.xhtml#sigil_toc_id_127"/>
+      </navPoint>
+      <navPoint id="navPoint-104" playOrder="104">
+        <navLabel>
+          <text>13.4 Spyware, Keyloggers, Rootkits, Backdoors,</text>
+        </navLabel>
+        <content src="Text/Section0013.xhtml#sigil_toc_id_128"/>
+      </navPoint>
+      <navPoint id="navPoint-105" playOrder="105">
+        <navLabel>
+          <text>13.5 Malware Indicators &amp; Process Analysis</text>
+        </navLabel>
+        <content src="Text/Section0013.xhtml#sigil_toc_id_129"/>
+      </navPoint>
+      <navPoint id="navPoint-106" playOrder="106">
+        <navLabel>
+          <text>13.6 Password Attacks</text>
+        </navLabel>
+        <content src="Text/Section0013.xhtml#sigil_toc_id_130"/>
+      </navPoint>
+      <navPoint id="navPoint-107" playOrder="107">
+        <navLabel>
+          <text>13.7 Tactics, Techniques &amp; Procedures</text>
+        </navLabel>
+        <content src="Text/Section0013.xhtml#sigil_toc_id_131"/>
+      </navPoint>
+      <navPoint id="navPoint-108" playOrder="108">
+        <navLabel>
+          <text>13.8 Privilege Escalation &amp; Error Handling</text>
+        </navLabel>
+        <content src="Text/Section0013.xhtml#sigil_toc_id_132"/>
+      </navPoint>
+      <navPoint id="navPoint-109" playOrder="109">
+        <navLabel>
+          <text>13.9 Uniform Resource Locator Analysis &amp;</text>
+        </navLabel>
+        <content src="Text/Section0013.xhtml#sigil_toc_id_133"/>
+      </navPoint>
+      <navPoint id="navPoint-110" playOrder="110">
+        <navLabel>
+          <text>13.10 Api &amp; Replay Attacks, Cross-Site Request Forgery, Clickjacking &amp; Ssl Strip Attacks</text>
+        </navLabel>
+        <content src="Text/Section0013.xhtml#sigil_toc_id_134"/>
+      </navPoint>
+      <navPoint id="navPoint-111" playOrder="111">
+        <navLabel>
+          <text>13.11 Injection Attacks</text>
+        </navLabel>
+        <content src="Text/Section0013.xhtml#sigil_toc_id_135"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-112" playOrder="112">
+      <navLabel>
+        <text>Section 14 - Summarize Security Governance Concepts</text>
+      </navLabel>
+      <content src="Text/Section0014.xhtml"/>
+      <navPoint id="navPoint-113" playOrder="113">
+        <navLabel>
+          <text>14.1 Regulations, Standards &amp; Legislation</text>
+        </navLabel>
+        <content src="Text/Section0014.xhtml#sigil_toc_id_136"/>
+      </navPoint>
+      <navPoint id="navPoint-114" playOrder="114">
+        <navLabel>
+          <text>14.2 ISO and Cloud Frameworks</text>
+        </navLabel>
+        <content src="Text/Section0014.xhtml#sigil_toc_id_137"/>
+      </navPoint>
+      <navPoint id="navPoint-115" playOrder="115">
+        <navLabel>
+          <text>14.3 Governance Structure</text>
+        </navLabel>
+        <content src="Text/Section0014.xhtml#sigil_toc_id_138"/>
+      </navPoint>
+      <navPoint id="navPoint-116" playOrder="116">
+        <navLabel>
+          <text>14.4 Governance Documents</text>
+        </navLabel>
+        <content src="Text/Section0014.xhtml#sigil_toc_id_139"/>
+      </navPoint>
+      <navPoint id="navPoint-117" playOrder="117">
+        <navLabel>
+          <text>14.5 Change Management</text>
+        </navLabel>
+        <content src="Text/Section0014.xhtml#sigil_toc_id_140"/>
+      </navPoint>
+      <navPoint id="navPoint-118" playOrder="118">
+        <navLabel>
+          <text>14.6 Configuration Management</text>
+        </navLabel>
+        <content src="Text/Section0014.xhtml#sigil_toc_id_141"/>
+      </navPoint>
+      <navPoint id="navPoint-119" playOrder="119">
+        <navLabel>
+          <text>14.7 Scripting, Automation &amp; Orchestration</text>
+        </navLabel>
+        <content src="Text/Section0014.xhtml#sigil_toc_id_142"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-120" playOrder="120">
+      <navLabel>
+        <text>Section 15 - Explain Risk Management</text>
+      </navLabel>
+      <content src="Text/Section0015.xhtml"/>
+      <navPoint id="navPoint-121" playOrder="121">
+        <navLabel>
+          <text>15.1 Risk management process</text>
+        </navLabel>
+        <content src="Text/Section0015.xhtml#sigil_toc_id_143"/>
+      </navPoint>
+      <navPoint id="navPoint-122" playOrder="122">
+        <navLabel>
+          <text>15.2 Risk Controls</text>
+        </navLabel>
+        <content src="Text/Section0015.xhtml#sigil_toc_id_144"/>
+      </navPoint>
+      <navPoint id="navPoint-123" playOrder="123">
+        <navLabel>
+          <text>15.3 Business Impact Analysis</text>
+        </navLabel>
+        <content src="Text/Section0015.xhtml#sigil_toc_id_145"/>
+      </navPoint>
+      <navPoint id="navPoint-124" playOrder="124">
+        <navLabel>
+          <text>15.4 Third-Party Risk Management &amp; Security Agreements</text>
+        </navLabel>
+        <content src="Text/Section0015.xhtml#sigil_toc_id_146"/>
+      </navPoint>
+      <navPoint id="navPoint-125" playOrder="125">
+        <navLabel>
+          <text>15.5 Audit &amp; Assurance</text>
+        </navLabel>
+        <content src="Text/Section0015.xhtml#sigil_toc_id_147"/>
+      </navPoint>
+      <navPoint id="navPoint-126" playOrder="126">
+        <navLabel>
+          <text>15.6 PenTest Attack Life Cycle</text>
+        </navLabel>
+        <content src="Text/Section0015.xhtml#sigil_toc_id_148"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-127" playOrder="127">
+      <navLabel>
+        <text>Section 16 - Summarize Data Protection and Compliance Concepts</text>
+      </navLabel>
+      <content src="Text/Section0016.xhtml"/>
+      <navPoint id="navPoint-128" playOrder="128">
+        <navLabel>
+          <text>16.1 Privacy &amp; Sensitive Data Concepts</text>
+        </navLabel>
+        <content src="Text/Section0016.xhtml#sigil_toc_id_149"/>
+      </navPoint>
+      <navPoint id="navPoint-129" playOrder="129">
+        <navLabel>
+          <text>16.2 Data Sovereignty, Privacy Breaches &amp; Data Sharing</text>
+        </navLabel>
+        <content src="Text/Section0016.xhtml#sigil_toc_id_150"/>
+      </navPoint>
+      <navPoint id="navPoint-130" playOrder="130">
+        <navLabel>
+          <text>16.3 Privacy And Data Controls</text>
+        </navLabel>
+        <content src="Text/Section0016.xhtml#sigil_toc_id_151"/>
+      </navPoint>
+      <navPoint id="navPoint-131" playOrder="131">
+        <navLabel>
+          <text>16.4 Privacy Principles</text>
+        </navLabel>
+        <content src="Text/Section0016.xhtml#sigil_toc_id_152"/>
+      </navPoint>
+      <navPoint id="navPoint-132" playOrder="132">
+        <navLabel>
+          <text>16.5 Compliance Monitoring</text>
+        </navLabel>
+        <content src="Text/Section0016.xhtml#sigil_toc_id_153"/>
+      </navPoint>
+      <navPoint id="navPoint-133" playOrder="133">
+        <navLabel>
+          <text>16.6 Education, Training &amp; Awareness</text>
+        </navLabel>
+        <content src="Text/Section0016.xhtml#sigil_toc_id_154"/>
+      </navPoint>
+      <navPoint id="navPoint-134" playOrder="134">
+        <navLabel>
+          <text>16.7 Personnel Policies</text>
+        </navLabel>
+        <content src="Text/Section0016.xhtml#sigil_toc_id_155"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-135" playOrder="135">
+      <navLabel>
+        <text></text>
+      </navLabel>
+      <content src="Text/Section0017.xhtml"/>
+      <navPoint id="navPoint-136" playOrder="136">
+        <navLabel>
+          <text>Acronyms</text>
+        </navLabel>
+        <content src="Text/Section0017.xhtml#sigil_toc_id_156"/>
+      </navPoint>
+      <navPoint id="navPoint-137" playOrder="137">
+        <navLabel>
+          <text>Glossary</text>
+        </navLabel>
+        <content src="Text/Section0017.xhtml#sigil_toc_id_157"/>
       </navPoint>
     </navPoint>
   </navMap>
