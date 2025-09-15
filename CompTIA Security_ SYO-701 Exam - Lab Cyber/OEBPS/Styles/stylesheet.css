@@ -93,3 +93,7 @@ code {
 .tooltip {
 	text-decoration: underline;
 }
+
+.acronyms {
+	width: 100%;
+}

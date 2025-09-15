@@ -28,7 +28,7 @@
 
   <p><b>Domain Name System (DNS) servers</b> - host name records and perform name resolution to allow applications and users to address hosts and services using fully qualified domain names (FQDNs) rather than IP Addresses.</p>
 
-  <p><a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a> works at layer 7 of the OSI model.</p>
+  <p>DNS works at layer 7 of the OSI model.</p>
 
   <p><img src="../Images/index-37_2.png" alt=""/></p>
 
@@ -223,7 +223,7 @@
 
     <li>Remote access technologies—including shell access, which was once accomplished via telnet and is now almost exclusively done via SSH—can also be secured. Microsoft's RDP is encrypted by default, but other remote access tools may use other protocols, including HTTPS, to ensure that their traffic is not exposed.</li>
 
-    <li>Domain name resolution remains a security challenge, with multiple efforts over time that have had limited impact on <a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a> protocol security, including DNSSEC and <a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a> reputation lists.</li>
+    <li>Domain name resolution remains a security challenge, with multiple efforts over time that have had limited impact on DNS protocol security, including DNSSEC and DNS reputation lists.</li>
 
     <li>Routing and switching protocol security can be complex, with protocols like Border Gateway Protocol (BGP) lacking built-in security features. Therefore, attacks such as BGP hijacking attacks and other routing attacks remain possible. Organizations cannot rely on a secure protocol in many cases and need to design around this lack.</li>
 
@@ -292,7 +292,7 @@
 
   <p>Iptables works with chains which apply to the different types of traffic such as the input chain for traffic destined for the local host. Each chain has a default policy set to drop or allow traffic that does not match a rule.</p>
 
-  <p>The rules in this example will drop any traffic from the specific host 10.1.0.192 and allow icmp echo requests (pings), <a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a> and http/https traffic either from the local subnet (10.1.0.0/24) or from any network (0.0.0.0/0)</p>
+  <p>The rules in this example will drop any traffic from the specific host 10.1.0.192 and allow icmp echo requests (pings), DNS and http/https traffic either from the local subnet (10.1.0.0/24) or from any network (0.0.0.0/0)</p>
 
   <p><img src="../Images/index-46_1.png" alt=""/></p>
 
@@ -340,7 +340,7 @@
 
   <p><b>Internet Protocol Security (IPSEC)</b> - TLS Is Applied At The Application Level Either By Using A Separate Secure Port Or By Using Commands In The Application Protocol To Negotiate A Secure Connection.</p>
 
-  <p><a href="Section0017.xhtml#IPSEC" epub:type="noteref">IPSEC</a> Operates At The Network Layer (Layer 3) So It Can Operate Without Having To Configure Specific Application Support.</p>
+  <p>IPSEC Operates At The Network Layer (Layer 3) So It Can Operate Without Having To Configure Specific Application Support.</p>
 
   <p><b>Authentication Header (AH)</b> - This Performs A Cryptographic Hash On The Whole Packet Including The IP Header Plus A Shared Secret Key And Adds This HMAC In Its Header As an Integrity Check Value (ICV)</p>
 
@@ -350,10 +350,10 @@
 
   <p>ESP Attaches Three Fields To The Packet: A Header, A Trailer (Providing Padding For The Cryptographic Function) And An ICV.</p>
 
-  <p><b><a href="Section0017.xhtml#IPSEC" epub:type="noteref">IPSEC</a> Transport And Tunnel Modes</b> - <a href="Section0017.xhtml#IPSEC" epub:type="noteref">IPSEC</a> Can Be Used In Two Modes:</p>
+  <p><b>IPSEC Transport And Tunnel Modes</b> - IPSEC Can Be Used In Two Modes:</p>
 
   <ul>
-    <li><p><span class="bullets">Transport Mode</span> - This Mode Is Used To Secure Communications Between Hosts On A Private Network. Here The Ip Header For Each Packet Is Not Encrypted, Just The Payload Data. If <a href="Section0017.xhtml#AH" epub:type="noteref">AH</a> Is Used In This Mode, It Can Provide Integrity For The IP Header.</p>
+    <li><p><span class="bullets">Transport Mode</span> - This Mode Is Used To Secure Communications Between Hosts On A Private Network. Here The Ip Header For Each Packet Is Not Encrypted, Just The Payload Data. If AH Is Used In This Mode, It Can Provide Integrity For The IP Header.</p>
 
     <table class="IPExample">
       <tbody>
@@ -363,7 +363,7 @@
           </td>
 
           <td>
-            <a href="Section0017.xhtml#AH" epub:type="noteref">AH</a> 
+            AH 
 
             <table class="IPEmbedded">
               <tbody>
@@ -377,7 +377,7 @@
           </td>
 
           <td>
-            <a href="Section0017.xhtml#ESP" epub:type="noteref">ESP</a> 
+            ESP 
 
             <table class="IPEmbedded">
               <tbody>
@@ -411,7 +411,7 @@
           </td>
 
           <td>
-            <a href="Section0017.xhtml#ESP" epub:type="noteref">ESP</a> 
+            ESP 
 
             <table class="IPEmbedded">
               <tbody>
@@ -444,13 +444,13 @@
     </table></li>
   </ul>
 
-  <p><b>Internet Key Exchange (IKE)</b> - <a href="Section0017.xhtml#IPSEC" epub:type="noteref">IPSEC</a>'s Encryption And Hashing Functions Depend On A Shared Secret. The Secret Must Be Communicated To Both Hosts And The Hosts Must Confirm One Another's Identity (Mutual Authentication) Otherwise The Connection Is Vulnerable To MITM And Spoofing Attacks. The <a href="Section0017.xhtml#IKE" epub:type="noteref">IKE</a> Protocol Handles Authentication And Key Exchange Referred To As Security Associations (<span class="tooltip" title="Security Associations">SA</span>).</p>
+  <p><b>Internet Key Exchange (IKE)</b> - IPSEC's Encryption And Hashing Functions Depend On A Shared Secret. The Secret Must Be Communicated To Both Hosts And The Hosts Must Confirm One Another's Identity (Mutual Authentication) Otherwise The Connection Is Vulnerable To MITM And Spoofing Attacks. The IKE Protocol Handles Authentication And Key Exchange Referred To As Security Associations (<span class="tooltip" title="Security Associations">SA</span>).</p>
 
-  <p><a href="Section0017.xhtml#IKE" epub:type="noteref">IKE</a> Negotiations Take Place Over Two Phases:</p>
+  <p>IKE Negotiations Take Place Over Two Phases:</p>
 
   <p>Phase 1 Establishes The Identity Of The Two Hosts And Performs Key Agreement Using The <span class="tooltip" title="Diffie-Hellman">DH</span> Algorithm To Create A Secure Channel. Digital Certificates And Pre-Shared Key Are Used For Authenticating Hosts.</p>
 
-  <p>Phase 2 Uses The Secure Channel Created In Phase 1 To Establish Which Ciphers And Key Sizes Will Be Used With <a href="Section0017.xhtml#AH" epub:type="noteref">AH</a> And/Or <a href="Section0017.xhtml#ESP" epub:type="noteref">ESP</a> In The <a href="Section0017.xhtml#IPSEC" epub:type="noteref">IPSEC</a> Session.</p>
+  <p>Phase 2 Uses The Secure Channel Created In Phase 1 To Establish Which Ciphers And Key Sizes Will Be Used With AH And/Or ESP In The IPSEC Session.</p>
 
   <p><b>VPN Client Configuration - </b>To Configure A VPN Client, You May Need To Install The Client Software If The VPN Type Is Not Natively Supported By The Os.</p>
 
@@ -458,11 +458,11 @@
 
   <p>When A Client Connected To A Remote Access VPN Tries To Access Other Sites On The Internet, There Are Two Ways To Manage The Connection:</p>
 
-  <p><b>Split Tunnel</b> - The Client Accesses The Internet Directly Using Its "Native" IP Configuration And <a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a> Servers.</p>
+  <p><b>Split Tunnel</b> - The Client Accesses The Internet Directly Using Its "Native" IP Configuration And DNS Servers.</p>
 
-  <p><b>Full Tunnel</b> - Internet Access Is Mediated By The Corporate Network, Which Will Alter The Client's IP Address And <a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a> Servers And May Use A Proxy.</p>
+  <p><b>Full Tunnel</b> - Internet Access Is Mediated By The Corporate Network, Which Will Alter The Client's IP Address And DNS Servers And May Use A Proxy.</p>
 
-  <p>Full Tunnel Offers Better Security But The Network Address Translations And <a href="Section0017.xhtml#DNS" epub:type="noteref">DNS</a> Operations Required May Cause Problems With Some Websites Especially Cloud Services.</p>
+  <p>Full Tunnel Offers Better Security But The Network Address Translations And DNS Operations Required May Cause Problems With Some Websites Especially Cloud Services.</p>
 
   <p><b>Out-Of-Band Management -</b> Remote Management Methods Can Be Described As Either In-Band Or Out-Of-Band (OOB).</p>
 
